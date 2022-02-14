@@ -1,0 +1,32 @@
+{
+    "config": {
+        "name": "i-2",
+        "data": {
+            "type": "i",
+            "flag_id": 2
+        },
+        "currentMap": 1,
+        "logErrors": true,
+        "limitOnceExecution": true,
+        "onScriptErrorRollBack": true
+    },
+    "flagRequisits": [
+        {
+            "type": "m",
+            "flag_id": 1
+        },
+        {
+            "type": "m",
+            "flag_id": 3
+        }
+    ],
+    "script": [
+        ["givemonster", {
+            "monsterpedia_id": 4,
+            "level": 5,
+            "is_initial": true,
+            "can_trade": false
+        }]
+    ],
+    "onscriptdone": []
+}

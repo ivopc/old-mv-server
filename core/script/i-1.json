@@ -1,0 +1,30 @@
+{
+    "config": {
+        "name": "i-1",
+        "data": {
+            "type": "i",
+            "flag_id": 1
+        },
+        "currentMap": 1,
+        "logErrors": true,
+        "limitOnceExecution": true,
+        "onScriptErrorRollBack": true
+    },
+    "flagRequisits": [
+        {
+            "type": "m",
+            "flag_id": 1
+        },
+        {
+            "type": "m",
+            "flag_id": 3
+        }
+    ],
+    "script": [
+        ["giveitem", {
+            "id": 1,
+            "amount": 100
+        }]
+    ],
+    "onscriptdone": []
+}

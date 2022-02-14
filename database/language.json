@@ -1,0 +1,68 @@
+{
+    "index": {
+        "LOGIN": {
+            "br": "Conectar",
+            "en": "Login"
+        },
+        "LOGIN_PHRASE": {
+            "br": "Conecte-se",
+            "en": "Login"
+        },
+        "USERNAME": {
+            "br": "Usuário",
+            "en": "Username"
+        },
+        "PASSWORD": {
+            "br": "Senha",
+            "en": "Password"
+        },
+        "REPEAT_PASSWORD": {
+            "br": "Repetir Senha",
+            "en": "Repeat Password"
+        },
+        "REMEMBER_ME": {
+            "br": "Lembrar-me",
+            "en": "Remember-me"
+        },
+        "REGISTER": {
+            "br": "Registrar",
+            "en": "Register"
+        },
+        "REGISTER_PHRASE": {
+            "br": "Registre-se",
+            "en": "Register"
+        },
+        "FREE_TO_PLAY_DESC": {
+            "br": "Você pode jogar Monster Valle totalmente de graça! É gratuito e sempre será.",
+            "en": "You can play Monster Valle totally for free! It's free and always will be."
+        },
+        "PLAY_IN_MOBILE_TITLE": {
+            "br": "Jogar Mobile",
+            "en": "Play Mobile"
+        },
+        "PLAY_IN_MOBILE": {
+            "br": "Monster Valle também roda em smartphones! Acesse o link abaixo para ter acesso ao mobile a Play Store ou a App Store.",
+            "en": "You can play Monster Valle in smartphones! Access the link below to Play Store or App Store."
+        },
+        "SOCIAL_NETWORKS_TITLE": {
+            "br": "Redes Sociais",
+            "en": "Social Networks"
+        },
+        "SOCIAL_NETWORKS": {
+            "br": "Siga-nos nas redes sociais e fique por dentro de tudo.",
+            "en": "Follow us on social networkds and stay on top of things."
+        },
+        "OUR_PROGRESS_TITLE": {
+            "br": "Nosso Progresso",
+            "en": "Project Progress"
+        },
+        "OUR_PROGRESS": {
+            "br": "Fique por dentro do devlog de desenvolvimento do Monster Valle. Você saberá de todos os sistemas que estamos fazendo e que estamos planejando.",
+            "en": "Stay on top of project devlog of Monster Valle. You will know about the systems that we are developing and planning."
+        },
+        "VIEW_DETAILS": {
+            "br": "Ver Detalhes",
+            "en": "View Details"
+        }
+    }
+}

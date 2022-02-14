@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Monster Valle - Admininstração</title>
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="/img/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style type="text/css">
+        .gradient-shadow {
+            background: rgba(0, 0, 0, 0.2);
+            background: -moz-linear-gradient(bottom, rgba(0, 0, 0, 0.2) 0%, #fff 100%);
+            background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.2) 0%,#fff 100%);
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%,#fff 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgba(0, 0, 0, 0.2)', endColorstr='#fff',GradientType=1 );
+            filter: blur(2px);
+            width: 755px;
+            height: 500px;
+            position: relative;
+            left: 0px;
+            top: 10px;
+            margin: 0 auto;
+        }
+        .shadow-box {
+            width: 750px;
+            background: #fff;
+            padding: 20px;
+            position: relative;
+            margin-top: -485px;
+            height: 500px;
+        }
+
+        #unban-title {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="gradient-shadow"></div>
+    <div class="container shadow-box">
+        <h1>Administrar</h1>
+        <h3>Banir usuário</h3>
+        <form id="ban">
+            <div class="form-group">
+                <label for="exampleInputEmail1">ID do usuário:</label>
+                <input type="text" class="form-control" name="uid">
+            </div>
+            <button type="submit" class="btn btn-primary">Banir</button>
+        </form>
+        <h3 id="unban-title">Desbanir usuário</h3>
+        <form id="unban">
+            <div class="form-group">
+                <label for="exampleInputEmail1">ID do usuário:</label>
+                <input type="text" class="form-control" name="uid">
+            </div>
+            <button type="submit" class="btn btn-primary">Desbanir</button>
+        </form>
+    </div>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+    <script type="text/javascript">
+        function start () {
+            document.querySelector("#ban").addEventListener("submit", onBanSubmit);
+            document.querySelector("#unban").addEventListener("submit", onUnbanSubmit);
+        };
+
+        function onBanSubmit (e) {
+            e.preventDefault();
+            const formData = new FormData(e.target);
+            console.log();
+
+            axios.post("/admin/ban", {
+                uid: formData.get("uid")
+            }).then(response => {
+                console.log(response.data);
+            });
+        };
+
+        function onUnbanSubmit (e) {
+            e.preventDefault();
+            const formData = new FormData(e.target);
+            console.log();
+
+            axios.post("/admin/unban", {
+                uid: formData.get("uid")
+            }).then(response => {
+                console.log(response.data);
+            });
+        };
+
+        window.addEventListener("DOMContentLoaded", start);
+    </script>
+</body>
+</html>

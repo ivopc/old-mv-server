@@ -1,0 +1,27 @@
+{
+    "config": {
+        "name": "h-1",
+        "data": {
+            "type": "h",
+            "flag_id": 1
+        },
+        "currentMap": [1, 4, 6, 7],
+        "logErrors": true,
+        "limitOnceExecution": false,
+        "onScriptErrorRollBack": true
+    },
+    "flagRequisits": [
+        {
+            "type": "m",
+            "flag_id": 1
+        },
+        {
+            "type": "m",
+            "flag_id": 3
+        }
+    ],
+    "script": [
+        ["healmonster", "all"]
+    ],
+    "onscriptdone": []
+}

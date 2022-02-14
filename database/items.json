@@ -1,0 +1,37 @@
+{
+    "1": {
+        "name": "Selo Mágico",
+        "img": "/assets/img/items/ball.png",
+        "type": "magic_seal"
+    },
+    "3": {
+        "name": "Antídoto",
+        "img": "/assets/img/items/medicine.png",
+        "type": "health_potion"
+    },
+    "6": {
+        "name": "Super Poção",
+        "img": "/assets/img/items/potion.png",
+        "type": "health_potion"
+    },
+    "10": {
+        "name": "Super Poção de Mana",
+        "img": "/assets/img/items/potion.png",
+        "type": "mana_potion"
+    },
+    "15": {
+        "name": "Carbos",
+        "img": "/assets/img/items/potion.png",
+        "type": "vitamin"
+    },
+    "16": {
+        "name": "Skin 01",
+        "img": "/assets/img/items/potion.png",
+        "type": "skin"
+    },
+    "25": {
+        "name": "Pergaminho 25",
+        "img": "/assets/img/items/potion.png",
+        "type": "parchment"
+    }
+}

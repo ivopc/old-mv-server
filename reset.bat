@@ -1,0 +1,2 @@
+node reset.js
+pause

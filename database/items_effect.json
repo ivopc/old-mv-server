@@ -1,0 +1,98 @@
+{
+    "1": {
+        "type": "magic_seal",
+        "effect": {
+            "tame_rate": 1
+        }
+    },
+    "2": {
+        "type": "magic_seal",
+        "effect": {
+            "tame_rate": 1.7
+        }
+    },
+    "3": {
+        "type": "magic_seal",
+        "effect": {
+            "tame_rate": 3
+        }
+    },
+    "4": {
+        "type": "magic_seal",
+        "effect": {
+            "tame_rate": 0
+        }
+    },
+    "5": {
+        "type": "health_potion",
+        "effect": {
+            "heal": 20
+        }
+    },
+    "6": {
+        "type": "health_potion",
+        "effect": {
+            "heal": 50
+        }
+    },
+    "7": {
+        "type": "health_potion",
+        "effect": {
+            "heal": 200
+        }
+    },
+    "8": {
+        "type": "health_potion",
+        "effect": {
+            "heal": 99999
+        }
+    },
+    "9": {
+        "type": "mana_potion",
+        "effect": {
+            "heal": 20
+        }
+    },
+    "10": {
+        "type": "mana_potion",
+        "effect": {
+            "heal": 50
+        }
+    },
+    "11": {
+        "type": "mana_potion",
+        "effect": {
+            "heal": 99999
+        }
+    },
+    "12": {
+        "type": "vitamin",
+        "effect": {
+            "increase": "HP"
+        }
+    },
+    "13": {
+        "type": "vitamin",
+        "effect": {
+            "increase": "attack"
+        }
+    },
+    "14": {
+        "type": "vitamin",
+        "effect": {
+            "increase": "defense"
+        }
+    },
+    "15": {
+        "type": "vitamin",
+        "effect": {
+            "increase": "speed"
+        }
+    },
+    "25": {
+        "type": "parchment",
+        "effect": {
+            "learn_move": 3
+        }
+    }
+}

@@ -1,0 +1,72 @@
+#language {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    z-index: 99;
+}
+
+#movingbg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    background: url("/img/background.png") repeat;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+    height: 100%;
+    min-height: 600px;
+}
+
+#logo {
+    text-align: center;
+    user-select: none;
+    height: 270px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 15px;
+    z-index: 5;
+    position: relative;
+}
+
+#login-register {
+    margin-top: 15px;
+}
+
+h3 {
+    margin-top: 5px;
+}
+
+#nothing {
+    margin-top: 50px;
+    background: #fff;
+    min-width: 100%;
+}
+
+#features {
+    min-width: 100%;
+}
+
+.feature {
+    margin: 0 auto;
+}
+
+.feature-friends {
+    position: relative;
+    background: url("/img/zelda_wp.jpg") no-repeat center center;
+    background-size: cover;
+    height: 500px;
+    margin-top: 8px;
+}
+
+.card-friends {
+    position: absolute;
+    max-width: 25rem; 
+    background: rgba(0, 0, 0, 0.6);
+    bottom: 5px;
+    -webkit-box-shadow: -5px -6px 62px  0px rgba(255,255,255,0.69);
+    -moz-box-shadow: -5px -6px 62px  0px rgba(255,255,255,0.69);
+    box-shadow: -5px -6px 62px  0px rgba(255,255,255,0.69);
+}

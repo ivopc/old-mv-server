@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Monster Valle - Market Place :: {{ product_name }}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/mktspecific.css">
+    <link rel="shortcut icon" href="/img/favicon.ico" />
+</head>
+<body>
+    <div class="container" style="width: 332px; margin-top: 25px;"> 
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Dashboard</a></li>
+            <li class="breadcrumb-item"><a href="/marketplace">Market Place</a></li>
+            <li class="breadcrumb-item active">Produto</li>
+        </ol>
+    </div>
+    <div class="container">
+        <h1 class="p-title">{{ nickname }} está negociando {{ product_name }}.</h1>
+        <div class="card">
+            <div class="container-fliud">
+                <div class="wrapper row">
+                    <div class="preview col-md-6">
+                        <div class="preview-pic tab-content">
+                            <div class="tab-pane active" id="pic-1"><img src="https://via.placeholder.com/400x252.png?text={{ product_name }}" /></div>
+                        </div>                
+                    </div>
+                    <div class="details col-md-6">
+                        <h3 class="product-title">{{ product_name }}</h3>
+                        <div class="rating">
+                            <div class="stars">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                            </div>
+                            <span class="review-no">Overall</span>
+                        </div>
+                        <p class="product-description">{{ product_name }} é um monstro inicial e raro.</p>
+                        <h4 class="price">
+                            Preço: 
+                            <span>
+                                <img src="{{product_data.url}}">&nbsp;{{ product_data.value }}
+                            </span>
+                            <a href="#" data-toggle="tooltip" title="Valor: {{coin_value}}" onclick="return false;" class="btn btn-info btn-sm">
+                                <i class="fa fa-info"></i>
+                            </a>
+                        </h4>
+                        <div class="action">
+                            <button type="button" data-toggle="modal" data-target="#confirmbuytrade" class="add-to-cart btn btn-default" type="button">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="confirmbuytrade" tabindex="-1" role="dialog" aria-labelledby="confirmbuytrade" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Confirme</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Tem certeza que deseja comprar <b>{{ product_name }}</b> de <b>{{ nickname }}</b>?
+                    <div id="response"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Não</button>
+                    <button type="button" id="buytrade" class="btn btn-success">Sim</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+    <script type="text/javascript">
+        var $Data = {
+            product_id: {{ id }},
+            token: "{{ token }}"
+        };
+
+        $("[data-toggle='tooltip']").tooltip();
+
+        var response = document.querySelector("#response");
+        var type;
+
+        switch ({{ item_or_monster }}) {
+            case 0: {
+                type = 5;
+                break;
+            };
+            case 1: {
+                type = 2;
+                break;
+            };
+        };
+
+        function buyTrade (event) {
+
+            axios.post("/routes/marketplace", {
+                id: $Data.product_id, 
+                token: $Data.token,
+                type
+            })
+                .then(response => buyResponse(response.data));
+        };
+
+        function buyResponse (data) {
+            response.innerHTML = "";
+            var message = document.createElement("div");
+
+            console.log(data);
+
+            if (data.error) {
+                message.setAttribute("class", "alert alert-danger");
+                switch (data.error) {
+                    case 1: {
+                        message.innerHTML = "O produto já foi negociado ou a negociação está desabilitada!";   
+                        break;
+                    };
+                
+                    case 2: {
+                        message.innerHTML = "Você não tem moedas suficiente!";  
+                        break;
+                    };
+
+                    case 3: {
+                        message.innerHTML = "Você não pode negociar sua própria mercadoria!";  
+                        break;
+                    };
+                };
+            };
+
+            if (data.success) {
+                message.setAttribute("class", "alert alert-success");
+                message.innerHTML = "Negociação efetuada com sucesso!";
+                setTimeout(() => {
+                    location.href = "/marketplace";
+                }, 2501);
+            };
+
+            response.appendChild(message);
+        };
+ 
+        document.querySelector("#buytrade").addEventListener("click", buyTrade);
+    </script>
+</body>
+</html>

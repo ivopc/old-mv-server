@@ -1,0 +1,84 @@
+{
+    "1": {
+        "name": "generic_tamer1",
+        "id": 1,
+        "team": [
+            {
+                "shiny": 0,
+                "monsterpedia_id": 10,
+                "level": 1,
+                "hold_item": 0,
+                "move_0": 1,
+                "move_1": 0,
+                "move_2": 0,
+                "move_3": 0
+            },
+            {
+                "shiny": 0,
+                "monsterpedia_id": 10,
+                "level": 2,
+                "hold_item": 0,
+                "move_0": 1,
+                "move_1": 0,
+                "move_2": 0,
+                "move_3": 0
+            },
+            {
+                "shiny": 0,
+                "monsterpedia_id": 10,
+                "level": 3,
+                "hold_item": 0,
+                "move_0": 1,
+                "move_1": 0,
+                "move_2": 0,
+                "move_3": 0
+            },
+            {
+                "shiny": 0,
+                "monsterpedia_id": 10,
+                "level": 3,
+                "hold_item": 0,
+                "move_0": 1,
+                "move_1": 0,
+                "move_2": 0,
+                "move_3": 0
+            }
+        ]
+    },
+    "2": {
+        "name": "generic_tamer2",
+        "id": 2,
+        "team": [
+            {
+                "shiny": 0,
+                "monsterpedia_id": 1,
+                "level": 5,
+                "hold_item": 0,
+                "move_0": 1,
+                "move_1": 0,
+                "move_2": 0,
+                "move_3": 0
+            },
+            {
+                "shiny": 0,
+                "monsterpedia_id": 4,
+                "level": 5,
+                "hold_item": 0,
+                "move_0": 1,
+                "move_1": 0,
+                "move_2": 0,
+                "move_3": 0
+            },
+            {
+                "shiny": 0,
+                "monsterpedia_id": 7,
+                "level": 5,
+                "hold_item": 0,
+                "move_0": 1,
+                "move_1": 0,
+                "move_2": 0,
+                "move_3": 0
+            }
+        ]
+    }
+}

@@ -1,0 +1,149 @@
+{
+    "catch": {
+        "1": {
+            "id": 1,
+            "name": {
+                "br": "Selo Mágico",
+                "en": "Magic Seal"
+            },
+            "desc": {
+                "br": "Um selo para a captura de monstro selvagem. É jogado como uma bola em um monstro, confortavelmente encapsular o seu alvo.",
+                "us": "A device for catching wild Pokémon. It's thrown like a ball at a Pokémon, comfortably encapsulating its target."
+            },
+            "price": {
+                "amount": 100,
+                "type": 1
+            },
+            "effect": {
+                "catchrate": 1
+            }
+        },
+        "2": {
+            "id": 2,
+            "name": {
+                "br": "Super Selo Mágico",
+                "en": "Super Magic Seal"
+            },
+            "desc": {
+                "br": "Um bom Selo Mágico com alta performance que fornece uma taxa de domação de monstro mais elevado do que um Selo Mágico padrão.",
+                "us": "A good, high-performance Poké Ball that provides a higher Pokémon catch rate than a standard Poké Ball can."
+            },
+            "price": {
+                "amount": 500,
+                "type": 1
+            },
+            "effect": {
+                "catchrate": 1.7
+            }
+        },
+        "3": {
+            "id": 3,
+            "name": {
+                "br": "Ultra Selo Mágico",
+                "en": "Ultra Magic Seal"
+            },
+            "desc": {
+                "br": "Um ótimo Selo Mágico de ultra performance que proporciona uma maior taxa de sucesso para domar o monstro do que um Super Selo Mágico.",
+                "us": "An ultra-high performance Poké Ball that provides a higher success rate for catching Pokémon than a Great Ball."
+            },
+            "price": {
+                "amount": 1500,
+                "type": 1
+            },
+            "effect": {
+                "catchrate": 3
+            }
+        },
+        "4": {
+            "id": 4,
+            "name": {
+                "br": "Selo Mágico Mestre",
+                "en": "Master Magic Seal"
+            },
+            "desc": {
+                "br": "O melhor Selo Mágico com o nível máximo de desempenho. Com ele, você vai pegar qualquer monstro selvagem, sem falhar.",
+                "us": "The best Poké Ball with the ultimate level of performance. With it, you will catch any wild Pokémon without fail."
+            },
+            "price": {
+                "amount": 50,
+                "type": 2
+            },
+            "effect": {
+                "catchrate": true
+            }
+        }
+    },
+    "health": {
+        "1": {
+            "id": 5,
+            "name": {
+                "br": "Poção",
+                "en": "Potion"
+            },
+            "desc": {
+                "br": "Recupera 20 de HP de um monstro."
+            },
+            "price": {
+                "amount": 500,
+                "type": 1
+            },
+            "effect": {
+                "recoveryHp": 20
+            }
+        },
+        "2": {
+            "id": 6,
+            "name": {
+                "br": "Super Poção",
+                "en": "Super Potion"
+            },
+            "desc": {
+                "br": "Recupera 50 de HP de um monstro."
+            },
+            "price": {
+                "amount": 1000,
+                "type": 1
+            },
+            "effect": {
+                "recoveryHp": 50
+            }
+        },
+        "3": {
+            "id": 7,
+            "name": {
+                "br": "Ultra Poção",
+                "en": "Ultra Potion"
+            },
+            "desc": {
+                "br": "Recupera 200 de HP de um monstro."
+            },
+            "price": {
+                "amount": 3500,
+                "type": 1
+            },
+            "effect": {
+                "recoveryHp": 200
+            }
+        },
+        "4": {
+            "id": 8,
+            "name": {
+                "br": "Mega Poção",
+                "en": "Mega Potion"
+            },
+            "desc": {
+                "br": "Recupera todo o HP de um monstro."
+            },
+            "price": {
+                "amount": 4000,
+                "type": 1
+            },
+            "effect": {
+                "recoveryHp": true
+            }
+        }
+    },
+    "stone": {},
+    "special": {},
+    "vip": {}
+}

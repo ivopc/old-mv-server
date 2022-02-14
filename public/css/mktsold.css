@@ -1,0 +1,21 @@
+.m-top {
+    margin-top: 50px; 
+}
+
+h2 {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.center {
+    text-align: center;
+}
+
+.max {
+    max-width: 32px;
+    max-height: 24px;
+}
+
+.scnd-input-sell {
+    margin-top: 15px;
+}

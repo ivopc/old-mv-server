@@ -1,0 +1,8654 @@
+{
+  "1": {
+    "specie": "Bulbasaur",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 1,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 64
+  },
+  "2": {
+    "specie": "Ivysaur",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 1,
+      "spd": 1,
+      "spe": 0
+    },
+    "expBase": 142
+  },
+  "3": {
+    "specie": "Venusaur",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 2,
+      "spd": 1,
+      "spe": 0
+    },
+    "expBase": 236
+  },
+  "4": {
+    "specie": "Charmander",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "expBase": 62
+  },
+  "5": {
+    "specie": "Charmeleon",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 1,
+      "spd": 0,
+      "spe": 1
+    },
+    "expBase": 142
+  },
+  "6": {
+    "specie": "Charizard",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 3,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 240
+  },
+  "7": {
+    "specie": "Squirtle",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 1,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 63
+  },
+  "8": {
+    "specie": "Wartortle",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 1,
+      "spa": 0,
+      "spd": 1,
+      "spe": 0
+    },
+    "expBase": 142
+  },
+  "9": {
+    "specie": "Blastoise",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 3,
+      "spe": 0
+    },
+    "expBase": 239
+  },
+  "10": {
+    "specie": "Caterpie",
+    "ev": {
+      "hp": 1,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 39
+  },
+  "11": {
+    "specie": "Metapod",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 2,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 72
+  },
+  "12": {
+    "specie": "Butterfree",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 2,
+      "spd": 1,
+      "spe": 0
+    },
+    "expBase": 173
+  },
+  "13": {
+    "specie": "Weedle",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "expBase": 39
+  },
+  "14": {
+    "specie": "Kakuna",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 2,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 72
+  },
+  "15": {
+    "specie": "Beedrill",
+    "ev": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 1,
+      "spe": 0
+    },
+    "expBase": 173
+  },
+  "16": {
+    "specie": "Pidgey",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "expBase": 50
+  },
+  "17": {
+    "specie": "Pidgeotto",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 2
+    },
+    "expBase": 122
+  },
+  "18": {
+    "specie": "Pidgeot",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 3
+    },
+    "expBase": 211
+  },
+  "19": {
+    "specie": "Rattata",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "expBase": 51
+  },
+  "20": {
+    "specie": "Raticate",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 2
+    },
+    "expBase": 145
+  },
+  "21": {
+    "specie": "Spearow",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "expBase": 52
+  },
+  "22": {
+    "specie": "Fearow",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 2
+    },
+    "expBase": 155
+  },
+  "23": {
+    "specie": "Ekans",
+    "ev": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 58
+  },
+  "24": {
+    "specie": "Arbok",
+    "ev": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 153
+  },
+  "25": {
+    "specie": "Pikachu",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 2
+    },
+    "expBase": 105
+  },
+  "26": {
+    "specie": "Raichu",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 3
+    },
+    "expBase": 214
+  },
+  "27": {
+    "specie": "Sandshrew",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 1,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 60
+  },
+  "28": {
+    "specie": "Sandslash",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 2,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 158
+  },
+  "29": {
+    "specie": "Nidoran♀",
+    "ev": {
+      "hp": 1,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 55
+  },
+  "30": {
+    "specie": "Nidorina",
+    "ev": {
+      "hp": 2,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 128
+  },
+  "31": {
+    "specie": "Nidoqueen",
+    "ev": {
+      "hp": 3,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 223
+  },
+  "32": {
+    "specie": "Nidoran♂",
+    "ev": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 55
+  },
+  "33": {
+    "specie": "Nidorino",
+    "ev": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 128
+  },
+  "34": {
+    "specie": "Nidoking",
+    "ev": {
+      "hp": 0,
+      "atk": 3,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 223
+  },
+  "35": {
+    "specie": "Clefairy",
+    "ev": {
+      "hp": 2,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 113
+  },
+  "36": {
+    "specie": "Clefable",
+    "ev": {
+      "hp": 3,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 213
+  },
+  "37": {
+    "specie": "Vulpix",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "expBase": 60
+  },
+  "38": {
+    "specie": "Ninetales",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 1,
+      "spe": 1
+    },
+    "expBase": 177
+  },
+  "39": {
+    "specie": "Jigglypuff",
+    "ev": {
+      "hp": 2,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 95
+  },
+  "40": {
+    "specie": "Wigglytuff",
+    "ev": {
+      "hp": 3,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 191
+  },
+  "41": {
+    "specie": "Zubat",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "expBase": 49
+  },
+  "42": {
+    "specie": "Golbat",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 2
+    },
+    "expBase": 159
+  },
+  "43": {
+    "specie": "Oddish",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 1,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 64
+  },
+  "44": {
+    "specie": "Gloom",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 2,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 138
+  },
+  "45": {
+    "specie": "Vileplume",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 3,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 216
+  },
+  "46": {
+    "specie": "Paras",
+    "ev": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 57
+  },
+  "47": {
+    "specie": "Parasect",
+    "ev": {
+      "hp": 0,
+      "atk": 2,
+      "def": 1,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 142
+  },
+  "48": {
+    "specie": "Venonat",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 1,
+      "spe": 0
+    },
+    "expBase": 61
+  },
+  "49": {
+    "specie": "Venomoth",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 1,
+      "spd": 0,
+      "spe": 1
+    },
+    "expBase": 158
+  },
+  "50": {
+    "specie": "Diglett",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "expBase": 53
+  },
+  "51": {
+    "specie": "Dugtrio",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 2
+    },
+    "expBase": 142
+  },
+  "52": {
+    "specie": "Meowth",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "expBase": 58
+  },
+  "53": {
+    "specie": "Persian",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 2
+    },
+    "expBase": 154
+  },
+  "54": {
+    "specie": "Psyduck",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 1,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 64
+  },
+  "55": {
+    "specie": "Golduck",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 2,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 175
+  },
+  "56": {
+    "specie": "Mankey",
+    "ev": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 61
+  },
+  "57": {
+    "specie": "Primeape",
+    "ev": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 159
+  },
+  "58": {
+    "specie": "Growlithe",
+    "ev": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 70
+  },
+  "59": {
+    "specie": "Arcanine",
+    "ev": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 194
+  },
+  "60": {
+    "specie": "Poliwag",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "expBase": 60
+  },
+  "61": {
+    "specie": "Poliwhirl",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 2
+    },
+    "expBase": 135
+  },
+  "62": {
+    "specie": "Poliwrath",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 3,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 225
+  },
+  "63": {
+    "specie": "Abra",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 1,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 62
+  },
+  "64": {
+    "specie": "Kadabra",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 2,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 140
+  },
+  "65": {
+    "specie": "Alakazam",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 3,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 221
+  },
+  "66": {
+    "specie": "Machop",
+    "ev": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 61
+  },
+  "67": {
+    "specie": "Machoke",
+    "ev": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 142
+  },
+  "68": {
+    "specie": "Machamp",
+    "ev": {
+      "hp": 0,
+      "atk": 3,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 227
+  },
+  "69": {
+    "specie": "Bellsprout",
+    "ev": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 60
+  },
+  "70": {
+    "specie": "Weepinbell",
+    "ev": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 137
+  },
+  "71": {
+    "specie": "Victreebel",
+    "ev": {
+      "hp": 0,
+      "atk": 3,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 216
+  },
+  "72": {
+    "specie": "Tentacool",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 1,
+      "spe": 0
+    },
+    "expBase": 67
+  },
+  "73": {
+    "specie": "Tentacruel",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 2,
+      "spe": 0
+    },
+    "expBase": 180
+  },
+  "74": {
+    "specie": "Geodude",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 1,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 60
+  },
+  "75": {
+    "specie": "Graveler",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 2,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 137
+  },
+  "76": {
+    "specie": "Golem",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 3,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 218
+  },
+  "77": {
+    "specie": "Ponyta",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "expBase": 82
+  },
+  "78": {
+    "specie": "Rapidash",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 2
+    },
+    "expBase": 175
+  },
+  "79": {
+    "specie": "Slowpoke",
+    "ev": {
+      "hp": 1,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 63
+  },
+  "80": {
+    "specie": "Slowbro",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 2,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 172
+  },
+  "81": {
+    "specie": "Magnemite",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 1,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 65
+  },
+  "82": {
+    "specie": "Magneton",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 2,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 163
+  },
+  "83": {
+    "specie": "Farfetch'd",
+    "ev": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 123
+  },
+  "84": {
+    "specie": "Doduo",
+    "ev": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 62
+  },
+  "85": {
+    "specie": "Dodrio",
+    "ev": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 161
+  },
+  "86": {
+    "specie": "Seel",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 1,
+      "spe": 0
+    },
+    "expBase": 65
+  },
+  "87": {
+    "specie": "Dewgong",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 2,
+      "spe": 0
+    },
+    "expBase": 166
+  },
+  "88": {
+    "specie": "Grimer",
+    "ev": {
+      "hp": 1,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 65
+  },
+  "89": {
+    "specie": "Muk",
+    "ev": {
+      "hp": 1,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 175
+  },
+  "90": {
+    "specie": "Shellder",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 1,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 61
+  },
+  "91": {
+    "specie": "Cloyster",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 2,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 184
+  },
+  "92": {
+    "specie": "Gastly",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 1,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 62
+  },
+  "93": {
+    "specie": "Haunter",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 2,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 142
+  },
+  "94": {
+    "specie": "Gengar",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 3,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 225
+  },
+  "95": {
+    "specie": "Onix",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 1,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 77
+  },
+  "96": {
+    "specie": "Drowzee",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 1,
+      "spe": 0
+    },
+    "expBase": 66
+  },
+  "97": {
+    "specie": "Hypno",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 2,
+      "spe": 0
+    },
+    "expBase": 169
+  },
+  "98": {
+    "specie": "Krabby",
+    "ev": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 65
+  },
+  "99": {
+    "specie": "Kingler",
+    "ev": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 166
+  },
+  "100": {
+    "specie": "Voltorb",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "expBase": 66
+  },
+  "101": {
+    "specie": "Electrode",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 2
+    },
+    "expBase": 168
+  },
+  "102": {
+    "specie": "Exeggcute",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 1,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 65
+  },
+  "103": {
+    "specie": "Exeggutor",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 2,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 182
+  },
+  "104": {
+    "specie": "Cubone",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 1,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 64
+  },
+  "105": {
+    "specie": "Marowak",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 2,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 149
+  },
+  "106": {
+    "specie": "Hitmonlee",
+    "ev": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 159
+  },
+  "107": {
+    "specie": "Hitmonchan",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 2,
+      "spe": 0
+    },
+    "expBase": 159
+  },
+  "108": {
+    "specie": "Lickitung",
+    "ev": {
+      "hp": 2,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 77
+  },
+  "109": {
+    "specie": "Koffing",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 1,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 68
+  },
+  "110": {
+    "specie": "Weezing",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 2,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 172
+  },
+  "111": {
+    "specie": "Rhyhorn",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 1,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 69
+  },
+  "112": {
+    "specie": "Rhydon",
+    "ev": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 170
+  },
+  "113": {
+    "specie": "Chansey",
+    "ev": {
+      "hp": 2,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 395
+  },
+  "114": {
+    "specie": "Tangela",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 1,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 87
+  },
+  "115": {
+    "specie": "Kangaskhan",
+    "ev": {
+      "hp": 2,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 172
+  },
+  "116": {
+    "specie": "Horsea",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 1,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 59
+  },
+  "117": {
+    "specie": "Seadra",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 1,
+      "spa": 1,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 154
+  },
+  "118": {
+    "specie": "Goldeen",
+    "ev": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 64
+  },
+  "119": {
+    "specie": "Seaking",
+    "ev": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 158
+  },
+  "120": {
+    "specie": "Staryu",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "expBase": 68
+  },
+  "121": {
+    "specie": "Starmie",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 2
+    },
+    "expBase": 182
+  },
+  "122": {
+    "specie": "Mr. Mime",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 2,
+      "spe": 0
+    },
+    "expBase": 161
+  },
+  "123": {
+    "specie": "Scyther",
+    "ev": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 100
+  },
+  "124": {
+    "specie": "Jynx",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 2,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 159
+  },
+  "125": {
+    "specie": "Electabuzz",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 2
+    },
+    "expBase": 172
+  },
+  "126": {
+    "specie": "Magmar",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 2,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 173
+  },
+  "127": {
+    "specie": "Pinsir",
+    "ev": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 175
+  },
+  "128": {
+    "specie": "Tauros",
+    "ev": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "expBase": 172
+  },
+  "129": {
+    "specie": "Magikarp",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "expBase": 40
+  },
+  "130": {
+    "specie": "Gyarados",
+    "ev": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 189
+  },
+  "131": {
+    "specie": "Lapras",
+    "ev": {
+      "hp": 2,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 187
+  },
+  "132": {
+    "specie": "Ditto",
+    "ev": {
+      "hp": 1,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 101
+  },
+  "133": {
+    "specie": "Eevee",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 1,
+      "spe": 0
+    },
+    "expBase": 65
+  },
+  "134": {
+    "specie": "Vaporeon",
+    "ev": {
+      "hp": 2,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 184
+  },
+  "135": {
+    "specie": "Jolteon",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 2
+    },
+    "expBase": 184
+  },
+  "136": {
+    "specie": "Flareon",
+    "ev": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 184
+  },
+  "137": {
+    "specie": "Porygon",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 1,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 79
+  },
+  "138": {
+    "specie": "Omanyte",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 1,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 71
+  },
+  "139": {
+    "specie": "Omastar",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 2,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 173
+  },
+  "140": {
+    "specie": "Kabuto",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 1,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 71
+  },
+  "141": {
+    "specie": "Kabutops",
+    "ev": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 173
+  },
+  "142": {
+    "specie": "Aerodactyl",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 2
+    },
+    "expBase": 180
+  },
+  "143": {
+    "specie": "Snorlax",
+    "ev": {
+      "hp": 2,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 189
+  },
+  "144": {
+    "specie": "Articuno",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 3,
+      "spe": 0
+    },
+    "expBase": 261
+  },
+  "145": {
+    "specie": "Zapdos",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 3,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 261
+  },
+  "146": {
+    "specie": "Moltres",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 3,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 261
+  },
+  "147": {
+    "specie": "Dratini",
+    "ev": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 60
+  },
+  "148": {
+    "specie": "Dragonair",
+    "ev": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 147
+  },
+  "149": {
+    "specie": "Dragonite",
+    "ev": {
+      "hp": 0,
+      "atk": 3,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 270
+  },
+  "150": {
+    "specie": "Mewtwo",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 3,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 306
+  },
+  "151": {
+    "specie": "Mew",
+    "ev": {
+      "hp": 3,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 270
+  },
+  "152": {
+    "specie": "Chikorita",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 1,
+      "spe": 0
+    },
+    "expBase": 64
+  },
+  "153": {
+    "specie": "Bayleef",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 1,
+      "spa": 0,
+      "spd": 1,
+      "spe": 0
+    },
+    "expBase": 142
+  },
+  "154": {
+    "specie": "Meganium",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 1,
+      "spa": 0,
+      "spd": 2,
+      "spe": 0
+    },
+    "expBase": 236
+  },
+  "155": {
+    "specie": "Cyndaquil",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "expBase": 62
+  },
+  "156": {
+    "specie": "Quilava",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 1,
+      "spd": 0,
+      "spe": 1
+    },
+    "expBase": 142
+  },
+  "157": {
+    "specie": "Typhlosion",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 3,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 240
+  },
+  "158": {
+    "specie": "Totodile",
+    "ev": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 63
+  },
+  "159": {
+    "specie": "Croconaw",
+    "ev": {
+      "hp": 0,
+      "atk": 1,
+      "def": 1,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 142
+  },
+  "160": {
+    "specie": "Feraligatr",
+    "ev": {
+      "hp": 0,
+      "atk": 2,
+      "def": 1,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 239
+  },
+  "161": {
+    "specie": "Sentret",
+    "ev": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 43
+  },
+  "162": {
+    "specie": "Furret",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 2
+    },
+    "expBase": 145
+  },
+  "163": {
+    "specie": "Hoothoot",
+    "ev": {
+      "hp": 1,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 52
+  },
+  "164": {
+    "specie": "Noctowl",
+    "ev": {
+      "hp": 2,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 155
+  },
+  "165": {
+    "specie": "Ledyba",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 1,
+      "spe": 0
+    },
+    "expBase": 53
+  },
+  "166": {
+    "specie": "Ledian",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 2,
+      "spe": 0
+    },
+    "expBase": 137
+  },
+  "167": {
+    "specie": "Spinarak",
+    "ev": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 50
+  },
+  "168": {
+    "specie": "Ariados",
+    "ev": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 137
+  },
+  "169": {
+    "specie": "Crobat",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 3
+    },
+    "expBase": 241
+  },
+  "170": {
+    "specie": "Chinchou",
+    "ev": {
+      "hp": 1,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 66
+  },
+  "171": {
+    "specie": "Lanturn",
+    "ev": {
+      "hp": 2,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 161
+  },
+  "172": {
+    "specie": "Pichu",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "expBase": 41
+  },
+  "173": {
+    "specie": "Cleffa",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 1,
+      "spe": 0
+    },
+    "expBase": 44
+  },
+  "174": {
+    "specie": "Igglybuff",
+    "ev": {
+      "hp": 1,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 42
+  },
+  "175": {
+    "specie": "Togepi",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 1,
+      "spe": 0
+    },
+    "expBase": 49
+  },
+  "176": {
+    "specie": "Togetic",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 2,
+      "spe": 0
+    },
+    "expBase": 142
+  },
+  "177": {
+    "specie": "Natu",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 1,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 64
+  },
+  "178": {
+    "specie": "Xatu",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 1,
+      "spd": 0,
+      "spe": 1
+    },
+    "expBase": 165
+  },
+  "179": {
+    "specie": "Mareep",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 1,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 56
+  },
+  "180": {
+    "specie": "Flaaffy",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 2,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 128
+  },
+  "181": {
+    "specie": "Ampharos",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 3,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 225
+  },
+  "182": {
+    "specie": "Bellossom",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 3,
+      "spe": 0
+    },
+    "expBase": 216
+  },
+  "183": {
+    "specie": "Marill",
+    "ev": {
+      "hp": 2,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 88
+  },
+  "184": {
+    "specie": "Azumarill",
+    "ev": {
+      "hp": 3,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 185
+  },
+  "185": {
+    "specie": "Sudowoodo",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 2,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 144
+  },
+  "186": {
+    "specie": "Politoed",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 3,
+      "spe": 0
+    },
+    "expBase": 225
+  },
+  "187": {
+    "specie": "Hoppip",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 1,
+      "spe": 0
+    },
+    "expBase": 50
+  },
+  "188": {
+    "specie": "Skiploom",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 2
+    },
+    "expBase": 119
+  },
+  "189": {
+    "specie": "Jumpluff",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 3
+    },
+    "expBase": 203
+  },
+  "190": {
+    "specie": "Aipom",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "expBase": 72
+  },
+  "191": {
+    "specie": "Sunkern",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 1,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 36
+  },
+  "192": {
+    "specie": "Sunflora",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 2,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 149
+  },
+  "193": {
+    "specie": "Yanma",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "expBase": 78
+  },
+  "194": {
+    "specie": "Wooper",
+    "ev": {
+      "hp": 1,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 42
+  },
+  "195": {
+    "specie": "Quagsire",
+    "ev": {
+      "hp": 2,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 151
+  },
+  "196": {
+    "specie": "Espeon",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 2,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 184
+  },
+  "197": {
+    "specie": "Umbreon",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 2,
+      "spe": 0
+    },
+    "expBase": 184
+  },
+  "198": {
+    "specie": "Murkrow",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "expBase": 81
+  },
+  "199": {
+    "specie": "Slowking",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 3,
+      "spe": 0
+    },
+    "expBase": 172
+  },
+  "200": {
+    "specie": "Misdreavus",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 1,
+      "spe": 0
+    },
+    "expBase": 87
+  },
+  "201": {
+    "specie": "Unown",
+    "ev": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 1,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 118
+  },
+  "202": {
+    "specie": "Wobbuffet",
+    "ev": {
+      "hp": 2,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 142
+  },
+  "203": {
+    "specie": "Girafarig",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 2,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 159
+  },
+  "204": {
+    "specie": "Pineco",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 1,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 58
+  },
+  "205": {
+    "specie": "Forretress",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 2,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 163
+  },
+  "206": {
+    "specie": "Dunsparce",
+    "ev": {
+      "hp": 1,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 145
+  },
+  "207": {
+    "specie": "Gligar",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 1,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 86
+  },
+  "208": {
+    "specie": "Steelix",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 2,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 179
+  },
+  "209": {
+    "specie": "Snubbull",
+    "ev": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 60
+  },
+  "210": {
+    "specie": "Granbull",
+    "ev": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 158
+  },
+  "211": {
+    "specie": "Qwilfish",
+    "ev": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 86
+  },
+  "212": {
+    "specie": "Scizor",
+    "ev": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 175
+  },
+  "213": {
+    "specie": "Shuckle",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 1,
+      "spa": 0,
+      "spd": 1,
+      "spe": 0
+    },
+    "expBase": 177
+  },
+  "214": {
+    "specie": "Heracross",
+    "ev": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 175
+  },
+  "215": {
+    "specie": "Sneasel",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "expBase": 86
+  },
+  "216": {
+    "specie": "Teddiursa",
+    "ev": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 66
+  },
+  "217": {
+    "specie": "Ursaring",
+    "ev": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 175
+  },
+  "218": {
+    "specie": "Slugma",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 1,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 50
+  },
+  "219": {
+    "specie": "Magcargo",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 2,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 144
+  },
+  "220": {
+    "specie": "Swinub",
+    "ev": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 50
+  },
+  "221": {
+    "specie": "Piloswine",
+    "ev": {
+      "hp": 1,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 158
+  },
+  "222": {
+    "specie": "Corsola",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 1,
+      "spa": 0,
+      "spd": 1,
+      "spe": 0
+    },
+    "expBase": 133
+  },
+  "223": {
+    "specie": "Remoraid",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 1,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 60
+  },
+  "224": {
+    "specie": "Octillery",
+    "ev": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 1,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 168
+  },
+  "225": {
+    "specie": "Delibird",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "expBase": 116
+  },
+  "226": {
+    "specie": "Mantine",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 2,
+      "spe": 0
+    },
+    "expBase": 163
+  },
+  "227": {
+    "specie": "Skarmory",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 2,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 163
+  },
+  "228": {
+    "specie": "Houndour",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 1,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 66
+  },
+  "229": {
+    "specie": "Houndoom",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 2,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 175
+  },
+  "230": {
+    "specie": "Kingdra",
+    "ev": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 1,
+      "spd": 1,
+      "spe": 0
+    },
+    "expBase": 243
+  },
+  "231": {
+    "specie": "Phanpy",
+    "ev": {
+      "hp": 1,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 66
+  },
+  "232": {
+    "specie": "Donphan",
+    "ev": {
+      "hp": 0,
+      "atk": 1,
+      "def": 1,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 175
+  },
+  "233": {
+    "specie": "Porygon2",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 2,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 180
+  },
+  "234": {
+    "specie": "Stantler",
+    "ev": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 163
+  },
+  "235": {
+    "specie": "Smeargle",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "expBase": 88
+  },
+  "236": {
+    "specie": "Tyrogue",
+    "ev": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 42
+  },
+  "237": {
+    "specie": "Hitmontop",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 2,
+      "spe": 0
+    },
+    "expBase": 159
+  },
+  "238": {
+    "specie": "Smoochum",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 1,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 61
+  },
+  "239": {
+    "specie": "Elekid",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "expBase": 72
+  },
+  "240": {
+    "specie": "Magby",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "expBase": 73
+  },
+  "241": {
+    "specie": "Miltank",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 2,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 172
+  },
+  "242": {
+    "specie": "Blissey",
+    "ev": {
+      "hp": 3,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 608
+  },
+  "243": {
+    "specie": "Raikou",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 1,
+      "spd": 0,
+      "spe": 2
+    },
+    "expBase": 261
+  },
+  "244": {
+    "specie": "Entei",
+    "ev": {
+      "hp": 1,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 261
+  },
+  "245": {
+    "specie": "Suicune",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 1,
+      "spa": 0,
+      "spd": 2,
+      "spe": 0
+    },
+    "expBase": 261
+  },
+  "246": {
+    "specie": "Larvitar",
+    "ev": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 60
+  },
+  "247": {
+    "specie": "Pupitar",
+    "ev": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 144
+  },
+  "248": {
+    "specie": "Tyranitar",
+    "ev": {
+      "hp": 0,
+      "atk": 3,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 270
+  },
+  "249": {
+    "specie": "Lugia",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 3,
+      "spe": 0
+    },
+    "expBase": 306
+  },
+  "250": {
+    "specie": "Ho-Oh",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 3,
+      "spe": 0
+    },
+    "expBase": 306
+  },
+  "251": {
+    "specie": "Celebi",
+    "ev": {
+      "hp": 3,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 270
+  },
+  "252": {
+    "specie": "Treecko",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "expBase": 62
+  },
+  "253": {
+    "specie": "Grovyle",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 2
+    },
+    "expBase": 142
+  },
+  "254": {
+    "specie": "Sceptile",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 3
+    },
+    "expBase": 239
+  },
+  "255": {
+    "specie": "Torchic",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 1,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 62
+  },
+  "256": {
+    "specie": "Combusken",
+    "ev": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 1,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 142
+  },
+  "257": {
+    "specie": "Blaziken",
+    "ev": {
+      "hp": 0,
+      "atk": 3,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 239
+  },
+  "258": {
+    "specie": "Mudkip",
+    "ev": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 62
+  },
+  "259": {
+    "specie": "Marshtomp",
+    "ev": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 142
+  },
+  "260": {
+    "specie": "Swampert",
+    "ev": {
+      "hp": 0,
+      "atk": 3,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 241
+  },
+  "261": {
+    "specie": "Poochyena",
+    "ev": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 44
+  },
+  "262": {
+    "specie": "Mightyena",
+    "ev": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 147
+  },
+  "263": {
+    "specie": "Zigzagoon",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "expBase": 48
+  },
+  "264": {
+    "specie": "Linoone",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 2
+    },
+    "expBase": 147
+  },
+  "265": {
+    "specie": "Wurmple",
+    "ev": {
+      "hp": 1,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 39
+  },
+  "266": {
+    "specie": "Silcoon",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 2,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 72
+  },
+  "267": {
+    "specie": "Beautifly",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 3,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 173
+  },
+  "268": {
+    "specie": "Cascoon",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 2,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 41
+  },
+  "269": {
+    "specie": "Dustox",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 3,
+      "spe": 0
+    },
+    "expBase": 135
+  },
+  "270": {
+    "specie": "Lotad",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 1,
+      "spe": 0
+    },
+    "expBase": 44
+  },
+  "271": {
+    "specie": "Lombre",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 2,
+      "spe": 0
+    },
+    "expBase": 119
+  },
+  "272": {
+    "specie": "Ludicolo",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 3,
+      "spe": 0
+    },
+    "expBase": 216
+  },
+  "273": {
+    "specie": "Seedot",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 1,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 44
+  },
+  "274": {
+    "specie": "Nuzleaf",
+    "ev": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 119
+  },
+  "275": {
+    "specie": "Shiftry",
+    "ev": {
+      "hp": 0,
+      "atk": 3,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 216
+  },
+  "276": {
+    "specie": "Taillow",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "expBase": 54
+  },
+  "277": {
+    "specie": "Swellow",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 2
+    },
+    "expBase": 151
+  },
+  "278": {
+    "specie": "Wingull",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "expBase": 54
+  },
+  "279": {
+    "specie": "Pelipper",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 2,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 151
+  },
+  "280": {
+    "specie": "Ralts",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 1,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 40
+  },
+  "281": {
+    "specie": "Kirlia",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 2,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 97
+  },
+  "282": {
+    "specie": "Gardevoir",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 3,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 233
+  },
+  "283": {
+    "specie": "Surskit",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "expBase": 54
+  },
+  "284": {
+    "specie": "Masquerain",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 1,
+      "spd": 1,
+      "spe": 0
+    },
+    "expBase": 145
+  },
+  "285": {
+    "specie": "Shroomish",
+    "ev": {
+      "hp": 1,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 59
+  },
+  "286": {
+    "specie": "Breloom",
+    "ev": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 161
+  },
+  "287": {
+    "specie": "Slakoth",
+    "ev": {
+      "hp": 1,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 56
+  },
+  "288": {
+    "specie": "Vigoroth",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 2
+    },
+    "expBase": 154
+  },
+  "289": {
+    "specie": "Slaking",
+    "ev": {
+      "hp": 3,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 252
+  },
+  "290": {
+    "specie": "Nincada",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 1,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 53
+  },
+  "291": {
+    "specie": "Ninjask",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 2
+    },
+    "expBase": 160
+  },
+  "292": {
+    "specie": "Shedinja",
+    "ev": {
+      "hp": 2,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 83
+  },
+  "293": {
+    "specie": "Whismur",
+    "ev": {
+      "hp": 1,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 48
+  },
+  "294": {
+    "specie": "Loudred",
+    "ev": {
+      "hp": 2,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 126
+  },
+  "295": {
+    "specie": "Exploud",
+    "ev": {
+      "hp": 3,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 216
+  },
+  "296": {
+    "specie": "Makuhita",
+    "ev": {
+      "hp": 1,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 47
+  },
+  "297": {
+    "specie": "Hariyama",
+    "ev": {
+      "hp": 2,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 166
+  },
+  "298": {
+    "specie": "Azurill",
+    "ev": {
+      "hp": 1,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 38
+  },
+  "299": {
+    "specie": "Nosepass",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 1,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 75
+  },
+  "300": {
+    "specie": "Skitty",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "expBase": 52
+  },
+  "301": {
+    "specie": "Delcatty",
+    "ev": {
+      "hp": 1,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "expBase": 133
+  },
+  "302": {
+    "specie": "Sableye",
+    "ev": {
+      "hp": 0,
+      "atk": 1,
+      "def": 1,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 133
+  },
+  "303": {
+    "specie": "Mawile",
+    "ev": {
+      "hp": 0,
+      "atk": 1,
+      "def": 1,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 133
+  },
+  "304": {
+    "specie": "Aron",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 1,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 66
+  },
+  "305": {
+    "specie": "Lairon",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 2,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 151
+  },
+  "306": {
+    "specie": "Aggron",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 3,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 239
+  },
+  "307": {
+    "specie": "Meditite",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "expBase": 56
+  },
+  "308": {
+    "specie": "Medicham",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 2
+    },
+    "expBase": 144
+  },
+  "309": {
+    "specie": "Electrike",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "expBase": 59
+  },
+  "310": {
+    "specie": "Manectric",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 2
+    },
+    "expBase": 166
+  },
+  "311": {
+    "specie": "Plusle",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "expBase": 142
+  },
+  "312": {
+    "specie": "Minun",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "expBase": 142
+  },
+  "313": {
+    "specie": "Volbeat",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "expBase": 140
+  },
+  "314": {
+    "specie": "Illumise",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "expBase": 140
+  },
+  "315": {
+    "specie": "Roselia",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 2,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 140
+  },
+  "316": {
+    "specie": "Gulpin",
+    "ev": {
+      "hp": 1,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 60
+  },
+  "317": {
+    "specie": "Swalot",
+    "ev": {
+      "hp": 2,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 163
+  },
+  "318": {
+    "specie": "Carvanha",
+    "ev": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 61
+  },
+  "319": {
+    "specie": "Sharpedo",
+    "ev": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 161
+  },
+  "320": {
+    "specie": "Wailmer",
+    "ev": {
+      "hp": 1,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 80
+  },
+  "321": {
+    "specie": "Wailord",
+    "ev": {
+      "hp": 2,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 175
+  },
+  "322": {
+    "specie": "Numel",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 1,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 61
+  },
+  "323": {
+    "specie": "Camerupt",
+    "ev": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 1,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 161
+  },
+  "324": {
+    "specie": "Torkoal",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 2,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 165
+  },
+  "325": {
+    "specie": "Spoink",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 1,
+      "spe": 0
+    },
+    "expBase": 66
+  },
+  "326": {
+    "specie": "Grumpig",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 2,
+      "spe": 0
+    },
+    "expBase": 165
+  },
+  "327": {
+    "specie": "Spinda",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 1,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 126
+  },
+  "328": {
+    "specie": "Trapinch",
+    "ev": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 58
+  },
+  "329": {
+    "specie": "Vibrava",
+    "ev": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "expBase": 119
+  },
+  "330": {
+    "specie": "Flygon",
+    "ev": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 2
+    },
+    "expBase": 234
+  },
+  "331": {
+    "specie": "Cacnea",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 1,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 67
+  },
+  "332": {
+    "specie": "Cacturne",
+    "ev": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 1,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 166
+  },
+  "333": {
+    "specie": "Swablu",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 1,
+      "spe": 0
+    },
+    "expBase": 62
+  },
+  "334": {
+    "specie": "Altaria",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 2,
+      "spe": 0
+    },
+    "expBase": 172
+  },
+  "335": {
+    "specie": "Zangoose",
+    "ev": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 160
+  },
+  "336": {
+    "specie": "Seviper",
+    "ev": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 1,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 160
+  },
+  "337": {
+    "specie": "Lunatone",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 2,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 154
+  },
+  "338": {
+    "specie": "Solrock",
+    "ev": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 154
+  },
+  "339": {
+    "specie": "Barboach",
+    "ev": {
+      "hp": 1,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 58
+  },
+  "340": {
+    "specie": "Whiscash",
+    "ev": {
+      "hp": 2,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 164
+  },
+  "341": {
+    "specie": "Corphish",
+    "ev": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 62
+  },
+  "342": {
+    "specie": "Crawdaunt",
+    "ev": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 164
+  },
+  "343": {
+    "specie": "Baltoy",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 1,
+      "spe": 0
+    },
+    "expBase": 60
+  },
+  "344": {
+    "specie": "Claydol",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 2,
+      "spe": 0
+    },
+    "expBase": 175
+  },
+  "345": {
+    "specie": "Lileep",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 1,
+      "spe": 0
+    },
+    "expBase": 71
+  },
+  "346": {
+    "specie": "Cradily",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 2,
+      "spe": 0
+    },
+    "expBase": 173
+  },
+  "347": {
+    "specie": "Anorith",
+    "ev": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 71
+  },
+  "348": {
+    "specie": "Armaldo",
+    "ev": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 173
+  },
+  "349": {
+    "specie": "Feebas",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "expBase": 40
+  },
+  "350": {
+    "specie": "Milotic",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 2,
+      "spe": 0
+    },
+    "expBase": 189
+  },
+  "351": {
+    "specie": "Castform",
+    "ev": {
+      "hp": 1,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 147
+  },
+  "352": {
+    "specie": "Kecleon",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 1,
+      "spe": 0
+    },
+    "expBase": 154
+  },
+  "353": {
+    "specie": "Shuppet",
+    "ev": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 59
+  },
+  "354": {
+    "specie": "Banette",
+    "ev": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 159
+  },
+  "355": {
+    "specie": "Duskull",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 1,
+      "spe": 0
+    },
+    "expBase": 59
+  },
+  "356": {
+    "specie": "Dusclops",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 1,
+      "spa": 0,
+      "spd": 1,
+      "spe": 0
+    },
+    "expBase": 159
+  },
+  "357": {
+    "specie": "Tropius",
+    "ev": {
+      "hp": 2,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 161
+  },
+  "358": {
+    "specie": "Chimecho",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 1,
+      "spd": 1,
+      "spe": 0
+    },
+    "expBase": 149
+  },
+  "359": {
+    "specie": "Absol",
+    "ev": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 163
+  },
+  "360": {
+    "specie": "Wynaut",
+    "ev": {
+      "hp": 1,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 52
+  },
+  "361": {
+    "specie": "Snorunt",
+    "ev": {
+      "hp": 1,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 60
+  },
+  "362": {
+    "specie": "Glalie",
+    "ev": {
+      "hp": 2,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 168
+  },
+  "363": {
+    "specie": "Spheal",
+    "ev": {
+      "hp": 1,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 58
+  },
+  "364": {
+    "specie": "Sealeo",
+    "ev": {
+      "hp": 2,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 144
+  },
+  "365": {
+    "specie": "Walrein",
+    "ev": {
+      "hp": 3,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 239
+  },
+  "366": {
+    "specie": "Clamperl",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 1,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 69
+  },
+  "367": {
+    "specie": "Huntail",
+    "ev": {
+      "hp": 0,
+      "atk": 1,
+      "def": 1,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 170
+  },
+  "368": {
+    "specie": "Gorebyss",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 2,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 170
+  },
+  "369": {
+    "specie": "Relicanth",
+    "ev": {
+      "hp": 1,
+      "atk": 0,
+      "def": 1,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 170
+  },
+  "370": {
+    "specie": "Luvdisc",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "expBase": 116
+  },
+  "371": {
+    "specie": "Bagon",
+    "ev": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 60
+  },
+  "372": {
+    "specie": "Shelgon",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 2,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 147
+  },
+  "373": {
+    "specie": "Salamence",
+    "ev": {
+      "hp": 0,
+      "atk": 3,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 270
+  },
+  "374": {
+    "specie": "Beldum",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 1,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 60
+  },
+  "375": {
+    "specie": "Metang",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 2,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 147
+  },
+  "376": {
+    "specie": "Metagross",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 3,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 270
+  },
+  "377": {
+    "specie": "Regirock",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 3,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 261
+  },
+  "378": {
+    "specie": "Regice",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 3,
+      "spe": 0
+    },
+    "expBase": 261
+  },
+  "379": {
+    "specie": "Registeel",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 2,
+      "spa": 0,
+      "spd": 1,
+      "spe": 0
+    },
+    "expBase": 261
+  },
+  "380": {
+    "specie": "Latias",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 3,
+      "spe": 0
+    },
+    "expBase": 270
+  },
+  "381": {
+    "specie": "Latios",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 3,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 270
+  },
+  "382": {
+    "specie": "Kyogre",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 3,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 302
+  },
+  "383": {
+    "specie": "Groudon",
+    "ev": {
+      "hp": 0,
+      "atk": 3,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 302
+  },
+  "384": {
+    "specie": "Rayquaza",
+    "ev": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 1,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 306
+  },
+  "385": {
+    "specie": "Jirachi",
+    "ev": {
+      "hp": 3,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 270
+  },
+  "386": {
+    "specie": "Deoxys (Speed Forme)",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 3
+    },
+    "expBase": 270
+  },
+  "387": {
+    "specie": "Turtwig",
+    "ev": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 64
+  },
+  "388": {
+    "specie": "Grotle",
+    "ev": {
+      "hp": 0,
+      "atk": 1,
+      "def": 1,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 142
+  },
+  "389": {
+    "specie": "Torterra",
+    "ev": {
+      "hp": 0,
+      "atk": 2,
+      "def": 1,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 236
+  },
+  "390": {
+    "specie": "Chimchar",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "expBase": 62
+  },
+  "391": {
+    "specie": "Monferno",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 1,
+      "spd": 0,
+      "spe": 1
+    },
+    "expBase": 142
+  },
+  "392": {
+    "specie": "Infernape",
+    "ev": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 1,
+      "spd": 0,
+      "spe": 1
+    },
+    "expBase": 240
+  },
+  "393": {
+    "specie": "Piplup",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 1,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 63
+  },
+  "394": {
+    "specie": "Prinplup",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 2,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 142
+  },
+  "395": {
+    "specie": "Empoleon",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 3,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 239
+  },
+  "396": {
+    "specie": "Starly",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "expBase": 49
+  },
+  "397": {
+    "specie": "Staravia",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 2
+    },
+    "expBase": 119
+  },
+  "398": {
+    "specie": "Staraptor",
+    "ev": {
+      "hp": 0,
+      "atk": 3,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 214
+  },
+  "399": {
+    "specie": "Bidoof",
+    "ev": {
+      "hp": 1,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 50
+  },
+  "400": {
+    "specie": "Bibarel",
+    "ev": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 144
+  },
+  "401": {
+    "specie": "Kricketot",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 1,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 39
+  },
+  "402": {
+    "specie": "Kricketune",
+    "ev": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 134
+  },
+  "403": {
+    "specie": "Shinx",
+    "ev": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 53
+  },
+  "404": {
+    "specie": "Luxio",
+    "ev": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 127
+  },
+  "405": {
+    "specie": "Luxray",
+    "ev": {
+      "hp": 0,
+      "atk": 3,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 235
+  },
+  "406": {
+    "specie": "Budew",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 1,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 56
+  },
+  "407": {
+    "specie": "Roserade",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 3,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 227
+  },
+  "408": {
+    "specie": "Cranidos",
+    "ev": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 70
+  },
+  "409": {
+    "specie": "Rampardos",
+    "ev": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 173
+  },
+  "410": {
+    "specie": "Shieldon",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 1,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 70
+  },
+  "411": {
+    "specie": "Bastiodon",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 2,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 173
+  },
+  "412": {
+    "specie": "Burmy",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 1,
+      "spe": 0
+    },
+    "expBase": 45
+  },
+  "413": {
+    "specie": "Wormadam (Trash Cloak)",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 1,
+      "spa": 0,
+      "spd": 1,
+      "spe": 0
+    },
+    "expBase": 148
+  },
+  "414": {
+    "specie": "Mothim",
+    "ev": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 1,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 148
+  },
+  "415": {
+    "specie": "Combee",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "expBase": 49
+  },
+  "416": {
+    "specie": "Vespiquen",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 1,
+      "spa": 0,
+      "spd": 1,
+      "spe": 0
+    },
+    "expBase": 166
+  },
+  "417": {
+    "specie": "Pachirisu",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "expBase": 142
+  },
+  "418": {
+    "specie": "Buizel",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "expBase": 66
+  },
+  "419": {
+    "specie": "Floatzel",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 2
+    },
+    "expBase": 173
+  },
+  "420": {
+    "specie": "Cherubi",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 1,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 55
+  },
+  "421": {
+    "specie": "Cherrim",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 2,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 158
+  },
+  "422": {
+    "specie": "Shellos",
+    "ev": {
+      "hp": 1,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 65
+  },
+  "423": {
+    "specie": "Gastrodon",
+    "ev": {
+      "hp": 2,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 166
+  },
+  "424": {
+    "specie": "Ambipom",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 2
+    },
+    "expBase": 169
+  },
+  "425": {
+    "specie": "Drifloon",
+    "ev": {
+      "hp": 1,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 70
+  },
+  "426": {
+    "specie": "Drifblim",
+    "ev": {
+      "hp": 2,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 174
+  },
+  "427": {
+    "specie": "Buneary",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "expBase": 70
+  },
+  "428": {
+    "specie": "Lopunny",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 2
+    },
+    "expBase": 168
+  },
+  "429": {
+    "specie": "Mismagius",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 1,
+      "spd": 1,
+      "spe": 0
+    },
+    "expBase": 173
+  },
+  "430": {
+    "specie": "Honchkrow",
+    "ev": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 177
+  },
+  "431": {
+    "specie": "Glameow",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "expBase": 62
+  },
+  "432": {
+    "specie": "Purugly",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 2
+    },
+    "expBase": 158
+  },
+  "433": {
+    "specie": "Chingling",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 1,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 57
+  },
+  "434": {
+    "specie": "Stunky",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "expBase": 66
+  },
+  "435": {
+    "specie": "Skuntank",
+    "ev": {
+      "hp": 2,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 168
+  },
+  "436": {
+    "specie": "Bronzor",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 1,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 60
+  },
+  "437": {
+    "specie": "Bronzong",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 1,
+      "spa": 0,
+      "spd": 1,
+      "spe": 0
+    },
+    "expBase": 175
+  },
+  "438": {
+    "specie": "Bonsly",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 1,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 58
+  },
+  "439": {
+    "specie": "Mime Jr.",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 1,
+      "spe": 0
+    },
+    "expBase": 62
+  },
+  "440": {
+    "specie": "Happiny",
+    "ev": {
+      "hp": 1,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 110
+  },
+  "441": {
+    "specie": "Chatot",
+    "ev": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 144
+  },
+  "442": {
+    "specie": "Spiritomb",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 1,
+      "spa": 0,
+      "spd": 1,
+      "spe": 0
+    },
+    "expBase": 170
+  },
+  "443": {
+    "specie": "Gible",
+    "ev": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 60
+  },
+  "444": {
+    "specie": "Gabite",
+    "ev": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 144
+  },
+  "445": {
+    "specie": "Garchomp",
+    "ev": {
+      "hp": 0,
+      "atk": 3,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 270
+  },
+  "446": {
+    "specie": "Munchlax",
+    "ev": {
+      "hp": 1,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 78
+  },
+  "447": {
+    "specie": "Riolu",
+    "ev": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 57
+  },
+  "448": {
+    "specie": "Lucario",
+    "ev": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 1,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 184
+  },
+  "449": {
+    "specie": "Hippopotas",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 1,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 66
+  },
+  "450": {
+    "specie": "Hippowdon",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 2,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 184
+  },
+  "451": {
+    "specie": "Skorupi",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 1,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 66
+  },
+  "452": {
+    "specie": "Drapion",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 2,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 175
+  },
+  "453": {
+    "specie": "Croagunk",
+    "ev": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 60
+  },
+  "454": {
+    "specie": "Toxicroak",
+    "ev": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 172
+  },
+  "455": {
+    "specie": "Carnivine",
+    "ev": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 159
+  },
+  "456": {
+    "specie": "Finneon",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "expBase": 66
+  },
+  "457": {
+    "specie": "Lumineon",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 2
+    },
+    "expBase": 161
+  },
+  "458": {
+    "specie": "Mantyke",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 1,
+      "spe": 0
+    },
+    "expBase": 69
+  },
+  "459": {
+    "specie": "Snover",
+    "ev": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 67
+  },
+  "460": {
+    "specie": "Abomasnow",
+    "ev": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 1,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 173
+  },
+  "461": {
+    "specie": "Weavile",
+    "ev": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "expBase": 179
+  },
+  "462": {
+    "specie": "Magnezone",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 3,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 241
+  },
+  "463": {
+    "specie": "Lickilicky",
+    "ev": {
+      "hp": 3,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 180
+  },
+  "464": {
+    "specie": "Rhyperior",
+    "ev": {
+      "hp": 0,
+      "atk": 3,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 241
+  },
+  "465": {
+    "specie": "Tangrowth",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 2,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 187
+  },
+  "466": {
+    "specie": "Electivire",
+    "ev": {
+      "hp": 0,
+      "atk": 3,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 243
+  },
+  "467": {
+    "specie": "Magmortar",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 3,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 243
+  },
+  "468": {
+    "specie": "Togekiss",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 2,
+      "spd": 1,
+      "spe": 0
+    },
+    "expBase": 245
+  },
+  "469": {
+    "specie": "Yanmega",
+    "ev": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 180
+  },
+  "470": {
+    "specie": "Leafeon",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 2,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 184
+  },
+  "471": {
+    "specie": "Glaceon",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 2,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 184
+  },
+  "472": {
+    "specie": "Gliscor",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 2,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 179
+  },
+  "473": {
+    "specie": "Mamoswine",
+    "ev": {
+      "hp": 0,
+      "atk": 3,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 239
+  },
+  "474": {
+    "specie": "Porygon-Z",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 3,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 241
+  },
+  "475": {
+    "specie": "Gallade",
+    "ev": {
+      "hp": 0,
+      "atk": 3,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 233
+  },
+  "476": {
+    "specie": "Probopass",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 1,
+      "spa": 0,
+      "spd": 2,
+      "spe": 0
+    },
+    "expBase": 184
+  },
+  "477": {
+    "specie": "Dusknoir",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 1,
+      "spa": 0,
+      "spd": 2,
+      "spe": 0
+    },
+    "expBase": 236
+  },
+  "478": {
+    "specie": "Froslass",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 2
+    },
+    "expBase": 168
+  },
+  "479": {
+    "specie": "Rotom",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 1,
+      "spd": 0,
+      "spe": 1
+    },
+    "expBase": 154
+  },
+  "480": {
+    "specie": "Uxie",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 2,
+      "spa": 0,
+      "spd": 1,
+      "spe": 0
+    },
+    "expBase": 261
+  },
+  "481": {
+    "specie": "Mesprit",
+    "ev": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 1,
+      "spd": 1,
+      "spe": 0
+    },
+    "expBase": 261
+  },
+  "482": {
+    "specie": "Azelf",
+    "ev": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 1,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 261
+  },
+  "483": {
+    "specie": "Dialga",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 3,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 306
+  },
+  "484": {
+    "specie": "Palkia",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 3,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 306
+  },
+  "485": {
+    "specie": "Heatran",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 3,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 270
+  },
+  "486": {
+    "specie": "Regigigas",
+    "ev": {
+      "hp": 0,
+      "atk": 3,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 302
+  },
+  "487": {
+    "specie": "Giratina",
+    "ev": {
+      "hp": 3,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 306
+  },
+  "488": {
+    "specie": "Cresselia",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 3,
+      "spe": 0
+    },
+    "expBase": 270
+  },
+  "489": {
+    "specie": "Phione",
+    "ev": {
+      "hp": 1,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 216
+  },
+  "490": {
+    "specie": "Manaphy",
+    "ev": {
+      "hp": 3,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 270
+  },
+  "491": {
+    "specie": "Darkrai",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 2,
+      "spd": 0,
+      "spe": 1
+    },
+    "expBase": 270
+  },
+  "492": {
+    "specie": "Shaymin (Sky Forme)",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 3
+    },
+    "expBase": 270
+  },
+  "493": {
+    "specie": "Arceus",
+    "ev": {
+      "hp": 3,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 324
+  },
+  "494": {
+    "specie": "Victini",
+    "ev": {
+      "hp": 3,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 270
+  },
+  "495": {
+    "specie": "Snivy",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "expBase": 28
+  },
+  "496": {
+    "specie": "Servine",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 2
+    },
+    "expBase": 145
+  },
+  "497": {
+    "specie": "Serperior",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 3
+    },
+    "expBase": 238
+  },
+  "498": {
+    "specie": "Tepig",
+    "ev": {
+      "hp": 1,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 28
+  },
+  "499": {
+    "specie": "Pignite",
+    "ev": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 146
+  },
+  "500": {
+    "specie": "Emboar",
+    "ev": {
+      "hp": 0,
+      "atk": 3,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 238
+  },
+  "501": {
+    "specie": "Oshawott",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 1,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 28
+  },
+  "502": {
+    "specie": "Dewott",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 2,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 145
+  },
+  "503": {
+    "specie": "Samurott",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 3,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 238
+  },
+  "504": {
+    "specie": "Patrat",
+    "ev": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 51
+  },
+  "505": {
+    "specie": "Watchog",
+    "ev": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": null
+  },
+  "506": {
+    "specie": "Lillipup",
+    "ev": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 55
+  },
+  "507": {
+    "specie": "Herdier",
+    "ev": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 130
+  },
+  "508": {
+    "specie": "Stoutland",
+    "ev": {
+      "hp": 0,
+      "atk": 3,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 221
+  },
+  "509": {
+    "specie": "Purrloin",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "expBase": 56
+  },
+  "510": {
+    "specie": "Liepard",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 2
+    },
+    "expBase": 156
+  },
+  "511": {
+    "specie": "Pansage",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "expBase": 63
+  },
+  "512": {
+    "specie": "Simisage",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 2
+    },
+    "expBase": 174
+  },
+  "513": {
+    "specie": "Pansear",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "expBase": 63
+  },
+  "514": {
+    "specie": "Simisear",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 2
+    },
+    "expBase": 174
+  },
+  "515": {
+    "specie": "Panpour",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "expBase": 63
+  },
+  "516": {
+    "specie": "Simipour",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 2
+    },
+    "expBase": 174
+  },
+  "517": {
+    "specie": "Munna",
+    "ev": {
+      "hp": 1,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 58
+  },
+  "518": {
+    "specie": "Musharna",
+    "ev": {
+      "hp": 2,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 170
+  },
+  "519": {
+    "specie": "Pidove",
+    "ev": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 53
+  },
+  "520": {
+    "specie": "Tranquill",
+    "ev": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 125
+  },
+  "521": {
+    "specie": "Unfezant",
+    "ev": {
+      "hp": 0,
+      "atk": 3,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 215
+  },
+  "522": {
+    "specie": "Blitzle",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "expBase": 59
+  },
+  "523": {
+    "specie": "Zebstrika",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 2
+    },
+    "expBase": 174
+  },
+  "524": {
+    "specie": "Roggenrola",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 1,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 56
+  },
+  "525": {
+    "specie": "Boldore",
+    "ev": {
+      "hp": 0,
+      "atk": 1,
+      "def": 1,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 137
+  },
+  "526": {
+    "specie": "Gigalith",
+    "ev": {
+      "hp": 0,
+      "atk": 3,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 227
+  },
+  "527": {
+    "specie": "Woobat",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "expBase": 63
+  },
+  "528": {
+    "specie": "Swoobat",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 2
+    },
+    "expBase": 149
+  },
+  "529": {
+    "specie": "Drilbur",
+    "ev": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 66
+  },
+  "530": {
+    "specie": "Excadrill",
+    "ev": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 178
+  },
+  "531": {
+    "specie": "Audino",
+    "ev": {
+      "hp": 2,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 390
+  },
+  "532": {
+    "specie": "Timburr",
+    "ev": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 61
+  },
+  "533": {
+    "specie": "Gurdurr",
+    "ev": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 142
+  },
+  "534": {
+    "specie": "Conkeldurr",
+    "ev": {
+      "hp": 0,
+      "atk": 3,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 227
+  },
+  "535": {
+    "specie": "Tympole",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "expBase": 59
+  },
+  "536": {
+    "specie": "Palpitoad",
+    "ev": {
+      "hp": 2,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 134
+  },
+  "537": {
+    "specie": "Seismitoad",
+    "ev": {
+      "hp": 3,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 225
+  },
+  "538": {
+    "specie": "Throh",
+    "ev": {
+      "hp": 2,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 163
+  },
+  "539": {
+    "specie": "Sawk",
+    "ev": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 163
+  },
+  "540": {
+    "specie": "Sewaddle",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 1,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 62
+  },
+  "541": {
+    "specie": "Swadloon",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 2,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 133
+  },
+  "542": {
+    "specie": "Leavanny",
+    "ev": {
+      "hp": 0,
+      "atk": 3,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 221
+  },
+  "543": {
+    "specie": "Venipede",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 1,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 52
+  },
+  "544": {
+    "specie": "Whirlipede",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 2,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 126
+  },
+  "545": {
+    "specie": "Scolipede",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 3
+    },
+    "expBase": 214
+  },
+  "546": {
+    "specie": "Cottonee",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "expBase": 56
+  },
+  "547": {
+    "specie": "Whimsicott",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 2
+    },
+    "expBase": 168
+  },
+  "548": {
+    "specie": "Petilil",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 1,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 56
+  },
+  "549": {
+    "specie": "Lilligant",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 2,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 168
+  },
+  "550": {
+    "specie": "Basculin",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 2
+    },
+    "expBase": 161
+  },
+  "551": {
+    "specie": "Sandile",
+    "ev": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 58
+  },
+  "552": {
+    "specie": "Krokorok",
+    "ev": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 123
+  },
+  "553": {
+    "specie": "Krookodile",
+    "ev": {
+      "hp": 0,
+      "atk": 3,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 229
+  },
+  "554": {
+    "specie": "Darumaka",
+    "ev": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 63
+  },
+  "555": {
+    "specie": "Darmanitan (Zen Mode)",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 2,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 168
+  },
+  "556": {
+    "specie": "Maractus",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 2,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 161
+  },
+  "557": {
+    "specie": "Dwebble",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 1,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 65
+  },
+  "558": {
+    "specie": "Crustle",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 2,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 166
+  },
+  "559": {
+    "specie": "Scraggy",
+    "ev": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 70
+  },
+  "560": {
+    "specie": "Scrafty",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 1,
+      "spa": 0,
+      "spd": 1,
+      "spe": 0
+    },
+    "expBase": 171
+  },
+  "561": {
+    "specie": "Sigilyph",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 2,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 172
+  },
+  "562": {
+    "specie": "Yamask",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 1,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 61
+  },
+  "563": {
+    "specie": "Cofagrigus",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 2,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 169
+  },
+  "564": {
+    "specie": "Tirtouga",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 1,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 71
+  },
+  "565": {
+    "specie": "Carracosta",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 2,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 173
+  },
+  "566": {
+    "specie": "Archen",
+    "ev": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 71
+  },
+  "567": {
+    "specie": "Archeops",
+    "ev": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 177
+  },
+  "568": {
+    "specie": "Trubbish",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "expBase": 66
+  },
+  "569": {
+    "specie": "Garbodor",
+    "ev": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 166
+  },
+  "570": {
+    "specie": "Zorua",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 1,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 66
+  },
+  "571": {
+    "specie": "Zoroark",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 2,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 179
+  },
+  "572": {
+    "specie": "Minccino",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "expBase": 60
+  },
+  "573": {
+    "specie": "Cinccino",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 2
+    },
+    "expBase": 165
+  },
+  "574": {
+    "specie": "Gothita",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 1,
+      "spe": 0
+    },
+    "expBase": 58
+  },
+  "575": {
+    "specie": "Gothorita",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 2,
+      "spe": 0
+    },
+    "expBase": 137
+  },
+  "576": {
+    "specie": "Gothitelle",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 3,
+      "spe": 0
+    },
+    "expBase": 221
+  },
+  "577": {
+    "specie": "Solosis",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 1,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 58
+  },
+  "578": {
+    "specie": "Duosion",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 2,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 130
+  },
+  "579": {
+    "specie": "Reuniclus",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 3,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 221
+  },
+  "580": {
+    "specie": "Ducklett",
+    "ev": {
+      "hp": 1,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 61
+  },
+  "581": {
+    "specie": "Swanna",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 2
+    },
+    "expBase": 166
+  },
+  "582": {
+    "specie": "Vanillite",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 1,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 61
+  },
+  "583": {
+    "specie": "Vanillish",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 2,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 138
+  },
+  "584": {
+    "specie": "Vanilluxe",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 3,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 241
+  },
+  "585": {
+    "specie": "Deerling",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "expBase": 67
+  },
+  "586": {
+    "specie": "Sawsbuck",
+    "ev": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 166
+  },
+  "587": {
+    "specie": "Emolga",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 2
+    },
+    "expBase": 150
+  },
+  "588": {
+    "specie": "Karrablast",
+    "ev": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 63
+  },
+  "589": {
+    "specie": "Escavalier",
+    "ev": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 173
+  },
+  "590": {
+    "specie": "Foongus",
+    "ev": {
+      "hp": 1,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 59
+  },
+  "591": {
+    "specie": "Amoonguss",
+    "ev": {
+      "hp": 2,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 162
+  },
+  "592": {
+    "specie": "Frillish",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 1,
+      "spe": 0
+    },
+    "expBase": 67
+  },
+  "593": {
+    "specie": "Jellicent",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 2,
+      "spe": 0
+    },
+    "expBase": 168
+  },
+  "594": {
+    "specie": "Alomomola",
+    "ev": {
+      "hp": 2,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 165
+  },
+  "595": {
+    "specie": "Joltik",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "expBase": 64
+  },
+  "596": {
+    "specie": "Galvantula",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 2
+    },
+    "expBase": 165
+  },
+  "597": {
+    "specie": "Ferroseed",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 1,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 61
+  },
+  "598": {
+    "specie": "Ferrothorn",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 2,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 171
+  },
+  "599": {
+    "specie": "Klink",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 1,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 60
+  },
+  "600": {
+    "specie": "Klang",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 2,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 154
+  },
+  "601": {
+    "specie": "Klinklang",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 3,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 234
+  },
+  "602": {
+    "specie": "Tynamo",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "expBase": 55
+  },
+  "603": {
+    "specie": "Eelektrik",
+    "ev": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 142
+  },
+  "604": {
+    "specie": "Eelektross",
+    "ev": {
+      "hp": 0,
+      "atk": 3,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 232
+  },
+  "605": {
+    "specie": "Elgyem",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 1,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 67
+  },
+  "606": {
+    "specie": "Beheeyem",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 2,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 170
+  },
+  "607": {
+    "specie": "Litwick",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 1,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 55
+  },
+  "608": {
+    "specie": "Lampent",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 2,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 130
+  },
+  "609": {
+    "specie": "Chandelure",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 3,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 234
+  },
+  "610": {
+    "specie": "Axew",
+    "ev": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 64
+  },
+  "611": {
+    "specie": "Fraxure",
+    "ev": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 144
+  },
+  "612": {
+    "specie": "Haxorus",
+    "ev": {
+      "hp": 0,
+      "atk": 3,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 243
+  },
+  "613": {
+    "specie": "Cubchoo",
+    "ev": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 61
+  },
+  "614": {
+    "specie": "Beartic",
+    "ev": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 170
+  },
+  "615": {
+    "specie": "Cryogonal",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 2,
+      "spe": 0
+    },
+    "expBase": 170
+  },
+  "616": {
+    "specie": "Shelmet",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 1,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 61
+  },
+  "617": {
+    "specie": "Accelgor",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 2
+    },
+    "expBase": 173
+  },
+  "618": {
+    "specie": "Stunfisk",
+    "ev": {
+      "hp": 2,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 165
+  },
+  "619": {
+    "specie": "Mienfoo",
+    "ev": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 70
+  },
+  "620": {
+    "specie": "Mienshao",
+    "ev": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 179
+  },
+  "621": {
+    "specie": "Druddigon",
+    "ev": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 170
+  },
+  "622": {
+    "specie": "Golett",
+    "ev": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 61
+  },
+  "623": {
+    "specie": "Golurk",
+    "ev": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 169
+  },
+  "624": {
+    "specie": "Pawniard",
+    "ev": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 68
+  },
+  "625": {
+    "specie": "Bisharp",
+    "ev": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 172
+  },
+  "626": {
+    "specie": "Bouffalant",
+    "ev": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 172
+  },
+  "627": {
+    "specie": "Rufflet",
+    "ev": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 70
+  },
+  "628": {
+    "specie": "Braviary",
+    "ev": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 179
+  },
+  "629": {
+    "specie": "Vullaby",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 1,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 74
+  },
+  "630": {
+    "specie": "Mandibuzz",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 2,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 179
+  },
+  "631": {
+    "specie": "Heatmor",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 2,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 169
+  },
+  "632": {
+    "specie": "Durant",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 2,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 169
+  },
+  "633": {
+    "specie": "Deino",
+    "ev": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 60
+  },
+  "634": {
+    "specie": "Zweilous",
+    "ev": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 147
+  },
+  "635": {
+    "specie": "Hydreigon",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 3,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 270
+  },
+  "636": {
+    "specie": "Larvesta",
+    "ev": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 72
+  },
+  "637": {
+    "specie": "Volcarona",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 3,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 248
+  },
+  "638": {
+    "specie": "Cobalion",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 3,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 261
+  },
+  "639": {
+    "specie": "Terrakion",
+    "ev": {
+      "hp": 0,
+      "atk": 3,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 261
+  },
+  "640": {
+    "specie": "Virizion",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 3,
+      "spe": 0
+    },
+    "expBase": 261
+  },
+  "641": {
+    "specie": "Tornadus (Therian Forme)",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 3
+    },
+    "expBase": 261
+  },
+  "642": {
+    "specie": "Thundurus (Therian Forme)",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 3,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 261
+  },
+  "643": {
+    "specie": "Reshiram",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 3,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 306
+  },
+  "644": {
+    "specie": "Zekrom",
+    "ev": {
+      "hp": 0,
+      "atk": 3,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 306
+  },
+  "645": {
+    "specie": "Landorus (Therian Forme)",
+    "ev": {
+      "hp": 0,
+      "atk": 3,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 270
+  },
+  "646": {
+    "specie": "Kyurem (White Kyurem)",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 3,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 297
+  },
+  "647": {
+    "specie": "Keldeo",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 3,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 261
+  },
+  "648": {
+    "specie": "Meloetta (Pirouette Forme)",
+    "ev": {
+      "hp": 0,
+      "atk": 1,
+      "def": 1,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "expBase": 270
+  },
+  "649": {
+    "specie": "Genesect",
+    "ev": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 1,
+      "spd": 0,
+      "spe": 1
+    },
+    "expBase": 270
+  },
+  "650": {
+    "specie": "Chespin",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 1,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 63
+  },
+  "651": {
+    "specie": "Quilladin",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 2,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 142
+  },
+  "652": {
+    "specie": "Chesnaught",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 3,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 239
+  },
+  "653": {
+    "specie": "Fennekin",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 1,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 61
+  },
+  "654": {
+    "specie": "Braixen",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 2,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 143
+  },
+  "655": {
+    "specie": "Delphox",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 3,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 240
+  },
+  "656": {
+    "specie": "Froakie",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "expBase": 63
+  },
+  "657": {
+    "specie": "Frogadier",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 2
+    },
+    "expBase": 142
+  },
+  "658": {
+    "specie": "Greninja",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 3
+    },
+    "expBase": 239
+  },
+  "659": {
+    "specie": "Bunnelby",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "expBase": 47
+  },
+  "660": {
+    "specie": "Diggersby",
+    "ev": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 148
+  },
+  "661": {
+    "specie": "Fletchling",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "expBase": 56
+  },
+  "662": {
+    "specie": "Fletchinder",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 2
+    },
+    "expBase": 134
+  },
+  "663": {
+    "specie": "Talonflame",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 3
+    },
+    "expBase": 175
+  },
+  "664": {
+    "specie": "Scatterbug",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 1,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 40
+  },
+  "665": {
+    "specie": "Spewpa",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 2,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 75
+  },
+  "666": {
+    "specie": "Vivillon",
+    "ev": {
+      "hp": 1,
+      "atk": 0,
+      "def": 0,
+      "spa": 1,
+      "spd": 0,
+      "spe": 1
+    },
+    "expBase": 185
+  },
+  "667": {
+    "specie": "Litleo",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 1,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 74
+  },
+  "668": {
+    "specie": "Pyroar",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 2,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 177
+  },
+  "669": {
+    "specie": "Flabébé",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 1,
+      "spe": 0
+    },
+    "expBase": 61
+  },
+  "670": {
+    "specie": "Floette",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 2,
+      "spe": 0
+    },
+    "expBase": 130
+  },
+  "671": {
+    "specie": "Florges",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 3,
+      "spe": 0
+    },
+    "expBase": 248
+  },
+  "672": {
+    "specie": "Skiddo",
+    "ev": {
+      "hp": 1,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 70
+  },
+  "673": {
+    "specie": "Gogoat",
+    "ev": {
+      "hp": 2,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 186
+  },
+  "674": {
+    "specie": "Pancham",
+    "ev": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 70
+  },
+  "675": {
+    "specie": "Pangoro",
+    "ev": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 173
+  },
+  "676": {
+    "specie": "Furfrou",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "expBase": 165
+  },
+  "677": {
+    "specie": "Espurr",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "expBase": 71
+  },
+  "678": {
+    "specie": "Meowstic",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 2
+    },
+    "expBase": 163
+  },
+  "679": {
+    "specie": "Honedge",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 1,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 65
+  },
+  "680": {
+    "specie": "Doublade",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 2,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 157
+  },
+  "681": {
+    "specie": "Aegislash",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 2,
+      "spa": 0,
+      "spd": 1,
+      "spe": 0
+    },
+    "expBase": 234
+  },
+  "682": {
+    "specie": "Spritzee",
+    "ev": {
+      "hp": 1,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 68
+  },
+  "683": {
+    "specie": "Aromatisse",
+    "ev": {
+      "hp": 2,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 162
+  },
+  "684": {
+    "specie": "Swirlix",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 1,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 68
+  },
+  "685": {
+    "specie": "Slurpuff",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 2,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 168
+  },
+  "686": {
+    "specie": "Inkay",
+    "ev": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 58
+  },
+  "687": {
+    "specie": "Malamar",
+    "ev": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 169
+  },
+  "688": {
+    "specie": "Binacle",
+    "ev": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 61
+  },
+  "689": {
+    "specie": "Barbaracle",
+    "ev": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 175
+  },
+  "690": {
+    "specie": "Skrelp",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 1,
+      "spe": 0
+    },
+    "expBase": 64
+  },
+  "691": {
+    "specie": "Dragalge",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 2,
+      "spe": 0
+    },
+    "expBase": 173
+  },
+  "692": {
+    "specie": "Clauncher",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 1,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 66
+  },
+  "693": {
+    "specie": "Clawitzer",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 2,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 100
+  },
+  "694": {
+    "specie": "Helioptile",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "expBase": 58
+  },
+  "695": {
+    "specie": "Heliolisk",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 1,
+      "spd": 0,
+      "spe": 1
+    },
+    "expBase": 168
+  },
+  "696": {
+    "specie": "Tyrunt",
+    "ev": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 72
+  },
+  "697": {
+    "specie": "Tyrantrum",
+    "ev": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 182
+  },
+  "698": {
+    "specie": "Amaura",
+    "ev": {
+      "hp": 1,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 72
+  },
+  "699": {
+    "specie": "Aurorus",
+    "ev": {
+      "hp": 2,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 104
+  },
+  "700": {
+    "specie": "Sylveon",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 2,
+      "spe": 0
+    },
+    "expBase": 184
+  },
+  "701": {
+    "specie": "Hawlucha",
+    "ev": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 175
+  },
+  "702": {
+    "specie": "Dedenne",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 2
+    },
+    "expBase": 151
+  },
+  "703": {
+    "specie": "Carbink",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 1,
+      "spa": 0,
+      "spd": 1,
+      "spe": 0
+    },
+    "expBase": 100
+  },
+  "704": {
+    "specie": "Goomy",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 1,
+      "spe": 0
+    },
+    "expBase": 60
+  },
+  "705": {
+    "specie": "Sliggoo",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 2,
+      "spe": 0
+    },
+    "expBase": 158
+  },
+  "706": {
+    "specie": "Goodra",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 3,
+      "spe": 0
+    },
+    "expBase": 270
+  },
+  "707": {
+    "specie": "Klefki",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 1,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 165
+  },
+  "708": {
+    "specie": "Phantump",
+    "ev": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 62
+  },
+  "709": {
+    "specie": "Trevenant",
+    "ev": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 166
+  },
+  "710": {
+    "specie": "Pumpkaboo",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 1,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 67
+  },
+  "711": {
+    "specie": "Gourgeist",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 2,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 173
+  },
+  "712": {
+    "specie": "Bergmite",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 1,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 61
+  },
+  "713": {
+    "specie": "Avalugg",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 2,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 180
+  },
+  "714": {
+    "specie": "Noibat",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "expBase": 49
+  },
+  "715": {
+    "specie": "Noivern",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 2
+    },
+    "expBase": 187
+  },
+  "716": {
+    "specie": "Xerneas",
+    "ev": {
+      "hp": 3,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 306
+  },
+  "717": {
+    "specie": "Yveltal",
+    "ev": {
+      "hp": 3,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 306
+  },
+  "718": {
+    "specie": "Zygarde",
+    "ev": {
+      "hp": 3,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 270
+  },
+  "719": {
+    "specie": "Diancie",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 1,
+      "spa": 0,
+      "spd": 2,
+      "spe": 0
+    },
+    "expBase": 270
+  },
+  "720": {
+    "specie": "Hoopa",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 3,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 270
+  },
+  "721": {
+    "specie": "Volcanion",
+    "ev": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 3,
+      "spd": 0,
+      "spe": 0
+    },
+    "expBase": 255
+  }
+}

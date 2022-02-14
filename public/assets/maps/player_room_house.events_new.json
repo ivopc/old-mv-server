@@ -1,0 +1,131 @@
+{
+    "map": {
+        "id": 4,
+        "weather": "default",
+        "hasTamers": false,
+        "teleport": [
+            {
+                "x": 9,
+                "y": 9,
+                "mid": 1,
+                "tid": 3
+            },
+            {
+                "x": 10,
+                "y": 9,
+                "mid": 1,
+                "tid": 3
+            },
+            {
+                "x": 9,
+                "y": 1,
+                "mid": 7,
+                "tid": 1
+            },
+            {
+                "x": 10,
+                "y": 1,
+                "mid": 7,
+                "tid": 1
+            }
+        ],
+        "incomingteleport": {
+            "40": {
+                "x": 9,
+                "y": 8,
+                "facing": 0
+            },
+            "41": {
+                "x": 10,
+                "y": 8,
+                "facing": 0
+            },
+            "42": {
+                "x": 9,
+                "y": 2,
+                "facing": 2
+            }
+        },
+        "dayandnight": true
+    },
+    "elements": {
+        "config": {
+            "mother": {
+                "type": 2,
+                "name": "mother",
+                "default": {
+                    "visible": true,
+                    "position": {
+                        "x": 3, 
+                        "y": 3, 
+                        "facing": 0
+                    },
+                    "sprite": 1
+                }
+            }
+        },
+        "screenplay": {
+            "mother": {
+                "default": [
+                    ["face", "toplayer"],
+                    ["dialog", [
+                        {
+                            "br": "Bom dia, Ivopc. Hoje é o grande dia que você completa 15 anos, a propósito, parabéns, meu amor!"
+                        },
+                        {
+                            "br": "Vá encontrar seu pai no laboratório dele, como todo mundo que completa essa idade, você receberá seu bracelete mágico para domar monstros e poderá sair ao mundo para se aventurar."
+                        },
+                        {
+                            "br": "Estou orgulhosa de você, Ivopc. Boa sorte nessa nova fase. Prepare-se, pois novos desafios virão."
+                        }
+                    ]]
+                ]
+            }
+        }
+    },
+    "events": {
+        "config": [
+            {"x": 9, "y": 3, "id": 1},
+            {"x": 10, "y": 3, "id": 1}
+        ],
+        "script": {
+            "1": {
+                "requiredFlagValueToExec": ["default"],
+                "script": [
+                    ["walk", "right", {"target": "mother"}],
+                    ["walk", "right",  {"target": "mother"}],
+                    ["walk", "down",  {"target": "mother"}],
+                    ["walk", "down",  {"target": "mother"}],
+                    ["walk", "down",  {"target": "mother"}],
+                    ["walk", "down",  {"target": "mother"}],
+                    ["walk", "right",  {"target": "mother"}],
+                    ["walk", "right",  {"target": "mother"}],
+                    ["walk", "right",  {"target": "mother"}],
+                    ["walk", "right",  {"target": "mother"}],
+                    ["walk", "up", {"target": "mother"}],
+                    ["walk", "up",  {"target": "mother"}],
+                    ["walk", "up",  {"target": "mother"}],
+                    ["dialog", [
+                        {
+                            "br": "Bom dia, {plyer}. Hoje é o grande dia que você completa 15 anos, a propósito, parabéns, meu amor!"
+                        },
+                        {
+                            "br": "Vá encontrar seu pai no laboratório dele, você receberá seu bracelete mágico para domar monstros e poderá sair ao mundo para se aventurar."
+                        },
+                        {
+                            "br": "Estou orgulhosa de você, Ivopc. Boa sorte nessa nova fase. Prepare-se, pois novos desafios virão."
+                        }
+                    ]],
+                ],
+                "server_response": {
+                    "p-1": {
+                        "0": [
+                            ["stopPlayer", false],
+                            ["destroyLoaderSprite"]
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}

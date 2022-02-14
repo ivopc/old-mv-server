@@ -1,0 +1,22 @@
+{
+    "position": {
+        "x": 2,
+        "y": 3,
+        "facing": 3,
+        "map": 7
+    },
+    "flags": [
+        {
+            "type": "m",
+            "flag": "4",
+            "value": 1,
+            "description": "?"
+        },
+        {
+            "type": "m",
+            "flag": "7",
+            "value": 1,
+            "description": "?"
+        }
+    ]
+}

@@ -1,0 +1,26 @@
+{
+    "config": {
+        "name": "t-2",
+        "data": {
+            "type": "t",
+            "flag_id": 2
+        },
+        "currentMap": 3,
+        "logErrors": true,
+        "limitOnceExecution": true,
+        "onScriptErrorRollBack": true,
+        "dontNeedServerResponse": true
+    },
+    "flagRequisits": [
+        {
+            "type": "m",
+            "flag_id": 1
+        }
+    ],
+    "script": [
+        ["battlevstamer", {
+            "tamer_id": 2
+        }]
+    ],
+    "onscriptdone": []
+}

@@ -1,0 +1,141 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: none;
+}
+
+#interface {
+    z-index: 13;
+    height: 240px;
+    position: absolute;
+}
+
+#wild-box {
+    min-width: 100%;
+    height: 45px;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.8);
+    color: #000;
+    left: 0;
+    bottom: 0;
+    text-shadow: none;
+    font-size: 1em;
+    line-height: 45px;
+    z-index: 10;
+    font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+    display: none;
+}
+
+#wild-box #wild-button-menu {
+    float: right;
+}
+
+#wild-box .wild-button {
+    border-radius: 2px;
+    padding: 5px;
+    font-size: 0.75em;
+    height: 25px;
+    width: auto;
+    border: 1px solid #000;
+    color: #fff;
+    background: #9b59b6;
+    text-align: center;
+    margin-right: 3px;
+    line-height: normal;
+    transition: background 0.8s ease;
+    font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+}
+
+#wild-box .wild-button:hover {
+    background: #8e44ad;
+}
+
+#chat {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    color: #fff;
+    top: 50%;
+    margin-top: -25px;
+    user-select: none;
+}
+
+#chat input {
+    outline: 0;
+    text-indent: 10px;
+    font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+    width: 100%;
+    height: 50px;
+    font-size: 1.45em;
+    background: rgba(0, 0, 0, 0.1);
+    left: 0;
+    color: #fff;
+    z-index: 999;
+    display: none;
+    border: 0;
+    text-align: center;
+}
+
+/*#chat input:focus {
+    box-shadow: 5px 0 0 0 #95a5a6;
+}*/
+
+[placeholder]:focus::-webkit-input-placeholder {
+    color: #fff;
+    transition: opacity 0.5s 1s ease;
+    opacity: 0;
+}
+
+[placeholder]:focus::-moz-input-placeholder {
+    color: #fff;
+    transition: opacity 0.5s 1s ease;
+    opacity: 0;
+}
+
+#chat-messages {
+    bottom: 0;
+    left: 0;
+    min-width: 100%;
+    height: 200px;
+    z-index: 999;
+    overflow-y: scroll;
+    overflow-x: hidden; 
+    background: rgba(0, 0, 0, 0.3);
+    transition: background 0.8s ease;
+    font-size: 1em;
+    word-wrap: break-word;
+    display: none;
+}
+
+#chat-messages:hover {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#chat-messages::-webkit-scrollbar {
+    width: 6px;
+}
+
+#chat-messages::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+#chat-messages::-webkit-scrollbar-thumb {
+    background: rgba(236, 240, 241, 0.7);
+    transition: background ease 0.8s;
+}
+
+#chat-messages::-webkit-scrollbar-thumb:hover {
+    background: rgba(236, 240, 241, 0.9);
+}
+
+#container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    left: 0;
+    top: 0;
+    z-index: 9;
+}

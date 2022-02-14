@@ -1,0 +1,37 @@
+{
+    "config": {
+        "name": "p-1",
+        "data": {
+            "type": "p",
+            "flag_id": 1
+        },
+        "currentMap": 1,
+        "logErrors": true,
+        "limitOnceExecution": true,
+        "onScriptErrorRollBack": true
+    },
+    "flagRequisits": [
+        {
+            "type": "m",
+            "flag_id": 7
+        }
+    ],
+    "script": [
+        ["setflag", {
+            "type": "m",
+            "flag_id": 4,
+            "value": 2
+        }],
+        ["setflag", {
+            "type": "m",
+            "flag_id": 1,
+            "value": 1
+        }],
+        ["setflag", {
+            "type": "m",
+            "flag_id": 2,
+            "value": 1
+        }]
+    ],
+    "onscriptdone": []
+}

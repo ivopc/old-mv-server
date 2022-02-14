@@ -1,0 +1,171 @@
+{
+    "1": {
+        "name": {
+            "br": "Selo Mágico",
+            "en": "Magic Seal"
+        },
+        "price": {
+            "amount": 100,
+            "type": 1
+        }
+    },
+    "2": {
+        "name": {
+            "br": "Super Selo Mágico",
+            "en": "Super Magic Seal"
+        },
+        "price": {
+            "amount": 500,
+            "type": 1
+        }
+    },    
+    "3": {
+        "name": {
+            "br": "Ultra Selo Mágico",
+            "en": "Ultra Magic Seal"
+        },
+        "price": {
+            "amount": 1500,
+            "type": 1
+        }
+    },
+    "4": {
+        "name": {
+            "br": "Selo Mágico Mestre",
+            "en": "Master Magic Seal"
+        },
+        "price": {
+            "amount": 50,
+            "type": 2
+        }
+    },
+    "5": {
+        "name": {
+            "br": "Poção",
+            "en": "Potion"
+        },
+        "price": {
+            "amount": 500,
+            "type": 1
+        }
+    },
+    "6": {
+        "name": {
+            "br": "Super Poção",
+            "en": "Super Potion"
+        },
+        "price": {
+            "amount": 1000,
+            "type": 1
+        }
+    },
+    "7": {
+        "name": {
+            "br": "Ultra Poção",
+            "en": "Ultra Potion"
+        },
+        "price": {
+            "amount": 3500,
+            "type": 1
+        }
+    },
+    "8": {
+        "name": {
+            "br": "Mega Poção",
+            "en": "Mega Potion"
+        },
+        "price": {
+            "amount": 4000,
+            "type": 1
+        }
+    },
+    "9": {
+        "name": {
+            "br": "Poção de MP",
+            "en": "MP Potion"
+        },
+        "price": {
+            "amount": 100,
+            "type": 1
+        }
+    },
+    "10": {
+        "name": {
+            "br": "Super Poção de MP",
+            "en": "Super MP Potion"
+        },
+        "price": {
+            "amount": 1000,
+            "type": 1
+        }
+    },
+    "11": {
+        "name": {
+            "br": "Ultra Poção de MP",
+            "en": "Ultra MP Potion"
+        },
+        "price": {
+            "amount": 3500,
+            "type": 1
+        }
+    },
+    "12": {
+        "name": {
+            "br": "Litío",
+            "en": "Lithium"
+        },
+        "price": {
+            "amount": 100000,
+            "type": 1
+        }
+    },
+    "13": {
+        "name": {
+            "br": "Proteína",
+            "en": "Protein"
+        },
+        "price": {
+            "amount": 100000,
+            "type": 1
+        }
+    },
+    "14": {
+        "name": {
+            "br": "Zinco",
+            "en": "Zinc"
+        },
+        "price": {
+            "amount": 100000,
+            "type": 1
+        }
+    },
+    "15": {
+        "name": {
+            "br": "Carbos",
+            "en": "Carbos"
+        },
+        "price": {
+            "amount": 100000,
+            "type": 1
+        }
+    },
+    "16": {
+        "name": {
+            "br": "Skin 1",
+            "en": "Skin 2"
+        },
+        "price": {
+            "amount": 100,
+            "type": 2
+        }
+    },
+    "25": {
+        "name": {
+            "br": "Pergaminho 25"
+        },
+        "price": {
+            "amount": 15000,
+            "type": 1
+        }
+    }
+}

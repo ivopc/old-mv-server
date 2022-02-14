@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <title>Monster Valle - Market Place</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="/img/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/marketplace.css">
+</head>
+<body>
+    <div class="container" style="width: 253px; margin-top: 25px;">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/">Dashboard</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Market Place</li>
+            </ol>
+        </nav>
+    </div>
+{% if logged %}
+    <div class="top-m">
+        <a href="/marketplace/sell">
+            <input type="submit" value="Vender Item/Monstro" class="action-button">
+        </a>
+        <a href="/marketplace/my">
+            <input type="submit" value="Ver suas Vendas" class="action-button">
+        </a>
+    </div>
+{% endif %}
+    <div class="top-m">
+        <a href="/marketplace/items">
+            <input type="submit" value="Itens" class="href-button">
+        </a>
+        <a href="/marketplace/monsters">
+            <input type="submit" value="Monstros" class="href-button">
+        </a>
+    </div>
+    <div class="limiter">
+        <div class="container-table100">
+            <div class="wrap-table100">
+                <div class="table">
+                    <div class="row header">
+                        <div class="cell">
+                            {{ type }}
+                        </div>
+                        <div class="cell">
+                            Tipo de Negócio
+                        </div>
+                        <div class="cell">
+                            Valor/Item/Monstro Exigido
+                        </div>
+                        <div class="cell"></div>
+                    </div>
+                {% if products.length > 0 %}
+                {% for product in products %}
+                    <div class="row">
+                        <div class="cell">
+                            <img class="max" src="/assets/img/{{ product.item_or_monster }}/{{ product.item_monster_id }}.png">&nbsp;{{ product.name }}
+                        </div>
+                        <div class="cell">
+                            {{ product.negotiation_type }}
+                        </div>
+                        <div class="cell">
+                            <img src="{{ product.requested.url }}">
+                            {{ product.requested.value }}
+                        </div>
+                        <div class="cell">
+                            <a href="/marketplace/purchase/{{ product.id }}">
+                                <input type="submit" value="Comprar" class="buy-button"></a>
+                        </div>
+                    </div>
+                {% endfor %}
+                {% else %}
+                    <div class="row">
+                        <div class="cell">Não há vendas ou trocas</div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                    </div>
+                {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="center">
+        <div class="pagination">
+            <a id="pagination-back" href="#">&laquo;</a>
+        {% for page in pagination %}
+            <a class="pagination-links" href="?page={{ page }}">{{ page }}</a>
+        {% endfor %}
+            <a id="pagination-next" href="#">&raquo;</a>
+        </div>
+    </div>
+    <script type="text/javascript">
+        // pega parametro da paginação e stora elementos
+        var page = parseInt(new URL(location.href).searchParams.get("page")) || 1,
+            els = document.querySelectorAll(".pagination-links"),
+            back = document.querySelector("#pagination-back"),
+            next = document.querySelector("#pagination-next");
+
+        // percore links para encontrar o da página atual pra add classe de ativo
+        for (let i = 0, l = els.length; i < l; i ++) 
+            if (i == page - 1)
+                els[i].classList.add("active");
+
+        // se tiver só uma página remove elemento de (<) voltar, se não edita pra menos um link do atual
+        if (page == 1)
+            back.parentNode.removeChild(back);
+        else
+            back.setAttribute("href", "?page=" + (page - 1));
+
+        // se tiver mais de uma página edita link do próximo, se não remove elemento de próximo
+        if (els.length > 1)
+            next.setAttribute("href", "?page=" + (page + 1));
+        else
+            next.parentNode.removeChild(next);
+
+        // se checar no limite de páginas remove elemento de próximo
+        if (page == els.length)
+            next.parentNode.removeChild(next);
+    </script>
+</body>
+</html>

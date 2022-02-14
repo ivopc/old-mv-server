@@ -1,0 +1,64 @@
+{
+    "config": {
+        "name": "ka-1",
+        "data": {
+            "type": "ka",
+            "flag_id": 1
+        },
+        "currentMap": 2,
+        "logErrors": true,
+        "limitOnceExecution": true,
+        "onScriptErrorRollBack": true
+    },
+    "flagRequisits": [
+        {
+            "type": "m",
+            "flag_id": 7
+        },
+        {
+            "type": "m",
+            "flag_id": 2
+        },
+        {
+            "type": "p",
+            "flag_id": 1
+        }
+    ],
+    "script": [
+        ["givemonster", {
+            "monsterpedia_id": "$input{chosenmonster}",
+            "level": 5,
+            "is_initial": true,
+            "can_trade": false
+        }],
+        ["setflag", {
+            "type": "m",
+            "flag_id": 2,
+            "value": 2
+        }],
+        ["setflag", {
+            "type": "m",
+            "flag_id": 1,
+            "value": 2
+        }],
+        ["setflag", {
+            "type": "m",
+            "flag_id": 3,
+            "value": 1
+        }],
+        ["setflag", {
+            "type": "m",
+            "flag_id": 5,
+            "value": 1
+        }],
+        ["setflag", {
+            "type": "m",
+            "flag_id": 6,
+            "value": 1
+        }]
+    ],
+    "authenticate_input": {
+        "chosenmonster": [1, 4, 7]
+    },
+    "onscriptdone": []
+}

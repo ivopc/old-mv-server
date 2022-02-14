@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <title>Monster Valle Online</title>
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="/img/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/login.css">
+</head>
+<body>
+    <section id="row-welcome">
+        <div class="row-body">
+            <div class="welcome-inner">
+                <div id="welcome-message" class="welcome-text-shadow">
+                    <div class="welcome-title">Memebook</div>
+                    <div class="welcome-desc">a rede social de memes</div>
+                    <div class="welcome-about">Compartilhe memes com seus amigos, conecte-se com outras pessoas e faça novas amizades.</div>                        
+                </div>
+                <div id="welcome-inputs">
+                    <div class="container">
+                        <div class="row">
+         
+                            <div class="col-md-8 col-md-offset-4">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                    </div>
+                                    <div class="panel-body">
+                                        <form id="login-form" role="form">
+                                        <fieldset>
+                                            <div class="form-group">
+                                                <input class="form-control" placeholder="Nickname" name="nickname" maxlength="15" type="text">
+                                            </div>
+                                            <div class="form-group">
+                                                <input class="form-control" placeholder="Senha" name="password" type="password" maxlength="30" value="">
+                                            </div>
+                                            <div class="checkbox">
+                                            <input class="btn btn-lg btn-success btn-block" type="submit" value="Conecte-se">
+                                        </fieldset>
+                                        </form>
+                                          <hr/>
+
+                                          
+                                        <button type="button" class="btn btn-facebook btn-lg btn-block"><i class="icon fa fa-fw fa-facebook-official"></i>&nbsp;Entre com o Facebook</button>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="register">
+        <div class="container">
+            <div class="row">
+                <div id="register-col" class="col-xl-8 col-12">
+                    <form id="register-form" role="form">
+                        <h2>Registre-se <small>É fácil e rápido.</small></h2>
+                        <hr class="colorgraph">
+                        <div class="form-group">
+                            <input type="text" maxlength="15" name="nickname" id="display_name" class="form-control input-lg" placeholder="Nickname" data-toggle="tooltip" title="Seu apelido será exibido em todas as publicações">
+                        </div>
+                    
+                        <div class="form-group">
+                            <input type="email" name="email" id="email" class="form-control input-lg" placeholder="E-mail">
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <input type="password" maxlength="30" name="password" id="password" class="form-control input-lg" placeholder="Senha">
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <input type="password" maxlength="30" name="password_confirmation" id="password_confirmation" class="form-control input-lg" placeholder="Confirmar Senha">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row align-items-center">
+                            <div class="col-4">
+                                <img src="/captcha.svg" width="250" id="captcha" data-toggle="tooltip" title="Digite esse captcha no campo ao lado">
+                            </div>
+                            <div class="col-8" id="captcha-text">
+                                <input type="text" name="captcha" class="form-control input-lg" maxlength="4" placeholder="Digite o captcha">
+                            </div>
+                        </div>
+                        <hr class="colorgraph">
+                        <div class="row">
+                            <div class="col-12">
+                                 Clicando no <strong class="label label-primary">Registrar-se</strong>, você concorda com <a href="#" data-toggle="modal" data-target="#t_and_c_m">Termos e Condições de Uso</a>, incluindo nossa Política de Cookies.
+                            </div>
+                        </div>
+                        <hr class="colorgraph">
+                        <div class="row">
+                            <div class="col-md-12"><input type="submit" value="Registrar-se" class="btn btn-primary btn-block btn-lg"></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/popper.js/dist/umd/popper.min.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/js/notify.js"></script>
+    <script type="application/json" data-name="erros">
+        {
+            "THERE_XITER": "Temos um xiter aqui?",
+            "EMPTY_INPUTS": "Preencha todos os campos corretamente!",
+            "INVALID_USER_PASSWORD": "Usuário ou senha inválido!",
+            "ACCOUNT_BANNED": "A conta foi banida!",
+            "LENGTH_USER": "O usuário deve ter entre 4 e 16 caracteres!",
+            "LENGTH_NAME": "O seu nome/último nome deve ter entre 1 e 15 caracteres!",
+            "LENGTH_PASSWORD": "A senha deve ter entre 7 e 35 caracteres!",
+            "DIFFERENT_PASSWORD": "Digite as senhas corretamente, elas não são iguais!",
+            "LENGTH_CAPTCHA": "O captcha deve ter 4 caracteres!",
+            "INCORRECT_CAPTCHA": "O captcha está incorreto!",
+            "EXISTENT_USER": "O nickname está em uso, escolha outro!",
+            "IN_USE_EMAIL": "O e-mail está em uso!"
+        }
+    </script>
+    <script type="text/javascript" src="/js/internal/index.js"></script>
+</body>
+</html>
