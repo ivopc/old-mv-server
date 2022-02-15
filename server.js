@@ -11,10 +11,10 @@ var path = require('path');
 var argv = require('minimist')(process.argv.slice(2));
 var scHotReboot = require('sc-hot-reboot');
 
+var SocketCluster = require('socketcluster');
+
 var fsUtil = require('socketcluster/fsutil');
 var waitForFile = fsUtil.waitForFile;
-
-var SocketCluster = require('socketcluster');
 
 const Datamaster = require("./datamaster.js");
 
