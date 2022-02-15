@@ -1,5 +1,5 @@
 # Monster Valle Old Server
-Old Monster Valle server, crap architecture. Just turn it public to rewrite it to new one: https://github.com/ivopc/new-mv-server
+Old Monster Valle server, crap architecture. I Just turned it public to rewrite to new one: https://github.com/ivopc/new-mv-server
 
 # License
 The code of game source project is released under the MIT license.
