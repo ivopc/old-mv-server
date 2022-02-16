@@ -239,32 +239,31 @@ PixioScript.prototype.fns[1] = function (next) {
                 callback(null, results);
             });
         },
-        (index, callback) => {
-            // insere monstro no db
-            species.insert(param, callback);
-        },
+        (index, callback) => species.insert(param, callback),
         (data, fields, callback) => {
             console.log("Chegou até aqui");
             // se estiver no pocket, atualiza monstro pra pocket atual
             if (typeof(index) == "number") {
+                console.log("updeita db pocket", index);
                 this.mysqlQuery(
-                    "UPDATE `monsters_in_pocket` SET `monster" + this.escapeSQL(String(index)) + "` = '" + this.escapeSQL(data.insertId) + "' WHERE `uid` = ?",
-                    [this.auth.uid],
-                    () => callback()
+                    "UPDATE `monsters_in_pocket` SET `monster" + index + "` = ? WHERE `uid` = ?",
+                    [data.insertId, this.auth.uid],
+                    err => callback(err)
                 );
             } else {
+                console.log("não updeita db pocket", index);
                 callback();
             };
         },
         callback => {
             // enviar ao client para atualizar monstros
+            console.log("UPDATE CLIENT");
             this.socket.emit(EVENTS.UPDATE_MONSTERS_ITEMS, {
                 monsters: true
             });
             callback();
-        },
-        () => next()
-    ]);
+        }
+    ], err => err ? console.error("Ixi deu ruim", err) : next());
 };
 
 // healmonster

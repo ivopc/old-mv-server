@@ -4,7 +4,8 @@
   "description": "Monster Valle Old Server",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "node server",
+    "seed": "node database-seed"
   },
   "author": "Ivopc <ivoopc@gmail.com>",
   "license": "ISC",

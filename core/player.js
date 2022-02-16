@@ -81,6 +81,9 @@ Player.prototype.pong = function () {
 
 // checando se tem outro jogador conectado na mesma conta
 Player.prototype.checkIfTheresOtherPlayerConnected = function (callback) {
+
+    console.log("checkIfTheresOtherPlayerConnected");
+
     async.waterfall([
         next => {
             this.mysqlQuery(
@@ -90,11 +93,16 @@ Player.prototype.checkIfTheresOtherPlayerConnected = function (callback) {
             );
         },
         (results, fields, next) => {
+
+            console.log("checkIfTheresOtherPlayerConnected2");
+
             // se não há ninguém conectado só vai pro proximo
             if (!results.length) {
                 next(null, true);
                 return;
             };
+
+            console.log("checkIfTheresOtherPlayerConnected3");
 
             // * se há alguém conectado, desconecta ele
 
@@ -243,7 +251,7 @@ Player.prototype.sendWildBattle = function (data) {
         // seta buff e nerf
         battle_data.battle.buff_nerf = battle_data.buff_nerf;
         // manda infos da batalha pro client
-        this.network.send(EVENTS.START_CLIENT, {
+        this.networking.send(EVENTS.START_CLIENT, {
             state: 1,
             param: {
                 playerMonsters: data.monsters,
@@ -411,6 +419,8 @@ Player.prototype.sendWaitWildBattle = function (data, flag) {
 
 // pegar dados do jogador (cru/seco e com callback)
 Player.prototype.getRawPlayerData = function (callback) {
+
+    console.log("raw_player_data");
 
     async.auto({
         // pegar dados do player in-game
