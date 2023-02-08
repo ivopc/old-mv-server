@@ -1060,6 +1060,8 @@ Battle.prototype.itemDrop = function (fainted_monster_data, callback) {
 // Iniciar controle de ação do jogador
 Battle.prototype.initHandleAction = function (input) {
 
+    console.log("initHandleAction", input);
+
     let battle_type,
         if_is_pvp_battle_id;
 
@@ -1069,6 +1071,7 @@ Battle.prototype.initHandleAction = function (input) {
                 "SELECT `battle_type`, `doing_battle_action`, `if_is_pvp_battle_id` FROM `current_doing` WHERE `uid` = ?",
                 [this.auth.uid],
                 (err, results, fields) => {
+                    console.log("aab", results[0]);
                     // se o jogador já está fazendo alguma ação de batalha, 
                     //ele não pode fazer duas ao mesmo tempo
                     if (+results[0].doing_battle_action > 0) {
@@ -1084,13 +1087,14 @@ Battle.prototype.initHandleAction = function (input) {
                 }
             );
         }, (results, next) => {
+            console.log("initHandleAction2");
             // setar q está fazendo uma ação de batalha
             this.mysqlQuery(
                 "UPDATE `current_doing` SET `doing_battle_action` = '0' WHERE `uid` = ?",
                 [this.auth.uid],
                 next
             );
-        }, (results, fields, next) => {
+        }, (results, next) => {
             if (battle_type !== 3) {
                 // pegar infos da batalha (monstros do jogador, tamer/wild monstros, infos batalha)
                 this.getAllBattleInfo(
@@ -1103,13 +1107,17 @@ Battle.prototype.initHandleAction = function (input) {
             };
         }, 
         // manipular ação
-        data => this.handleAction(input, data)
+        data => {
+            console.log("haha fdpt", data);
+            this.handleAction(input, data);
+        } 
 
     ]);
 };
 
 // Controlar ação do jogador
 Battle.prototype.handleAction = function (input, data) {
+    console.log(input, data, "handleAction");
     switch (data.battle.battle_type) {
 
         // vs wild
@@ -3187,6 +3195,7 @@ Battle.prototype.getInPartyMonsterDataById = function (id, monsters) {
 
 // Pegar todas as informações da batalha
 Battle.prototype.getAllBattleInfo = function (battle_type, if_is_pvp_battle_id, callback) {
+
     /*
     battle_type:
         1 = wild

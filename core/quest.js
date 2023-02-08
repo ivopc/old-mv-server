@@ -112,9 +112,11 @@ Quest.prototype.getList = function (input) {
           starting_limit = (input.page - 1) * limit;
 
     this.mysqlQuery(
-        "SELECT * FROM `quests` WHERE `uid` = ?' AND `completed` = '0' ORDER BY `id` DESC LIMIT " + this.escapeSQL(starting_limit) + ", " + this.escapeSQL(limit),
+        "SELECT * FROM `quests` WHERE `uid` = ? AND `completed` = '0' ORDER BY `id` DESC LIMIT " + this.escapeSQL(starting_limit) + ", " + this.escapeSQL(limit),
         [this.auth.uid],
-        (err, results) => this.socket.emit(EVENTS.SEND_QUEST_LIST, results)
+        (err, results) => {
+            this.socket.emit(EVENTS.SEND_QUEST_LIST, results)
+        }
     );
 };
 

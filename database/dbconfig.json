@@ -2,9 +2,9 @@
     "mysql": {
         "connectionLimit": 100,
         "host": "localhost",
-        "user": "root",
-        "password": "123",
-        "database": "valle"
+        "user": "mv",
+        "password": "",
+        "database": "newvalle"
     },
     "rethinkdb": {
         "host": "localhost",

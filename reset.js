@@ -1,9 +1,9 @@
-var mysqlConnection = require("mysql").createPool({
+var mysqlConnection = require("mysql2").createPool({
     connectionLimit: 100,
     host: "localhost",
-    user: "root",
+    user: "mv",
     password: "",
-    database: "valle"
+    database: "newvalle"
 });
 
 mysqlConnection.query("TRUNCATE TABLE `battle`");

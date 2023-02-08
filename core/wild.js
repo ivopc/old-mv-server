@@ -53,6 +53,7 @@ Wild.prototype.insert = function (wild, callback) {
 
 // procurar monstro selvagem
 Wild.prototype.search = function () {
+    console.log("search");
     async.waterfall([
         // pegar informações do jogador
         callback => {
@@ -84,11 +85,12 @@ Wild.prototype.search = function () {
             );
         },
         // pegar mapa que o jogador está
-        (results, fields, callback) => {
+        (results, callback) => {
+            console.log({results, callback});
             new PlayerData()
                 .get(this.auth.uid, callback);
         }
-    ], (err, results, fields) => {
+    ], (err, results) => {
         // gerar novo monstro selvagem
         this.generateNewWild(results);
     });
@@ -126,6 +128,8 @@ Wild.prototype.handleAcceptReject = function (input) {
 
 // gerar novo monstro selvagem (função complementar a 'search')
 Wild.prototype.generateNewWild = function (data) {
+
+    console.log("generateNewWild", data);
 	
     const wild = Resources.Location[data.map];
 
@@ -135,9 +139,7 @@ Wild.prototype.generateNewWild = function (data) {
         // inserir monstro selvagem
         next => this.insert(wild, next),
         // pegar informações do monstro selvagem
-        (results, fields, next) => {
-            //console.log("resultados do wild", results.insertId);
-
+        (results, next) => {
             this.mysqlQuery(
                 "SELECT `monsterpedia_id`, `level`, `sp_HP`,  `sp_attack`, `sp_defense`, `sp_speed` FROM `monsters` WHERE `id` = ? AND `type` = '1' AND `uid` = ?",
                 [results.insertId, this.auth.uid],
@@ -149,6 +151,9 @@ Wild.prototype.generateNewWild = function (data) {
         (results, fields, next) => {
 
             let wild_monster = results[0];
+
+
+            console.log("wildo", wild_monster);
 
             // checando se tem o item do SP CHECKER
             new Bag(null, this.auth, this.db)
