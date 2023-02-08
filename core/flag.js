@@ -32,10 +32,10 @@ Flag.prototype.requestExecution = function (input) {
             this.mysqlQuery(
                 "SELECT `type`, `flag_id`, `value` FROM `flags` WHERE `uid` = ?",
                 [this.auth.uid],
-                next
+                (err, data) => next(err, data)
             );
         },
-        (results, fields, next) => {
+        (results, next) => {
             // console.log("flags", results);
 
             // script para execução e validação da flag requisitada
@@ -182,10 +182,10 @@ Flag.prototype.insertUpdate = function (type, flag_id, value, callback) {
             this.mysqlQuery(
                 "SELECT `id` FROM `flags` WHERE `uid` = ? AND `type` = ? AND `flag_id` = ?",
                 [this.auth.uid, type, flag_id],
-                next
+                (err, data) => next(err, data)
             );
         },
-        (results, fields, next) => {
+        (results, next) => {
             console.log(2);
             // se o player já tiver o flag, apenas edita valor da linha já existente
             if (results.length > 0) {

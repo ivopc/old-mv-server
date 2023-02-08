@@ -243,7 +243,7 @@ Species.prototype.getMonstersInPocket = function (main_callback, id) {
         },
 
         // retornar informações de todos os monstros
-        (results, fields, callback) => {
+        results => {
             //console.log(results[0].monster0);
 
             // definir monstro que estão no pocket
@@ -298,10 +298,10 @@ Species.prototype.changePartyPosition = function (input) {
             this.mysqlQuery(
                 "SELECT `monster" + this.escapeSQL(input.from) + "`, `monster" + this.escapeSQL(input.to) + "` FROM `monsters_in_pocket` WHERE `uid` = ?",
                 [this.auth.uid],
-                next
+                (err, data) => next(err, data)
             );
         },
-        (results, fields) => {
+        results => {
             results = results[0];
 
             var change = [];
@@ -388,10 +388,10 @@ Species.prototype.addHp = function (value, monster_id, callback) {
             this.mysqlQuery(
                 "SELECT `current_HP`, `stats_HP` FROM `monsters` WHERE `id` = ?",
                 [monster_id],
-                next
+                (err, data) => next(err, data)
             );
         },
-        (results, fields, next) => {
+        (results, next) => {
             results = results[0];
             
             let HP = results.current_HP,
@@ -403,11 +403,10 @@ Species.prototype.addHp = function (value, monster_id, callback) {
             this.mysqlQuery(
                 "UPDATE `monsters` SET `current_HP` = ? WHERE `id` = ?",
                 [newHP, monster_id],
-                next
+                (err, data) => next(err, data)
             );
         },
-        (results, fields, next) => {
-            //console.log({results, fields});
+        (results, next) => {
             next();
         },
         () => callback()
@@ -421,10 +420,10 @@ Species.prototype.addMp = function (value, monster_id, callback) {
             this.mysqlQuery(
                 "SELECT `current_MP`, `stats_MP` FROM `monsters` WHERE `id` = ?",
                 [monster_id],
-                next
+                (err, data) => next(err, data)
             );
         },
-        (results, fields, next) => {
+        (results, next) => {
             results = results[0];
             
             let MP = results.current_MP,
@@ -438,10 +437,6 @@ Species.prototype.addMp = function (value, monster_id, callback) {
                 [newMP, monster_id],
                 next
             );
-        },
-        (results, fields, next) => {
-            //console.log({results, fields});
-            next();
         },
         () => callback()
     ]);
@@ -790,10 +785,10 @@ Species.prototype.learnMove = function (monster_id, move_id, position, callback)
             this.mysqlQuery(
                 "UPDATE `monsters` SET `move_" + this.escapeSQL(position) + "` = ? WHERE `id` = ?",
                 [move_id, monster_id],
-                next
+                (err, data) => next(err, data)
             );
         },
-        (results, fields, next) => {
+        (results, next) => {
             // atualizar monstros
             this.socket.emit(EVENTS.UPDATE_MONSTERS_ITEMS, {
                 monsters: true
@@ -843,10 +838,10 @@ Species.prototype.evolve = function (monster_id, evolve_to, callback) {
             // evoluir monstro e mudar stats
             this.mysqlQuery(
                 "UPDATE `monsters` SET `monsterpedia_id` = '" + evolve_to + "', `stats_HP` = '" + stats.hp + "', `stats_attack` = '" + stats.atk + "', `stats_defense` = '" + stats.def + "', `stats_speed` = '" + stats.spe + "' WHERE `id` = '" + monster_id + "'",
-                next
+                (err, data) => next(err, data)
             );
         },
-        (results, fields, next) => {
+        (results, next) => {
 
             console.log(results, "POHAAAAA");
 

@@ -125,7 +125,7 @@ Quest.prototype.getListRaw = function (callback) {
     this.mysqlQuery(
         "SELECT * FROM `quests` WHERE `uid` = ? AND `completed` = '0'",
         [this.auth.uid],
-        callback
+        (err, data) => callback(err, data)
     );
 };
 

@@ -91,7 +91,7 @@ Tamer.prototype.startBattle = function (tamer_id, callback) {
         battle: ["insertBattle", (data, next) => {
             this.mysqlQuery(
                 "SELECT * FROM `battle` WHERE `uid` = ? AND `id` = ?",
-                [this.auth.uid, data.insertBattle[0].insertId],
+                [this.auth.uid, data.insertBattle.insertId],
                 next
              );
         }],
@@ -148,12 +148,12 @@ Tamer.prototype.getMonstersInParty = function (tamer_id, main_callback) {
             this.mysqlQuery(
                 "SELECT `monster0`, `monster1`, `monster2`, `monster3`, `monster4`, `monster5` FROM `tamer_bot_monsters_in_pocket` WHERE `uid` = ? AND `tamer_id` = ?", 
                 [this.auth.uid, tamer_id],
-                callback
+                (err, data) => callback(err, data)
             );
         },
 
         // retornar informações de todos os monstros
-        (results, fields, callback) => {
+        (results, callback) => {
             //console.log(results[0].monster0);
 
             // definir monstro que estão no pocket
@@ -206,7 +206,7 @@ Tamer.prototype.changePartyPosition = function (input, tamer_id, callback) {
                 next
             );
         },
-        (results, fields) => {
+        (results) => {
             results = results[0];
 
             const change = [];

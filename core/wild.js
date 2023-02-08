@@ -60,11 +60,11 @@ Wild.prototype.search = function () {
             this.mysqlQuery(
                 "SELECT `battle_type`, `waiting_wild_battle` FROM `current_doing` WHERE `uid` = ?",
                 [this.auth.uid],
-                callback
+                (err, data) => callback(err, data)
             );
         },
         // checar se já está batalhando
-        (results, fields, callback) => {
+        (results, callback) => {
             results = results[0];
 
             // se o player já estiver batalhando, impossibilita ele de criar
@@ -143,12 +143,12 @@ Wild.prototype.generateNewWild = function (data) {
             this.mysqlQuery(
                 "SELECT `monsterpedia_id`, `level`, `sp_HP`,  `sp_attack`, `sp_defense`, `sp_speed` FROM `monsters` WHERE `id` = ? AND `type` = '1' AND `uid` = ?",
                 [results.insertId, this.auth.uid],
-                next
+                (err, data) => next(err, data)
             );
         },
 
         // enviar para o client
-        (results, fields, next) => {
+        (results, next) => {
 
             let wild_monster = results[0];
 
@@ -287,12 +287,12 @@ Wild.prototype.startBattle = function (monsters_data, state) {
                 // pega informações da batalha
                 this.mysqlQuery(
                     "SELECT * FROM `battle` WHERE `uid` = ? AND `id` = ?",
-                    [this.auth.uid, data.battle[0].insertId],
+                    [this.auth.uid, data.battle.insertId],
                     next
                  );
             },
             // envia pro client as informações
-            (results, fields, callback) => {
+            results => {
 
                 //console.log("infos da batalha2", results);
 

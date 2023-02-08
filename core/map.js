@@ -75,7 +75,7 @@ Map.prototype.changeMap = function (input) {
             this.mysqlQuery(
                 "SELECT `value` FROM `flags` WHERE `uid` = ? AND `type` = 'm' AND `flag_id` = ?",
                 [this.auth.uid, input.mid],
-                (err, results, fields) => {
+                (err, results) => {
                     /* não achou nada, então provavelmente 
                     aconteceu um bug ou o jogador está tentando trapacear 
                     o sistema, chama erro com namespace de 1 */

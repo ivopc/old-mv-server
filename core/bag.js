@@ -36,10 +36,10 @@ Bag.prototype.insertItem = function (uid, item_id, amount, callback) {
             this.mysqlQuery(
                 "SELECT `id`, `amount` FROM `items` WHERE `uid` = ? AND `item_id` = ?",
                 [uid, item_id],
-                next
+                (err, data) => next(err, data)
             );
         },
-        (results, fields, next) => {
+        (results, next) => {
             // se o player já tiver o item, apenas edita quantidade da linha já existente
             if (results.length > 0) {
                 results = results[0];
@@ -103,11 +103,11 @@ Bag.prototype.useItem = function (input) {
             this.mysqlQuery(
                 "SELECT `id` FROM `monsters` WHERE `uid` = ? AND `id` = ?",
                 [this.auth.uid, input.monster],
-                next
+                (err, data) => next(err, data)
             );
         },
         // desconta (usa) item na database
-        (results, fields, next) => {
+        (results, next) => {
 
             if (!results.length) {
                 next(ERROR.NOT_FOUND);
@@ -154,10 +154,10 @@ Bag.prototype.discontItem = function (item_id, callback) {
             this.mysqlQuery(
                 "SELECT `id`, `amount` FROM `items` WHERE `uid` = ? AND `item_id` = ?",
                 [this.auth.uid, item_id],
-                next
+                (err, data) => next(err, data)
             );
         },
-        (results, fields, next) => {
+        (results, next) => {
 
             if (!results.length)
                 return callback(false);
@@ -227,10 +227,10 @@ Bag.prototype.item = {
                 this.mysqlQuery(
                     "SELECT `" + this.escapeSQL(stat) + "` FROM `monsters` WHERE `id` = ?",
                     [data.monster],
-                    next
+                    (err, data) => next(err, data)
                 );
             },
-            (results, fields, next) => {
+            (results, next) => {
                 // pega valor da stat de vita
                 const vita = results[0];
 
@@ -244,9 +244,8 @@ Bag.prototype.item = {
                     this.mysqlQuery(
                         "UPDATE `monsters` SET `" + this.escapeSQL(stat) + "` = `" + this.escapeSQL(stat) + "` + '1' WHERE `id` = ?",
                         [data.monster],
-                        next
+                        (err, data) => next(err, data)
                     );
-
                 };
             }
         ], callback);

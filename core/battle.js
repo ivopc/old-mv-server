@@ -80,8 +80,7 @@ Battle.prototype.insert = function (data, callback) {
 
     data.challenged = data.challenged || 0;
 
-    this.mysqlQuery("INSERT INTO `battle` SET ?", data, (err, results, fields) => {
-
+    this.mysqlQuery("INSERT INTO `battle` SET ?", data, (err, results) => {
         // se for pvp inserir no datamaster
         if (data.battle_type == 3) {
             this.scServer.exchange.publish("datamaster", {
@@ -89,8 +88,7 @@ Battle.prototype.insert = function (data, callback) {
                 battle_id: results.insertId
             });
         };
-
-        callback(err, results, fields);
+        callback(err, results);
     });
 };
 
@@ -733,7 +731,7 @@ Battle.prototype.checkAndInsertQuestDefeat = function (monster_data, callback) {
         },
         // pegar lista de quests de forma crua
         (nothing, next) => quest.getListRaw(next),
-        (data, fields, next) => {
+        (data, next) => {
             // console.log("Dados das quests", data);
             // checar se monstro está nos requisitos
             for (let i = 0; i < data.length; i ++) {
@@ -783,11 +781,11 @@ Battle.prototype.expReward = function (actions, data, fainted_monster_data, call
             this.mysqlQuery(
                 "SELECT `monster_id` FROM `battle_exp_share` WHERE `battle_id` = ?",
                 [data.battle.id],
-                next
+                (err, data) => next(err, data)
             );
         },
         // dar EXP a eles
-        (results, fields, next) => {
+        (results, next) => {
             // console.log(results);
             // quando somente há um único monstro
             if (!results.length || results.length === 1) {
@@ -1070,7 +1068,7 @@ Battle.prototype.initHandleAction = function (input) {
             this.mysqlQuery(
                 "SELECT `battle_type`, `doing_battle_action`, `if_is_pvp_battle_id` FROM `current_doing` WHERE `uid` = ?",
                 [this.auth.uid],
-                (err, results, fields) => {
+                (err, results) => {
                     console.log("aab", results[0]);
                     // se o jogador já está fazendo alguma ação de batalha, 
                     //ele não pode fazer duas ao mesmo tempo
@@ -1667,10 +1665,10 @@ Battle.prototype.rawChangeMonster = function (changePartyIndex, uid, callback) {
         next => {
             this.mysqlQuery(
                 "SELECT `monster0`, `monster" + this.escapeSQL(changePartyIndex) + "` FROM `monsters_in_pocket` WHERE `uid` = '" + this.escapeSQL(uid) + "'", 
-                next
+                (err, data) => next(err, data)
             );
         },
-        (results, fields) => {
+        results => {
 
             results = results[0];
 
@@ -3624,11 +3622,11 @@ BattleScript.prototype.fns[5] = function (param, callback) {
             this.mysqlQuery(
                 "SELECT `monster0`, `monster" + this.escapeSQL(param.changeID) + "` FROM `monsters_in_pocket` WHERE `uid` = ?", 
                 [uid],
-                next
+                (err, data) => next(err, data)
             );
         },
         // muda de posição
-        (results, fields, next) => {
+        (results, next) => {
 
             results = results[0];
 
@@ -3716,11 +3714,11 @@ BattleScript.prototype.fns[7] = function (param, next) {
                         this.mysqlQuery(
                             "UPDATE `monsters` SET `type` = '0' WHERE `id` = ?",
                             [param.monster_id],
-                            cb
+                            (err, data) => cb(err, data)
                         );
                     },
                     // pega espaço livre no bracelete
-                    (results, fields, cb) => {
+                    (results, cb) => {
                         new Species(null, this.auth, this.db)
                             .getFreeSpaceInPocket(freespace => cb(null, freespace));
                     },

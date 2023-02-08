@@ -232,10 +232,10 @@ Notify.prototype.insertLearnMove = function (monster, moves, callback) {
                     used,
                     move_id: move,
                     monster_id: monster.id
-                }, next);
+                }, (err, data) => next(err, data));
             },
             // inserir notificação
-            (results, fields, next) => {
+            (results, next) => {
                 this.mysqlQuery("INSERT INTO `notify` SET ?", {
                     id: null,
                     uid: this.auth.uid,
@@ -266,10 +266,10 @@ Notify.prototype.insertEvolveMonster = function (monster, evolve_id, callback) {
                 used: 0,
                 evolve_to: evolve_id,
                 monster_id: monster.id
-            }, next);
+            }, (err, data) => next(err, data));
         },
         // inserir notificação
-        (results, fields, next) => {
+        (results, next) => {
             //results.insertId
 
             this.mysqlQuery("INSERT INTO `notify` SET ?", {
@@ -299,10 +299,10 @@ Notify.prototype.insertPurchase = function (sellerId, productType, productId, ca
                 enabled: 1,
                 item_or_monster: productType,
                 solded: productId
-            }, next);
+            }, (err, data) => next(err, data));
         },
         // inserir notificação
-        (results, fields, next) => {
+        (results, next) => {
             //results.insertId
             console.log("FOIOOOOOOOOOOOOOOOI222");
             action = results.insertId;
@@ -333,10 +333,10 @@ Notify.prototype.disable = function (id, callback) {
             this.mysqlQuery(
                 "SELECT * FROM `notify` WHERE `id` = ? AND `uid` = ?",
                 [id, this.auth.uid],
-                next
+                (err, data) => next(err, data)
             );
         },
-        (results, fields, next) => {
+        (results, next) => {
 
             // se não for do player sai com erro
             if (!results.length) {
@@ -426,10 +426,10 @@ Notify.prototype.setSeen = function (input = {}) {
             this.mysqlQuery(
                 "SELECT * FROM `notify` WHERE `id` = ? AND `uid` = ?",
                 [id, this.auth.uid],
-                next
+                (err, data) => next(err, data)
             );
         },
-        (results, fields, next) => {
+        (results, next) => {
 
             // se não for do player sai com erro
             if (!results.length) {
@@ -470,10 +470,10 @@ Notify.prototype.requestLearnMove = function (input = {}) {
             this.mysqlQuery(
                 "SELECT * FROM `notify_learn_move` WHERE `id` = ? AND `enabled` = '1' AND `used` = '0'",
                 [n_id],
-                next
+                (err, data) => next(err, data)
             );
         },
-        (results, fields, next) => {
+        (results, next) => {
 
             let data = results[0];
 
@@ -529,10 +529,10 @@ Notify.prototype.requestDontLearnMove = function (input = {}) {
             this.mysqlQuery(
                 "SELECT * FROM `notify_learn_move` WHERE `id` = ? AND `enabled` = '1' AND `used` = '0'",
                 [n_id],
-                next
+                (err, data) => next(err, data)
             );
         },
-        (results, fields, next) => {
+        (results, next) => {
 
             let data = results[0];
 
@@ -581,11 +581,11 @@ Notify.prototype.requestEvolveMonster = function (input = {}) {
             this.mysqlQuery(
                 "SELECT * FROM `notify_evolve` WHERE `id` = ? AND `enabled` = '1' AND `used` = '0'",
                 [n_id],
-                next
+                (err, data) => next(err, data)
             );
         },
         // autenticar e evoluir monstro
-        (results, fields, next) => {
+        (results, next) => {
             let data = results[0];
 
             // se não achou nada

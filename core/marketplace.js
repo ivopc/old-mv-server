@@ -153,11 +153,10 @@ MarketPlace.prototype.sellItemMonster = function (uid, id, type, coin, callback)
                     this.mysqlQuery(
                         "SELECT `monsterpedia_id` FROM `monsters` WHERE `id` = ? AND `uid` = ?",
                         [id, uid],
-                        next
+                        (err, data) => next(err, data)
                     );
                 },
-                (results, fields, next) => {
-                    //console.log("pqpp", results, fields, next);
+                (results, next) => {
                     this.mysqlQuery(
                         "INSERT INTO `marketplace` SET ?", {
                             enabled: 1,
@@ -188,10 +187,10 @@ MarketPlace.prototype.cancelMonsterSellTrade = function (uid, negotiation_id, ca
             this.mysqlQuery(
                 "SELECT `sale_id` FROM `marketplace` WHERE `uid` = ? AND `id` = ?",
                 [uid, negotiation_id],
-                next 
+                (err, data) => next(err, data) 
             );
         },
-        (results, fields, next) => {
+        (results, next) => {
 
             if (!results.length) {
                 callback(null, {dontExists: true});
@@ -226,10 +225,10 @@ MarketPlace.prototype.cancelItemSellTrade = function (uid, negotiation_id, callb
             this.mysqlQuery(
                 "SELECT `sale_id` FROM `marketplace` WHERE `uid` = ? AND `id` = ?",
                 [uid, negotiation_id],
-                next
+                (err, data) => next(err, data)
             );
         },
-        (results, fields, next) => {
+        (results, next) => {
 
             if (!results.length) {
                 callback(null, {dontExists: true});

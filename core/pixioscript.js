@@ -380,10 +380,10 @@ PixioScript.prototype.fns[9] = function (next) {
         battle: ["insertBattle", (data, next) => {
             console.log("--------------------------------");
             console.log("AKI FDP");
-            console.log(data.insertBattle[0]);
+            console.log(data.insertBattle);
             this.mysqlQuery(
                 "SELECT * FROM `battle` WHERE `uid` = ? AND `id` = ?",
-                [this.auth.uid, data.insertBattle[0].insertId],
+                [this.auth.uid, data.insertBattle.insertId],
                 (err, results) => next(err, results[0])
              );
         }]

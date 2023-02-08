@@ -89,10 +89,10 @@ Player.prototype.checkIfTheresOtherPlayerConnected = function (callback) {
             this.mysqlQuery(
                 "SELECT `sckt_id` FROM `online_offline_flag` WHERE `uid` = ?",
                 [this.auth.uid],
-                next
+                (err, data) => next(err, data)
             );
         },
-        (results, fields, next) => {
+        (results, next) => {
 
             console.log("checkIfTheresOtherPlayerConnected2");
 
@@ -609,7 +609,7 @@ Player.prototype.respondPvPInvite = function (receiver, inviter, accepted, next)
             battle: cb => {
                 this.mysqlQuery(
                     "SELECT * FROM `battle` WHERE `id` = ?",
-                    [data.battle[0].insertId],
+                    [data.battle.insertId],
                     (err, results) => cb(err, results[0])
                 );
             }

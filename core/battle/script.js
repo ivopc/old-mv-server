@@ -296,11 +296,11 @@ Script.prototype.fns[5] = function (param, callback) {
             this.mysqlQuery(
                 "SELECT `monster0`, `monster" + this.escapeSQL(param.changeID) + "` FROM `monsters_in_pocket` WHERE `uid` = ?", 
                 [uid],
-                next
+                (err, data) => next(err, data)
             );
         },
         // muda de posição
-        (results, fields, next) => {
+        (results, next) => {
 
             results = results[0];
 
@@ -388,11 +388,11 @@ Script.prototype.fns[7] = function (param, next) {
                         this.mysqlQuery(
                             "UPDATE `monsters` SET `type` = '0' WHERE `id` = ?",
                             [param.monster_id],
-                            cb
+                            (err, data) => cb(err, data)
                         );
                     },
                     // pega espaço livre no bracelete
-                    (results, fields, cb) => {
+                    (results, cb) => {
                         new Species(null, this.auth, this.db)
                             .getFreeSpaceInPocket(freespace => cb(null, freespace));
                     },
