@@ -1,7 +1,7 @@
 {
     "overworld": {
         "time": {
-            "step": 20,
+            "step": 85,
             "ride": 50
         },
         "tile": {

@@ -25,14 +25,6 @@ const setPool = require("./models/setpool.js");
 
 const checkIfIsBan = require("./utils/checkban.js");
 
-const sessionStore = new MySQLStore({
-    host: "localhost",
-    port: 3306,
-    user: "root",
-    password: "",
-    database: "valle"
-});
-
 const routes = require("./controller/routes/routes.json");
 
 const Router = {
@@ -193,7 +185,6 @@ app
     .use(bodyParser.urlencoded({extended: true}))
     .use(bodyParser.json())
     .use(expressSession({
-        "store": sessionStore,
         "secret": "supfgASF6fbdnvm4uiovmq1zab5678i0m1an3",
         "name": "sessid",
         resave: false,

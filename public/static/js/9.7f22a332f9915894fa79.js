@@ -1,0 +1,2 @@
+webpackJsonp([9],{Cr4Y:function(e,t){},f2fA:function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var r={render:function(){var e=this.$createElement;return(this._self._c||e)("div")},staticRenderFns:[]};var a=n("VU/8")({name:"Play",data:function(){return{title:"Jogar"}},created:function(){this.eventBus.$emit("call-client")}},r,!1,function(e){n("Cr4Y")},"data-v-3fd7bcc2",null);t.default=a.exports}});
+//# sourceMappingURL=9.7f22a332f9915894fa79.js.map

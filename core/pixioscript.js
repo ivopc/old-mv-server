@@ -240,7 +240,7 @@ PixioScript.prototype.fns[1] = function (next) {
             });
         },
         (index, callback) => species.insert(param, callback),
-        (data, fields, callback) => {
+        (data, callback) => {
             console.log("Chegou até aqui");
             // se estiver no pocket, atualiza monstro pra pocket atual
             if (typeof(index) == "number") {

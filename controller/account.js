@@ -205,7 +205,7 @@ Register.prototype.complete = function (req, res, data) {
             }, next);
         },
         // insere outra informações secundárias do jogo
-        (results, fields, next) => {
+        (results, next) => {
 
             // pega id que foi inserido na tabela users
             uid = results.insertId;

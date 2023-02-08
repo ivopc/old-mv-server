@@ -7,13 +7,17 @@
             {
                 "x": 11,
                 "y": 2,
+                "levelId": 1,
                 "mid": 1,
+                "teleportId": 2,
                 "tid": 2
             },
             {
                 "x": 38,
                 "y": 55,
+                "levelId": 5,
                 "mid": 5,
+                "teleportId": 88,
                 "tid": 88
             }
         ],
@@ -67,6 +71,7 @@
                 "isTamer": true,
                 "maxview": 3,
                 "tamer_id": 2,
+                "dynamicViewRange": false,
                 "default": {
                     "position": {
                         "x": 31,

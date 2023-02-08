@@ -7,13 +7,17 @@
             {
                 "x": 11,
                 "y": 2,
+                "levelId": 1,
                 "mid": 1,
+                "teleportId": 2,
                 "tid": 2
             },
             {
                 "x": 38,
                 "y": 55,
+                "levelId": 5,
                 "mid": 5,
+                "teleportId": 88,
                 "tid": 88
             }
         ],
@@ -67,6 +71,7 @@
                 "isTamer": true,
                 "maxview": 3,
                 "tamer_id": 2,
+                "dynamicViewRange": false,
                 "default": {
                     "position": {
                         "x": 31,
@@ -131,19 +136,20 @@
                     ["face", "toplayer"],
                     ["dialog", [
                         {
-                            "br": "Hello, Richy.",
+                            "br": "... Você sabia que, por mais que os corvos possuam uma natureza magarefe, eles possuem empatia?",
                             "en": ""
                         },
                         {
-                            "br": "How are you?"
+                            "br": "Uma capacidade que supera sua essência, mas não o fazem porque por pura benevolência, o fazem para sobreviver."
                         },
                         {
-                            "br": "Ok, fine."
+                            "br": " Lidou muito bem com aqueles dois projetos de corvo, você tem talento para ser um domador!"
                         }
                     ]],
                     ["walk", "down"],
                     ["walk", "down"],
-                    ["walk", "left"]
+                    ["walk", "left"],
+                    ["callFunction", "twice"]
                 ]
             },
             "tamer": {
@@ -159,7 +165,7 @@
                         }
                     ]],
                     ["ifNotBattled", [
-                        ["call", "battle"]
+                        ["callObjectFunction", "battle"]
                     ]]
                 ],
                 "battle": [
@@ -176,5 +182,14 @@
                 ]
             }
         }
+    },
+    "functions": {
+        "twice": [
+            ["dialog", [
+                {
+                    "br": "Test LOLzitos"
+                }
+            ]]
+        ]
     }
 }

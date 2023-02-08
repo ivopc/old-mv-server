@@ -6,7 +6,9 @@
             {
                 "x": 15,
                 "y": 28,
+                "levelId": 1,
                 "mid": 1,
+                "teleportId": 1,
                 "tid": 1
             }
         ],
@@ -36,33 +38,78 @@
                     "exist": false
                 }
             },
-            "dinnox": {
+            "fogara": {
                 "type": 2,
-                "name": "dinnox",
+                "name": "fogara",
                 "default": {
                     "position": {
-                        "x": 16,
-                        "y": 4,
+                        "x": 8,
+                        "y": 11,
                         "facing": 2
                     },
-                    "sprite": "Dinnox"
+                    "sprite": "Fogara",
+                    "visible": false
                 },
                 "2": {
                     "exist": false
+                },
+                "3": {
+                    "exist": false
                 }
             },
-            "atataiob": {
+            "maritin": {
                 "type": 2,
-                "name": "atataiob",
+                "name": "maritin",
                 "default": {
                     "position": {
-                        "x": 18,
-                        "y": 4,
+                        "x": 9,
+                        "y": 11,
                         "facing": 2
                     },
-                    "sprite": "Atataiob"
+                    "sprite": "Maritin",
+                    "visible": false
                 },
                 "2": {
+                    "exist": false
+                },
+                "3": {
+                    "exist": false
+                }
+            },
+            "graenn": {
+                "type": 2,
+                "name": "graenn",
+                "default": {
+                    "position": {
+                        "x": 10,
+                        "y": 11,
+                        "facing": 2
+                    },
+                    "sprite": "Graenn",
+                    "visible": false
+                },
+                "2": {
+                    "exist": false
+                },
+                "3": {
+                    "exist": false
+                }
+            },
+            "magiclauncher": {
+                "type": 2,
+                "name": "magiclauncher",
+                "default": {
+                    "position": {
+                        "x": 9,
+                        "y": 12,
+                        "facing": 2
+                    },
+                    "sprite": 1
+                },
+                "2": {
+                    "exist": false
+                },
+                "3": {
                     "exist": false
                 }
             }
@@ -135,26 +182,97 @@
                     }
                 }
             },
-            "dinnox": {
+            "magiclauncher": {
                 "default": [
-                    ["face", "toplayer"],
+                    ["disableMoveInputs"],
                     ["dialog", [
                         {
-                            "br": "DINNNNNNNNNNNNNNNNNNNOOOOOOXXXXXXXXX!!"
+                            "br": "Escolha um dos monstros que estão no lançador mágico!"
                         }
                     ]],
-                    ["face", "down"]
+                    ["show", "fogara"],
+                    ["show" ,"maritin"],
+                    ["show", "graenn"],
+                    ["delay", 2500],
+                    ["get_input", {
+                        "variable": "${chosenmonster}",
+                        "style": "choose_initial_monster"
+                    }],
+                    ["requestFlag", {
+                        "type": "ka",
+                        "id": 1,
+                        "data": {
+                            "chosenmonster": "${chosenmonster}"
+                        }
+                    }],
+
+                    ["enableMoveInputs"]
+                ],
+                "server_response": {
+                    "ka-1": {
+                        "0": [
+                            ["dialog", [
+                                {
+                                    "br": "Teste"
+                                },
+                                {
+                                    "br": "Tomas no cu pow"
+                                }
+                            ]]
+                        ]
+                    }
+                }
+            },
+            "fogara": {
+                "default": [
+                    ["dialog"]
                 ]
             },
-            "atataiob": {
-                "default": [
-                    ["face", "toplayer"],
+            "maritin": {
+                "default": []
+            },
+            "graenn": {
+                "default": []
+            }
+        }
+    },
+    "events": {
+        "config": [
+            {"x": 7, "y": 14, "id": 1},
+            {"x": 8, "y": 14, "id": 1},
+            {"x": 9, "y": 14, "id": 1},
+            {"x": 7, "y": 15, "id": 2},
+            {"x": 8, "y": 15, "id": 2},
+            {"x": 9, "y": 15, "id": 2}
+        ],
+        "script": {
+            "1": {
+                "requiredFlagValueToExec": ["default"],
+                "script": [
                     ["dialog", [
                         {
-                            "br": "ATAAAAAAATAAAAAAAAAAAAAAAAAAAAAA!!!"
+                            "br": "{player}, rápido, use meu lançador mágico!"
                         }
                     ]],
-                    ["face", "down"]
+                    ["requestFlag", {
+                        "type": "p",
+                        "id": 3,
+                        "dontNeedLoadSprite": true
+                    }],
+                    ["setMapFlag", 2]
+                ]
+            },
+            "2": {
+                "requiredFlagValueToExec": [2],
+                "script": [
+                    ["disableMoveInputs"],
+                    ["dialog", [
+                        {
+                            "br": "Não me deixe aqui sozinho, {player}!"
+                        }
+                    ]],
+                    ["walk", "up", {"target": "${player}"}],
+                    ["enableMoveInputs"]
                 ]
             }
         }

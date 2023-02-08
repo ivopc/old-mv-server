@@ -121,10 +121,11 @@
             }
         }
     },
+    "autoExec": {},
     "events": {
         "config": [
             {"x": 9, "y": 3, "id": 1},
-            {"x": 10, "y": 3, "id": 1}
+            {"x": 10, "y": 3, "id": 2}
         ],
         "script": {
             "1": {
@@ -136,7 +137,6 @@
                         "dontNeedLoadSprite": true
                     }],
                     ["disableMoveInputs"],
-                    ["stopPlayer", true],
                     ["walk", "right", {"target": "mother"}],
                     ["walk", "right", {"target": "mother"}],
                     ["walk", "right",  {"target": "mother"}],
@@ -151,17 +151,7 @@
                     ["walk", "up", {"target": "mother"}],
                     ["walk", "up",  {"target": "mother"}],
                     ["walk", "up",  {"target": "mother"}],
-                    ["dialog", [
-                        {
-                            "br": "Bom dia, Ivopc. Hoje você completa 15 anos, parabéns, meu doce!"
-                        },
-                        {
-                            "br": "Vá encontrar seu pai, você receberá seu primeiro monstro, assim como qualquer jovem de 15 anos."
-                        },
-                        {
-                            "br": "Estou orgulhosa de você, Ivopc. Você poderá sair ao mundo para se aventurar. Boa sorte nessa nova fase. Prepare-se, pois novos desafios te aguardam."
-                        }
-                    ], {"dontUnstopOnEndDialog": true}],
+                    ["callFunction", "dialog_start"],
                     ["walk", "down", {"target": "mother"}],
                     ["walk", "down",  {"target": "mother"}],
                     ["walk", "down",  {"target": "mother"}],
@@ -178,10 +168,70 @@
                     ["walk", "left",  {"target": "mother"}],
                     ["face", "up", {"target": "mother"}],
                     ["setMapFlag", 2],
-                    ["stopPlayer", false],
                     ["enableMoveInputs"]
+                ]
+            },
+            "2": {
+                "requiredFlagValueToExec": ["default"],
+                "script": [
+                    ["requestFlag", {
+                        "type": "p",
+                        "id": 1,
+                        "dontNeedLoadSprite": true
+                    }],
+                    ["disableMoveInputs"],
+                    ["walk", "right", {"target": "mother"}],
+                    ["walk", "right", {"target": "mother"}],
+                    ["walk", "right",  {"target": "mother"}],
+                    ["walk", "down",  {"target": "mother"}],
+                    ["walk", "down",  {"target": "mother"}],
+                    ["walk", "down",  {"target": "mother"}],
+                    ["walk", "down",  {"target": "mother"}],
+                    ["walk", "right",  {"target": "mother"}],
+                    ["walk", "right",  {"target": "mother"}],
+                    ["walk", "right",  {"target": "mother"}],
+                    ["walk", "right",  {"target": "mother"}],
+                    ["walk", "right",  {"target": "mother"}],
+                    ["walk", "up", {"target": "mother"}],
+                    ["walk", "up",  {"target": "mother"}],
+                    ["walk", "up",  {"target": "mother"}],
+                    ["callFunction", "dialog_start"],
+                    ["walk", "down", {"target": "mother"}],
+                    ["walk", "down",  {"target": "mother"}],
+                    ["walk", "down",  {"target": "mother"}],
+                    ["walk", "left",  {"target": "mother"}],
+                    ["walk", "left",  {"target": "mother"}],
+                    ["walk", "left",  {"target": "mother"}],
+                    ["walk", "left",  {"target": "mother"}],
+                    ["walk", "left",  {"target": "mother"}],
+                    ["walk", "up",  {"target": "mother"}],
+                    ["walk", "up",  {"target": "mother"}],
+                    ["walk", "up",  {"target": "mother"}],
+                    ["walk", "up",  {"target": "mother"}],
+                    ["walk", "left", {"target": "mother"}],
+                    ["walk", "left", {"target": "mother"}],
+                    ["walk", "left",  {"target": "mother"}],
+                    ["face", "up", {"target": "mother"}],
+                    ["setMapFlag", 2],
+                    ["enableMoveInputs"]
+
                 ]
             }
         }
+    },
+    "functions": {
+        "dialog_start": [
+            ["dialog", [
+                {
+                    "br": "Desse jeito você vai perder a hora!"
+                },
+                {
+                    "br": "Não deixe seu pai lhe esperando, ele disse que o esperaria ao norte da vila."
+                },
+                {
+                    "br": "Onde você brincava quando criança, lembra?"
+                }
+            ]]
+        ]
     }
 }
