@@ -4,7 +4,8 @@
   "description": "Monster Valle Old Server",
   "main": "index.js",
   "scripts": {
-    "dev": "node server",
+    "dev": "DB_HOST=localhost DB_PORT=3306 DB_USER=mv DB_NAME=newvalle node server",
+    "prod": "node server",
     "seed": "node database-seed",
     "reset": "node reset"
   },

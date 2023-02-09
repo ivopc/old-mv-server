@@ -24,9 +24,6 @@ var workerClusterControllerPath = argv.wcc || process.env.SOCKETCLUSTER_WORKERCL
 var environment = process.env.ENV || 'dev';
 
 
-console.log("port", process.env.PORT);
-
-
 
 var options = {
   workers: Number(argv.w) || Number(process.env.SOCKETCLUSTER_WORKERS) || 1,
