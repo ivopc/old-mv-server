@@ -113,8 +113,6 @@ const Register = function (req, res) {
 // checar se usuário existe
 Register.prototype.checkIfUserExist = function (nickname, db, next) {
     db.query("SELECT `nickname` FROM `users` WHERE `nickname` = ?", [nickname], function (err, results, fields) {
-
-        console.log("results", results);
         
         // se houver resultado setar o primeiro da array para ser único
         if (results[0])
@@ -233,7 +231,14 @@ Register.prototype.complete = function (req, res, data) {
                         points: 0,
                         level: 0,
                         rank: 0,
-                        exp: 0
+                        exp: 0,
+                        nickname: req.body["nickname"],
+                        online: 0,
+                        sprite: 2,
+                        map: default_init.position.map,
+                        pos_x: default_init.position.x,
+                        pos_y: default_init.position.y,
+                        pos_facing: default_init.position.facing
                     }, cb);
                 },
                 // [RethinkDB] informações do player que requerem real-time

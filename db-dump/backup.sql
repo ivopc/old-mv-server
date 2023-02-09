@@ -196,6 +196,13 @@ CREATE TABLE `in_game_data` (
   `level` bigint NOT NULL,
   `rank` tinyint(1) NOT NULL,
   `exp` bigint NOT NULL,
+  `nickname` varchar(15) NOT NULL,
+  `online` tinyint(1) NOT NULL,
+  `map` smallint(10) NOT NULL,
+  `pos_x` smallint(10) NOT NULL,
+  `pox_y` smallint(10) NOT NULL,
+  `pos_facing` tinyint(1) NOT NULL,
+  `sprite` smallint(10) NOT NULL,
   PRIMARY KEY (`uid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;

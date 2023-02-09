@@ -65,6 +65,7 @@
             "RECEIVE_DONT_LEARN_MOVE_BY_NOTIFICATION": "93",
             "RECEIVE_EVOLVE_BY_NOTIFICATION": "94",
             "RECEIVE_MARKETPLACE_NOTIFICATION_DATA": "95",
+            "UPDATE_SPECIFIC_BOX_MONSTERS": "7564",
             "RECEIVE_IN_BOX_MONSTERS": "7565"
         },
         "healing_places": {
@@ -264,6 +265,74 @@
                 },
                 "framerate": {
                     "idle": 16,
+                    "physicalattack": 1
+                },
+                "action": {
+                    "player": {
+                        "position": {
+                            "x": 10,
+                            "y": -100
+                        },
+                        "origin": {
+                            "x": -0.005,
+                            "y": 0.77
+                        }
+                    },
+                    "opponent": {
+                        "position": {
+                            "x": 100,
+                            "y": -100
+                        },
+                        "origin": {
+                            "x": -0.005,
+                            "y": 0.77
+                        }
+                    }
+                }
+            },
+            "18": {
+                "name": "frutara",
+                "atlas": "monster_18",
+                "animation": {
+                    "idle": 23,
+                    "physicalattack": 1
+                },
+                "framerate": {
+                    "idle": 13,
+                    "physicalattack": 1
+                },
+                "action": {
+                    "player": {
+                        "position": {
+                            "x": 10,
+                            "y": -100
+                        },
+                        "origin": {
+                            "x": -0.005,
+                            "y": 0.77
+                        }
+                    },
+                    "opponent": {
+                        "position": {
+                            "x": 100,
+                            "y": -100
+                        },
+                        "origin": {
+                            "x": -0.005,
+                            "y": 0.77
+                        }
+                    }
+                }
+            },
+            "21": {
+                "name": "horie",
+                "atlas": "monster_21",
+                "animation": {
+                    "idle": 16,
+                    "physicalattack": 1
+                },
+                "framerate": {
+                    "idle": 13,
                     "physicalattack": 1
                 },
                 "action": {
@@ -761,6 +830,10 @@
         }
     },
     "characters": {
+        "0": {
+            "name": "placeholder",
+            "atlas": "character-placeholder"
+        },
         "1": {
             "name": "base",
             "origin": {
@@ -980,6 +1053,50 @@
                 }
             },
             "atlas": "monster_15_overworld"
+        },
+        "Frutara": {
+            "name": "frutara",
+            "origin": {
+                "up": {
+                    "x": 0,
+                    "y": 0.1
+                },
+                "right": {
+                    "x": 0,
+                    "y": 0.1
+                },
+                "down": {
+                    "x": 0.05,
+                    "y": 0.1
+                },
+                "left": {
+                    "x": 0,
+                    "y": 0.1
+                }
+            },
+            "atlas": "monster_18_overworld"
+        },
+        "Horie": {
+            "name": "horie",
+            "origin": {
+                "up": {
+                    "x": 0,
+                    "y": 0.1
+                },
+                "right": {
+                    "x": 0,
+                    "y": 0.1
+                },
+                "down": {
+                    "x": 0.05,
+                    "y": 0.1
+                },
+                "left": {
+                    "x": 0,
+                    "y": 0.1
+                }
+            },
+            "atlas": "monster_21_overworld"
         }
     },
     "monsters": {
@@ -1012,6 +1129,16 @@
             "name": "Shifarie",
             "types": ["light"],
             "rating": 2
+        },
+        "18": {
+            "name": "Frutara",
+            "types": ["plant"],
+            "rating": 0
+        },
+        "21": {
+            "name": "Horie",
+            "types": ["null", "fire"],
+            "rating": 0
         }
     },
     "moves": {
