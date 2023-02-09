@@ -3,8 +3,6 @@ const
 
 const config = require("./../database/dbconfig.json");
 
-console.log(process.env);
-
 const mysqlConnection = mysql.createPool({
     ... config.mysql,
     ... {
