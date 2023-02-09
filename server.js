@@ -16,7 +16,7 @@ var SocketCluster = require('socketcluster');
 var fsUtil = require('socketcluster/fsutil');
 var waitForFile = fsUtil.waitForFile;
 
-const Datamaster = require("./datamaster.js");
+//const Datamaster = require("./datamaster.js");
 
 var workerControllerPath = argv.wc || process.env.SOCKETCLUSTER_WORKER_CONTROLLER;
 var brokerControllerPath = argv.bc || process.env.SOCKETCLUSTER_BROKER_CONTROLLER;
