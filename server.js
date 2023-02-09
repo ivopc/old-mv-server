@@ -103,7 +103,7 @@ var filesReadyPromises = [
 Promise.all(filesReadyPromises)
 .then(() => {
   start();
-  new Datamaster();
+  //new Datamaster();
 })
 .catch((err) => {
   console.error(err.stack);
