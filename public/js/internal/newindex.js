@@ -143,6 +143,18 @@ App.prototype.handleRegisterError = function (id) {
             message.innerHTML = this.errors["IN_USE_EMAIL"][this.lang];
             break;
         };
+        case 5: {
+            message.innerHTML = this.errors["LENGTH_USER"][this.lang];
+            break;
+        };
+        case 6: {
+            message.innerHTML = this.errors["LENGTH_PASSWORD"][this.lang];
+            break;
+        };
+        case 7: {
+            message.innerHTML = this.errors["INVALID_EMAIL"][this.lang];
+            break;
+        }
     };
 
     parent.appendChild(message);

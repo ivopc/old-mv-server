@@ -578,14 +578,23 @@ exports.register = function (req, res) {
     console.log("TNC FDP!");
 
     // validando inputs
-    req.checkBody("nickname", 0).len(4, 15);
-    req.checkBody("password", 1).len(7, 30);
-    req.checkBody("email", 2).isEmail();
+    req.checkBody("nickname", 1).len(4, 15);
+    req.checkBody("password", 2).len(7, 30);
+    req.checkBody("email", 3).isEmail();
     //req.checkBody("captcha", 3).len(4, 4);
 
     // checando se tem erros nas inputs
-    if (req.validationErrors()) {
-        res.json({error: 1});
+    const errors = req.validationErrors();
+    if (errors) {
+        console.log(errors);
+        const error = errors[0];
+        const map = {
+            1: 5, // LENGTH_USER
+            2: 6, // LENGTH_PASSWORD
+            3: 7 // EMPTY_INPUTS - invalid email
+        };
+        console.log(map[error.msg]);
+        res.json({error: map[error.msg] || 1});
         return;
     };
 
