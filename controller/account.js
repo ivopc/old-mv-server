@@ -50,6 +50,9 @@ const Login = function (req, res) {
 Login.prototype.checkIfUserExist = function (object, callback) {
     // procurar pelo nick
     object.db.query("SELECT `id`, `nickname`, `password`, `rank`, `ban`, `lang` FROM `users` WHERE `nickname` = ?", [object.nickname], function (err, results) {
+
+
+        console.log(err);
         
         // se houver resultado setar o primeiro da array para ser único, se não transf. em false
         if (results[0]) {
