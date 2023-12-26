@@ -1,3 +1,7 @@
+<p align="center" width="100%">
+    <img src="https://i.imgur.com/bh8ZbWe.png">
+</p>
+
 # Monster Valle Old Server
 Old Monster Valle server, crap architecture. I Just turned it public to rewrite to new one: https://github.com/ivopc/new-mv-server
 
