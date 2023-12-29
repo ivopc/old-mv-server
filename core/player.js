@@ -34,7 +34,7 @@ const Player = function (socket, auth, db, scServer) {
     this.autoSaveTimer;
 };
 
-const AUTO_SAVE_TIMER_UPDATE = 30000;
+const AUTO_SAVE_TIMER_UPDATE = 15000;
 
 Player.prototype = Object.create(Base.prototype);
 
@@ -46,15 +46,14 @@ Player.prototype.connect = async function () {
     const pdata = new PlayerData();
 
     if (!pdata.has(this.auth.uid)) {
-        console.log("dosent has");
-        pdata.set(this.auth.uid, await this.fetchDataFromPersistent());
+        const data = await this.fetchDataFromPersistent();
+        pdata.set(this.auth.uid, data);
     };
 
     // setar no banco de dados que player está online
     pdata.set(this.auth.uid, {online: true});
 
     this.autoSaveTimer = setInterval(() => this.autoSaveData(), AUTO_SAVE_TIMER_UPDATE);
-
     async.series([
         // checar se tem outro player conectado
         next => this.checkIfTheresOtherPlayerConnected(next),

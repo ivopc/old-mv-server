@@ -24,15 +24,22 @@ CREATE TABLE IF NOT EXISTS `users` (
 -- Dados in-game dos players
 DROP TABLE IF EXISTS `in_game_data`;
 CREATE TABLE IF NOT EXISTS `in_game_data` (
-    `uid` bigint(10) NOT NULL,
-    `silver` bigint(10) UNSIGNED NOT NULL DEFAULT '0',
-    `gold` bigint(10) UNSIGNED NOT NULL DEFAULT '0',
-    `points` bigint(10) UNSIGNED NOT NULL DEFAULT '0',
-    `level` bigint(10) NOT NULL,
-    `rank` tinyint(1) NOT NULL,
-    `exp` bigint(10) NOT NULL,
-    PRIMARY KEY (`uid`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `uid` bigint NOT NULL,
+  `silver` bigint unsigned NOT NULL DEFAULT '0',
+  `gold` bigint unsigned NOT NULL DEFAULT '0',
+  `points` bigint unsigned NOT NULL DEFAULT '0',
+  `level` bigint NOT NULL,
+  `rank` tinyint(1) NOT NULL,
+  `exp` bigint NOT NULL,
+  `nickname` varchar(15) NOT NULL,
+  `online` tinyint(1) NOT NULL,
+  `map` smallint(10) NOT NULL,
+  `pos_x` smallint(10) NOT NULL,
+  `pos_y` smallint(10) NOT NULL,
+  `pos_facing` tinyint(1) NOT NULL,
+  `sprite` smallint(10) NOT NULL,
+  PRIMARY KEY (`uid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 -- monstros que estão na party do player
 DROP TABLE IF EXISTS `monsters_in_pocket`;

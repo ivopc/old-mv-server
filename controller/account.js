@@ -50,7 +50,6 @@ const Login = function (req, res) {
 Login.prototype.checkIfUserExist = function (object, callback) {
     // procurar pelo nick
     object.db.query("SELECT `id`, `nickname`, `password`, `rank`, `ban`, `lang` FROM `users` WHERE `nickname` = ?", [object.nickname], function (err, results) {
-        
         // se houver resultado setar o primeiro da array para ser único, se não transf. em false
         if (results[0]) {
             results = results[0];
@@ -239,7 +238,7 @@ Register.prototype.complete = function (req, res, data) {
                         pos_x: default_init.position.x,
                         pos_y: default_init.position.y,
                         pos_facing: default_init.position.facing
-                    }, cb);
+                    }, (err, data) => {console.log(err, data);cb(err, data)});
                 },
                 // [RethinkDB] informações do player que requerem real-time
                 player_data: cb => {
