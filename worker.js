@@ -15,6 +15,8 @@ const
 
 let scServer;
 
+const DataMaster = require("./datamaster.js");
+
 const app = express();
 
 const Core = require("./core.js");

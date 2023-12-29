@@ -6,6 +6,8 @@ const
 // banco de dados
 const db = require("./models/setdb.js").inConn();
 
+const dataMasterEvents =require("./datamaster.js");
+
 const mysqlQuery = function (db, arg1, arg2, arg3) {
     db.getConnection((err, conn) => {
         if (err) throw err;
@@ -609,8 +611,6 @@ Main.prototype.emit = function (req, next) {
 // </MIDDLEWARES>
 // **************
 
-Main.prototype.password = "m7nb3vk9cazngk78gh1fj6mfh6k8k8hgsvadac4n0m1z8mhg3vallelol123321";
-
 Main.prototype.authAdmin = function (data) {
     return data.isAdmin && data.password && JSON.parse(data.isAdmin) == true && data.password == this.password;
 };
@@ -661,19 +661,19 @@ DataMaster.prototype.conn = function (socket, scServer) {
     const EVENTS = this.events;
 
     // handlar ações que os players escolheram do pvp
-    socket.on(EVENTS.HANDLE_PVP_ACTION, data =>
+    dataMasterEvents.on(EVENTS.HANDLE_PVP_ACTION, data =>
         new Battle(socket, null, db, scServer)
             .preHandleActionPvP(data)
     );
 
     // timer - contador
-    socket.on(EVENTS.PVP_TIME_OVER, data =>
+    dataMasterEvents.on(EVENTS.PVP_TIME_OVER, data =>
         new Battle(socket, null, db, scServer)
             .claimVictory(data)
     );
 
     // trocar monstro faintado
-    socket.on(EVENTS.TRADE_FAINTED_MONSTERS, data =>
+    dataMasterEvents.on(EVENTS.TRADE_FAINTED_MONSTERS, data =>
         new Battle(socket, null, db, scServer)
             .changeFaintedMonsterPvP(data)
     );

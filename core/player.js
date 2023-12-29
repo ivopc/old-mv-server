@@ -579,21 +579,21 @@ Player.prototype.respondPvPInvite = function (receiver, inviter, accepted, next)
             };
         },
         changeCurrentDoing: ["battle", (data, callback) => {
-
+            console.log("changeCurrentDoingBattle", data);
             // caso aceitou a batalha
             if (accepted == 1) {
                 async.parallel([
                     cb => {
                         this.mysqlQuery(
                             "UPDATE `current_doing` SET `if_is_pvp_battle_id` = ?, `battle_type` = '3' WHERE `uid` = ?",
-                            [data.battle[0].insertId, receiver],
+                            [data.battle.insertId, receiver],
                             cb
                         );
                     },
                     cb => {
                         this.mysqlQuery(
                             "UPDATE `current_doing` SET `if_is_pvp_battle_id` = ?, `battle_type` = '3' WHERE `uid` = ?", 
-                            [data.battle[0].insertId, inviter],
+                            [data.battle.insertId, inviter],
                             cb
                         );
                     }
@@ -626,6 +626,9 @@ Player.prototype.respondPvPInvite = function (receiver, inviter, accepted, next)
             }
         }, (err, response) => {
 
+
+            console.log("batalha!!!!!", response);
+
             // ação que inicia pvp
             const action = 5;
 
@@ -654,7 +657,7 @@ Player.prototype.respondPvPInvite = function (receiver, inviter, accepted, next)
 
             this.mysqlQuery(
                 "UPDATE `battle` SET `seen_presentation` = '1' WHERE `id` = ?",
-                [data.battle[0].insertId]
+                [data.battle.insertId]
             );
             next();
         });

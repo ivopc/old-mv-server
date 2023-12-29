@@ -19,6 +19,8 @@ const Battle = function (socket, auth, db, scServer) {
     // this.netwoking = new Networking();
 };
 
+const dataMasterEvents = require("../datamaster.js");
+
 Battle.prototype = Object.create(Base.prototype);
 
 const Resources = {
@@ -83,7 +85,7 @@ Battle.prototype.insert = function (data, callback) {
     this.mysqlQuery("INSERT INTO `battle` SET ?", data, (err, results) => {
         // se for pvp inserir no datamaster
         if (data.battle_type == 3) {
-            this.scServer.exchange.publish("datamaster", {
+            dataMasterEvents.handleEvents({
                 type: 0,
                 battle_id: results.insertId
             });
@@ -336,7 +338,7 @@ Battle.prototype.fainted = function (actions, data, fainted_type, fainted_monste
         case "pvp": {
 
             /// manda pro datamaster
-            this.scServer.exchange.publish("datamaster", {
+            dataMasterEvents.handleEvents({
                 type: 4,
                 battle_id: data.battle_info.id,
                 fainted: [
@@ -382,7 +384,7 @@ Battle.prototype.fainted = function (actions, data, fainted_type, fainted_monste
             //// console.log(fainted_monster_data);
 
             /// manda pro datamaster para ambos mudarem de monstro
-            this.scServer.exchange.publish("datamaster", {
+            dataMasterEvents.handleEvents( {
                 type: 4,
                 battle_id: data.battle_info.id,
                 fainted: [
@@ -1158,7 +1160,7 @@ Battle.prototype.handlePvPInput = function (input, battle_id) {
     };
 
     // publicar para o datamaster
-    this.scServer.exchange.publish("datamaster", {
+    dataMasterEvents.handleEvents({
         type: 1,
         action: input.action,
         param: input.param,
@@ -1601,7 +1603,7 @@ Battle.prototype.requestChangeFaintedMonsterPvP = function (input) {
                 iAm = "receiver";
             };
 
-            this.scServer.exchange.publish("datamaster", {
+            dataMasterEvents.handleEvents({
                 type: 5,
                 battle_id,
                 iAm,
@@ -1833,7 +1835,7 @@ Battle.prototype.claimTimer = function () {
         "SELECT `battle_type`, `if_is_pvp_battle_id` FROM `current_doing` WHERE `uid` = ?",
         [this.auth.uid],
         (err, results) => {
-            this.scServer.exchange.publish("datamaster", {
+            dataMasterEvents.handleEvents({
                 type: 3,
                 battle_id: results[0].if_is_pvp_battle_id
             });
@@ -1884,7 +1886,7 @@ Battle.prototype.claimVictory = function (data) {
         }]
     }, () => {
 
-        this.scServer.exchange.publish("datamaster", {
+        dataMasterEvents.handleEvents({
             type: 2,
             battle_id: data.battle_id
         });

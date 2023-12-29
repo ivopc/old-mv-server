@@ -1,6 +1,7 @@
 const 
-    socketCluster = require("socketcluster-client"),
-    _ = require("underscore");
+     _ = require("underscore"),
+    crypto = require("crypto"),
+    EventEmitter = require("events");
 
 /*
 Datamaster gerencia variavéis do jogo de forma global, guarda por exemplo: ações do PvP
@@ -8,31 +9,10 @@ e articula e gerencia emição de dados sw forma global
  */
 
 const Datamaster = function () {
-
-    // conectar ao server como datamaster
-    this.socket = socketCluster.connect({
-        query: {
-            isAdmin: "true",
-            password: this.password
-        },
-        port: 8000,
-        hostname: "localhost",
-        rejectUnauthorized: false
-    });
-
-    // Quando conectar, liberar clients a acessar jogo
-    this.socket.on("connect", () => {
-        console.log("Datamaster started.");
-    });
-
-    this.socket.on("error", err =>
-        console.log(err)
-    );
-
-    // Escuta de eventos
-    this.masterListener = this.socket.subscribe("datamaster");
-    this.masterListener.watch(data => this.handleEvents(data));
+    EventEmitter.call(this);
 };
+
+Datamaster.prototype = Object.create(EventEmitter.prototype);
 
 // Manipular eventos
 Datamaster.prototype.handleEvents = function (data) {
@@ -83,7 +63,6 @@ Datamaster.prototype.insertBattle = function (data) {
     this.PvP[data.battle_id].actionSended = {};
     this.PvP[data.battle_id].timerActive = false;
     this.PvP[data.battle_id].needToTradeFaintedMonster = [];
-    console.log("inserindo batalha", this.PvP);
 };
 
 // Escolher ação
@@ -101,7 +80,7 @@ Datamaster.prototype.chooseBattleAction = function (data) {
             this.PvP[data.battle_id].timerActive = false;
         };
         // envia ações pro server processar e enviar pro client
-        this.socket.emit("1", {
+        this.emit("1", {
             battle_id: data.battle_id,
             actions: [
                 this.PvP[data.battle_id].actionSended,
@@ -136,7 +115,7 @@ Datamaster.prototype.insertBattleTimer = function (data) {
     // execura timer
     this.PvP[data.battle_id].timer = setTimeout(() => {
         console.log("Timer ends");
-        this.socket.emit("2", {
+        this.emit("2", {
             battle_id: data.battle_id,
             action: this.PvP[data.battle_id].actionSended
         });
@@ -164,7 +143,7 @@ Datamaster.prototype.changeFaintedMonster = function (data) {
     if (this.PvP[data.battle_id].needToTradeFaintedMonster.length == 1) {
         console.log("LULZ2");
         // emitir pra trocar
-        this.socket.emit("3", {
+        this.emit("3", {
             battle_id: data.battle_id,
             params: [{
                 iAm: data.iAm,
@@ -193,7 +172,7 @@ Datamaster.prototype.changeFaintedMonster = function (data) {
 
             console.log(this.PvP[data.battle_id].needToTradeFaintedMonster);
 
-            this.socket.emit("3", {
+            this.emit("3", {
                 battle_id: data.battle_id,
                 params: this.PvP[data.battle_id].needToTradeFaintedMonster
             })
@@ -218,10 +197,10 @@ Datamaster.prototype.changeFaintedMonster = function (data) {
 Datamaster.prototype.PvP = {};
 
 // Timer do PVP de limite de espera do outro jogador
-Datamaster.prototype.pvpTimer = 5500; //120000
+Datamaster.prototype.pvpTimer = 120000; //120000
 
 // Senha para entrar como datamaster
-Datamaster.prototype.password = "m7nb3vk9cazngk78gh1fj6mfh6k8k8hgsvadac4n0m1z8mhg3vallelol123321";
+Datamaster.password = crypto.randomBytes(64).toString('hex');
 
 
-module.exports = Datamaster;
+module.exports = new Datamaster();
