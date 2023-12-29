@@ -9,6 +9,28 @@ Old Monster Valle server, crap architecture. I Just turned it public to rewrite 
 
 The Old Game Client and and Old Game Server are avaliable here: https://monstervalle.onrender.com/
 
+## Dependences
+- NodeJS
+- MySQL
+
+## Build Setup
+
+Do not forget to create an `.env` file in the project root path based in `.env.example`
+
+``` bash
+# install dependencies
+npm install
+
+# serve with hot reload at localhost:8000
+npm run dev
+
+# run database seeds (you need it to run server properly)
+npm run database-seed
+
+# if you get some bug, black screen or issue in battle gameplay just reset the battle related databases
+npm run database-reset-battle
+```
+
 # License
 The code of game source project is released under the MIT license.
 
