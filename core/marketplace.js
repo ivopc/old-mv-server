@@ -11,9 +11,10 @@ const Bag = require("./bag.js");
 
 const Base = require("./base.js");
 
-const MarketPlace = function (socket, auth, db, scServer) {
-    Base.call(this, socket, auth, db, scServer);
+const MarketPlace = function (main, socket, auth, db, scServer, dataMasterEvents) {
+    Base.call(this, main, socket, auth, db, scServer, dataMasterEvents);
 };
+
 
 MarketPlace.prototype = Object.create(Base.prototype);
 
@@ -249,7 +250,7 @@ MarketPlace.prototype.cancelItemSellTrade = function (uid, negotiation_id, callb
                     this.unfreezeItem(uid, results.sale_id, next);
                 },
                 reinsertItem: next => {
-                    new Bag(null, {uid}, {mysql: this.db.mysql})
+                    new Bag({}, null, {uid}, {mysql: this.db.mysql})
                         .insertItem(uid, results.sale_id, 1, next);
                 }
             }, (err, data) => {
@@ -287,7 +288,7 @@ MarketPlace.prototype.freezeItemMonster = function (uid, id, type, callback) {
         // item
         case 0: {
 
-            const bag = new Bag(null, {uid}, this.db);
+            const bag = new Bag(this.main, null, {uid}, this.db);
 
             async.parallel({
                 remove: next => {
@@ -558,7 +559,7 @@ MarketPlace.prototype.sendSaleNotification = function (sellerId, productType, pr
 
     async.waterfall([
         next => {
-            new Notify(null, this.auth, this.db)
+            instantiateGameCoreKlass(Notify, this.main)
                 .insertPurchase(sellerId, productType, productId, next);
         },
         (data, next) => {
@@ -579,3 +580,4 @@ MarketPlace.prototype.sendSaleNotification = function (sellerId, productType, pr
 module.exports = MarketPlace;
 
 const Notify = require("./notify.js");
+const { instantiateGameCoreKlass } = require("../utils/utils.js");

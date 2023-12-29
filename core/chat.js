@@ -2,8 +2,8 @@ const PlayerData = require("./playerdata.js");
 
 const Base = require("./base.js");
 
-const Chat = function (socket, auth, db, scServer) {
-    Base.call(this, socket, auth, db, scServer);
+const Chat = function (main, socket, auth, db, scServer, dataMasterEvents) {
+    Base.call(this, main, socket, auth, db, scServer, dataMasterEvents);
 };
 
 Chat.prototype = Object.create(Base.prototype);

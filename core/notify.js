@@ -40,9 +40,10 @@ helper.isFloat = n => Number(n) === n && n % 1 !== 0;
 
 const Base = require("./base.js");
 
-const Notify = function (socket, auth, db, scServer) {
-    Base.call(this, socket, auth, db, scServer);
+const Notify = function (main, socket, auth, db, scServer, dataMasterEvents) {
+    Base.call(this, main, socket, auth, db, scServer, dataMasterEvents);
 };
+
 
 Notify.prototype = Object.create(Base.prototype);
 
@@ -108,7 +109,7 @@ Notify.prototype.getMoveNotification = function (input = {}) {
             data = results[0];
 
             // pega dados do monstro que vai mudar o move
-            new Species(null, this.auth, this.db)
+            instantiateGameCoreKlass(Species, this.main)
                 .get(data.monster_id, next);
         },
         result => {
@@ -149,7 +150,7 @@ Notify.prototype.getEvolveNotification = function (input = {}) {
             data = results[0];
 
             // pega dados do monstro que vai mudar o move
-            new Species(null, this.auth, this.db)
+            instantiateGameCoreKlass(Species, this.main)
                 .get(data.monster_id, next);
         },
         result => {
@@ -216,7 +217,7 @@ Notify.prototype.insertLearnMove = function (monster, moves, callback) {
             // se tiver algum espaço vazio, aprender move automaticamente
             next => {
                 if (trade) {
-                    new Species(this.socket, this.auth, this.db)
+                    instantiateGameCoreKlass(Species, this.main)
                         .learnMove(monster.id, move, position, next);
                 } else {
                     next(null, true);
@@ -490,7 +491,7 @@ Notify.prototype.requestLearnMove = function (input = {}) {
             };
 
             // ensinar move
-            new Species(this.socket, this.auth, this.db)
+            instantiateGameCoreKlass(Species, this.main)
                 .learnMove(data.monster_id, data.move_id, position, next);
         },
         // desabilitar ação da notificação de aprender move
@@ -601,7 +602,7 @@ Notify.prototype.requestEvolveMonster = function (input = {}) {
             };
 
             // evoluir monstro
-            new Species(this.socket, this.auth, this.db)
+            instantiateGameCoreKlass(Species, this.main)
                 .evolve(data.monster_id, data.evolve_to, next);
         },
         (notthing, next) => {
@@ -625,3 +626,4 @@ Notify.prototype.filterInput = {
 module.exports = Notify;
 
 const Species = require("./species.js");
+const { instantiateGameCoreKlass } = require("../utils/utils.js");

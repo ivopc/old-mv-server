@@ -6,8 +6,6 @@ const
 // banco de dados
 const db = require("./models/setdb.js").inConn();
 
-const dataMasterEvents =require("./datamaster.js");
-
 const mysqlQuery = function (db, arg1, arg2, arg3) {
     db.getConnection((err, conn) => {
         if (err) throw err;
@@ -33,284 +31,235 @@ const
     Tamer = require("./core/tamer.js"),
     Notify = require("./core/notify.js");
 
-const 
-    Main = function () {},
-    DataMaster = function () {};
-
-// manipulação de entrada (pós-autenticar) método principal
-Main.prototype.conn = function (socket, scServer) {
-
-    const auth = url.parse(socket.request.url, true).query;
-
-    if (this.authAdmin(auth)) {
-        console.log("Oi admin");
-        new DataMaster().conn(socket, scServer);
-        return;
-    };
-
-    console.log(`Oi usuário de ID ${auth.uid}`);
-    this.userConn(socket, scServer);
+const Main = function (socket, server, auth) {
+    /**@type {DataMaster} */
+    this.dataMasterEvents;
+    this.socket = socket;
+    this.server = server;
+    this.db = db;
+    /** @type {{ uid: string }} */
+    this.auth = auth;
 };
 
+
 // manipulação de i/o (pós-autenticar) de quando o usuário conectar
-Main.prototype.userConn = function (socket, scServer) {
-
-    const 
-        auth = url.parse(socket.request.url, true).query,
-        EVENTS = this.events;
-
-    // new Bag(socket, auth, db, scServer)
-    //     .checkIfHaveItem(3, (err, have) => {
-    //         console.log(have ? "Tem o item" : "Não tem o item");
-    //     });
-
-    // const species = new Species(null, auth, db);
-    // species.getMonstersInPocket((err, data) => {
-    //     species.filterMonstersData(err, data, (err, monster_data) => {
-    //         console.log(monster_data);
-    //     })
-    // });
-
-    // new Bag(socket, auth, db, scServer)
-    //     .useItem({
-    //         monster: 1,
-    //         item: 15
-    //     });
-
-    // new Bag(socket, auth, db, scServer)
-    //     .insertItem(null, 15, 2, () => {console.log("Oi");});
-
-    // new Player(socket, auth, db, scServer)
-    //     .checkIfIsVip((err, isVip) => console.log(isVip ? "É VIP sim." : "Não é VIP."));
-    // const { id } = socket;
-    // console.log({id});
-    //console.log(scServer.clients);
-
-    // scServer.clients[socket.id].emit("ola", {
-    //     "kkk": 123
-    // });
-
-    // new Notify(socket, auth, db, scServer)
-    //     .get();
-
-    // new Species(socket, auth, db, scServer)
-    //     .learnMove(229, 4, 1, function () {
-    //         console.log("lol", arguments);
-    //     });
-
+Main.prototype.conn = function (socket, scServer) {
+    const auth = url.parse(socket.request.url, true).query;
+    this.auth = auth;
+    this.socket = socket;
+    this.server = scServer;
+    console.log(`Oi usuário de ID ${auth.uid}`);
+    this.dataMasterEvents = new DataMaster(this);
     // configurar conexão do jogador
-    new Player(socket, auth, db, scServer)
-        .connect();
+    instantiateGameCoreKlass(Player, this).connect();
 
-    // new Player(socket, auth, db, scServer)
+    // instantiateGameCoreKlass(Player, this)
     //     .insertVip(7779600000, function () {
     //         console.log(arguments);
     //     });
 
     // ping-pong
-    socket.on(EVENTS.PING, () => 
-        new Player(socket, auth, db, scServer)
-            .pong()
+    socket.on(EVENTS.PING, () => instantiateGameCoreKlass(Player, this).pong()
     );
 
     // jogador requisita usar item
     socket.on(EVENTS.USE_ITEM, input => 
-        new Bag(socket, auth, db, scServer)
+        instantiateGameCoreKlass(Bag, this)
             .useItem(input)
     );
 
     // comprar item
     socket.on(EVENTS.BUY_ITEM, input => 
-        new Mart(socket, auth, db, scServer)
+        instantiateGameCoreKlass(Mart, this)
             .buy(input)
     );
 
     // pegar monstros que estão na box
     socket.on(EVENTS.GET_MONSTER_BOX, input =>
-        new Box(socket, auth, db, scServer)
+        instantiateGameCoreKlass(Box, this)
             .get(input)
     );
 
     // jogador requisita um encontro com monstro selvagem
     socket.on(EVENTS.REQUEST_WILD_ENCOUNTER, () =>
-        new Wild(socket, auth, db, scServer)
+        instantiateGameCoreKlass(Wild, this)
             .search()
     );
 
     // jogador aceitou/recusou batalha selvagem
     socket.on(EVENTS.ACCEPT_REJECT_WILD_BATTLE, input => 
-        new Wild(socket, auth, db, scServer)
+        instantiateGameCoreKlass(Wild, this)
             .handleAcceptReject(input)
     );
 
     // escolher ação na batalha
     socket.on(EVENTS.CHOOSE_BATTLE_ACTION, input => 
-        new Battle(socket, auth, db, scServer)
+        instantiateGameCoreKlass(Battle, this)
             .initHandleAction(input)
     );
 
     // requisitar troca de monstro faintado
     socket.on(EVENTS.TRADE_FAINTED_MONSTER_PVP, input =>
-        new Battle(socket, auth, db, scServer)
+        instantiateGameCoreKlass(Battle, this)
             .requestChangeFaintedMonsterPvP(input)
     );
 
     // requisitar timer no PvP
     socket.on(EVENTS.CLAIM_PVP_TIMER, () =>
-        new Battle(socket, auth, db, scServer)
+        instantiateGameCoreKlass(Battle, this)
             .claimTimer()
     );
 
     // jogador requisita executar flag
     socket.on(EVENTS.EXEC_FLAG, input => 
-        new Flag(socket, auth, db, scServer)
+        instantiateGameCoreKlass(Flag, this)
             .requestExecution(input)
     );
 
     // jogador quer mudar de mapa
     socket.on(EVENTS.CHANGE_MAP, input => 
-        new Map(socket, auth, db, scServer)
+        instantiateGameCoreKlass(Map, this)
             .changeMap(input)
     );
 
     // jogagor muda skin
     socket.on(EVENTS.CHANGE_SKIN, input => 
-        new Player(socket, auth, db, scServer)
+        instantiateGameCoreKlass(Player, this)
             .changeSkin(input)
     );
 
     // PEGAR dados do profile do próprio player
     socket.on(EVENTS.REQUEST_SELF_PROFILE_DATA, () => 
-        new Player(socket, auth, db, scServer)
+        instantiateGameCoreKlass(Player, this)
             .getSelfProfileData()
     );
 
     // pegar dados do profile
     socket.on(EVENTS.REQUEST_PROFILE_DATA, input =>
-        new Player(socket, auth, db, scServer)
+        instantiateGameCoreKlass(Player, this)
             .getProfileData(input)
     );
 
     // box to party
     socket.on(EVENTS.CHANGE_BOX_TO_PARTY, input =>
-        new Box(socket, auth, db, scServer)
+        instantiateGameCoreKlass(Box, this)
             .changeBoxToParty(input)
     );
 
     // box to empty party
     socket.on(EVENTS.CHANGE_BOX_TO_EMPTY_PARTY, input =>
-        new Box(socket, auth, db, scServer)
+        instantiateGameCoreKlass(Box, this)
             .changeBoxToEmptyParty(input)
     );
 
     // party to empty box
     socket.on(EVENTS.CHANGE_PARTY_TO_EMPTY_BOX, input =>
-        new Box(socket, auth, db, scServer)
+        instantiateGameCoreKlass(Box, this)
             .changePartyToEmptyBox(input)
     );
 
     // jogador quer mudar posição do monstro na party
     socket.on(EVENTS.CHANGE_PARTY_POSITION, input => 
-        new Species(socket, auth, db, scServer)
+        instantiateGameCoreKlass(Species, this)
             .changePartyPosition(input)
     );
 
     // mudar posição da box do monstro
     socket.on(EVENTS.CHANGE_BOX_POSITION, input =>
-        new Box(socket, auth, db, scServer)
+        instantiateGameCoreKlass(Box, this)
             .changeInBoxMonsterPosition(input)
     );
 
     // pegar monstros/itens
     socket.on(EVENTS.GET_MONSTERS_ITEMS, input => 
-        new Player(socket, auth, db, scServer)
+        instantiateGameCoreKlass(Player, this)
             .getItemsMonster(input)
     );
 
     // pegar infos do player
     socket.on(EVENTS.GET_PLAYER_DATA, () =>
-        new Player(socket, auth, db, scServer)
+        instantiateGameCoreKlass(Player, this)
             .getPlayerData()
     );
 
     // pegar lista de quests (com paginação)
     socket.on(EVENTS.GET_QUESTS_LIST, input => 
-        new Quest(socket, auth, db, scServer)
+        instantiateGameCoreKlass(Quest, this)
             .getList(input)
     );
 
     // pegar dados de quest especifica
     socket.on(EVENTS.GET_SPECIFIC_QUEST_DATA, input =>
-        new Quest(socket, auth, db, scServer)
+        instantiateGameCoreKlass(Quest, this)
             .getSpecific(input)
     );
 
     // alguma requisição em relação a quest especifica
     socket.on(EVENTS.REQUEST_QUEST, input =>
-        new Quest(socket, auth, db, scServer)
+        instantiateGameCoreKlass(Quest, this)
             .request(input)
     );
 
     // requisição pra iniciar a missão
     socket.on(EVENTS.REQUEST_START_QUEST, input =>
-        new Quest(socket, auth, db, scServer)
+        instantiateGameCoreKlass(Quest, this)
             .startQuest(input)
     );
 
     // requisição pra pegar dados das notificações na page
     socket.on(EVENTS.GET_NOTIFICATIONS, input =>
-        new Notify(socket, auth, db, scServer)
+        instantiateGameCoreKlass(Notify, this)
             .getNotifications(input)
     );
 
     // requisição pra pegar dados da notificação de aprender move
     socket.on(EVENTS.GET_MOVE_NOTIFICATION, input =>
-        new Notify(socket, auth, db, scServer)
+        instantiateGameCoreKlass(Notify, this)
             .getMoveNotification(input)
     );
 
     // requisição pra pegar dados da notificação de evoluir
     socket.on(EVENTS.GET_EVOLVE_NOTIFICATION, input =>
-        new Notify(socket, auth, db, scServer)
+        instantiateGameCoreKlass(Notify, this)
             .getEvolveNotification(input)
     );
 
     // requisição de pegar dados da venda
     socket.on(EVENTS.GET_MARKETPLACE_NOTIFICATION, input =>
-        new Notify(socket, auth, db, scServer)
+        instantiateGameCoreKlass(Notify, this)
             .getMarketPlaceNotification(input)
     );
 
 
     // requisitar aprender move
     socket.on(EVENTS.REQUEST_LEARN_MOVE_NOTIFY_ACTION, input =>
-        new Notify(socket, auth, db, scServer)
+        instantiateGameCoreKlass(Notify, this)
             .requestLearnMove(input)
     );
 
     // requisitar não aprender move
     socket.on(EVENTS.REQUEST_DONT_LEARN_MOVE_NOTIFY_ACTION, input =>
-        new Notify(socket, auth, db, scServer)
+        instantiateGameCoreKlass(Notify, this)
             .requestDontLearnMove(input)
     );
     
 
     // requisitar evoluir monstro
     socket.on(EVENTS.REQUEST_EVOLVE_NOTIFY_ACTION, input =>
-        new Notify(socket, auth, db, scServer)
+        instantiateGameCoreKlass(Notify, this)
             .requestEvolveMonster(input)
     );
     
     // setar que já viu notificação
     socket.on(EVENTS.SET_NOTIFICATION_SEEN, input =>
-        new Notify(socket, auth, db, scServer)
+        instantiateGameCoreKlass(Notify, this)
             .setSeen(input)
     );
     
     
     // quando jogador desconectar
     socket.on(EVENTS.DISCONNECT, () =>
-        new Player(socket, auth, db, scServer)
+        instantiateGameCoreKlass(Player, this)
             .disconnect()
     );
 };
@@ -319,18 +268,11 @@ Main.prototype.userConn = function (socket, scServer) {
 // <MIDDLEWARES>
 
 // autenticar a entrada do client
-Main.prototype.auth = function (req, next) {
+Main.prototype.authConn = function (req, next) {
 
     let input = url.parse(req.url, true).query;
 
     console.time("i/o Auth");
-
-    // se for o datamaster
-    if (this.authAdmin(input)) {
-        console.log("Oi admin");
-        next();
-        return;
-    };
 
     // procura token na db
     new mysqlQuery(
@@ -365,7 +307,7 @@ Main.prototype.subscribe = function (req, scServer, next) {
 
         // mapa
         case "m": {
-            new Map(req.socket, auth, db)
+            instantiateGameCoreKlass(Map, this)
                 .getActivePlayersInMap();
             break;
         };
@@ -382,7 +324,7 @@ Main.prototype.subscribe = function (req, scServer, next) {
 
         // chat
         case "c": {
-            new Chat().subscribe({
+            instantiateGameCoreKlass(Chat, this).subscribe({
                 type: req.data.type
             });
 
@@ -392,7 +334,7 @@ Main.prototype.subscribe = function (req, scServer, next) {
         // pvp
         case "p": {
             // checar se pode se inscrever naquele pvp
-            console.log("AEUHAEUHEAUEH PVP", channel);
+            console.log("AEUHAEUHEAUEH PVP", {channel});
             break;
         };
 
@@ -400,20 +342,6 @@ Main.prototype.subscribe = function (req, scServer, next) {
         case "g": {
             break;
         };
-
-        // datamaster
-        case "d": {
-            if (this.authAdmin(auth)) {
-                console.log("Datamaster joined the server.");
-                next();
-            } else {
-                console.log("Wrong Datamaster auth.");
-                next(true);
-            };
-            return;
-            break;
-        };
-
         default: {
             next(true);
             return;
@@ -443,7 +371,7 @@ Main.prototype.publishIn = function (req, scServer, next) {
             switch (+req.data.type) {
                 // mensagem chat
                 case 1: {
-                    new Chat(req.socket, auth, db)
+                    instantiateGameCoreKlass(Chat, this)
                         .sendMessage(next, req.data);
                     return;
                     break;
@@ -462,27 +390,27 @@ Main.prototype.publishIn = function (req, scServer, next) {
             switch (req.data.dataType) {
                 // envia que se mexeu no mapa
                 case 1: {
-                    new Move(req.socket, auth, db)
+                    instantiateGameCoreKlass(Move, this)
                         .walk(next, req.data);
                     break;
                 };
 
                 // envia que mudou de facing no mapa
                 case 2: {
-                    new Move(req.socket, auth, db)
+                    instantiateGameCoreKlass(Move, this)
                         .face(next, req.data);
                     break;
                 };
 
                 // envia nova mensagem no chat
                 case 3: {
-                    new Chat(req.socket, auth, db)
+                    instantiateGameCoreKlass(Chat, this)
                         .sendMessage(next, req.data);
                     break;
                 };
                 // enviar que está digitando
                 case 5: {
-                    new Chat(req.socket, auth, db)
+                    instantiateGameCoreKlass(Chat, this)
                         .sendTyping(next, req.data);
                     break;
                 };
@@ -516,11 +444,8 @@ Main.prototype.publishIn = function (req, scServer, next) {
                 next(true);
                 return;
             };
-
-            let player = new Player(req.socket, auth, db, scServer);
-
+            let player = instantiateGameCoreKlass(Player, this);
             req.data.uid = +auth.uid;
-
             switch(req.data.action) {
                 case 1: {break;};
                 case 2: {break;};
@@ -608,14 +533,14 @@ Main.prototype.emit = function (req, next) {
     next();
 };
 
+
+
 // </MIDDLEWARES>
 // **************
 
-Main.prototype.authAdmin = function (data) {
-    return data.isAdmin && data.password && JSON.parse(data.isAdmin) == true && data.password == this.password;
-};
 
-Main.prototype.events = {
+
+const EVENTS = {
     "PING": "0",
     "USE_ITEM": "10",
     "BUY_ITEM": "11",
@@ -653,38 +578,6 @@ Main.prototype.events = {
     "SET_NOTIFICATION_SEEN": "88",
     "DISCONNECT": "disconnect"
 };
-
-
-// Quando o datamaster conecta
-DataMaster.prototype.conn = function (socket, scServer) {
-
-    const EVENTS = this.events;
-
-    // handlar ações que os players escolheram do pvp
-    dataMasterEvents.on(EVENTS.HANDLE_PVP_ACTION, data =>
-        new Battle(socket, null, db, scServer)
-            .preHandleActionPvP(data)
-    );
-
-    // timer - contador
-    dataMasterEvents.on(EVENTS.PVP_TIME_OVER, data =>
-        new Battle(socket, null, db, scServer)
-            .claimVictory(data)
-    );
-
-    // trocar monstro faintado
-    dataMasterEvents.on(EVENTS.TRADE_FAINTED_MONSTERS, data =>
-        new Battle(socket, null, db, scServer)
-            .changeFaintedMonsterPvP(data)
-    );
-};
-
-DataMaster.prototype.events = {
-    "HANDLE_PVP_ACTION": "1",
-    "PVP_TIME_OVER": "2",
-    "TRADE_FAINTED_MONSTERS": "3"
-};
-
 /*
 
 sockets =>
@@ -717,3 +610,7 @@ sockets =>
 */
 
  module.exports = Main;
+
+ const DataMaster = require("./datamaster.js");
+const Base = require("./core/base.js");
+const { instantiateGameCoreKlass } = require("./utils/utils.js");

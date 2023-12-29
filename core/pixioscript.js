@@ -4,9 +4,8 @@ const EVENTS = require("./../database/socket_events.json");
 
 const Base = require("./base.js");
 
-const PixioScript = function (socket, auth, db, scServer) {
-    Base.call(this, socket, auth, db, scServer);
-
+const PixioScript = function (main, socket, auth, db, scServer, dataMasterEvents) {
+    Base.call(this, main, socket, auth, db, scServer, dataMasterEvents);
     // lista das funções que serão executas em runtime
     this.fn = [];
     // lista dos códigos
@@ -188,7 +187,7 @@ PixioScript.prototype.fns[0] = function (next) {
     async.series([
         callback => {
             // inserindo item
-            new Bag(null, this.auth, this.db)
+            instantiateGameCoreKlass(Bag, this.main)
                 .insertItem(
                     null, // user id setado automaticamente
                     this.param.id, // id do item
@@ -217,7 +216,7 @@ PixioScript.prototype.fns[1] = function (next) {
 
     const 
         param = this.param,
-        species = new Species(null, this.auth, this.db);
+        species = instantiateGameCoreKlass(Species, this.main);
 
     async.waterfall([
         callback => {
@@ -273,7 +272,7 @@ PixioScript.prototype.fns[2] = function (next) {
     async.waterfall([
         callback => {
             // healar monstros
-            new Species(null, this.auth, this.db)
+            instantiateGameCoreKlass(Species, this.main)
                 .healAllPlayerMonsters(callback);
         },
         () => {
@@ -309,7 +308,7 @@ PixioScript.prototype.fns[7] = function (next) {
     const param = this.param;
 
     // muda flag na db
-    new Flag(null, this.auth, this.db)
+    instantiateGameCoreKlass(Flag, this.main)
         .insertUpdate(
             param.type,
             param.flag_id,
@@ -322,7 +321,7 @@ PixioScript.prototype.fns[7] = function (next) {
 PixioScript.prototype.fns[8] = function (next) {
     const param = this.param;
 
-    new Tamer(this.socket, this.auth, this.db)
+    instantiateGameCoreKlass(Tamer, this.main)
         .startBattle(param.tamer_id, next);
 };
 
@@ -330,7 +329,7 @@ PixioScript.prototype.fns[8] = function (next) {
 PixioScript.prototype.fns[9] = function (next) {
     const { monsterpedia_id, level, isTutorial } = this.param;
 
-    const species = new Species(null, this.auth, this.db);
+    const species = instantiateGameCoreKlass(Species, this.main);
 
     async.auto({
         // inserir monstro
@@ -347,7 +346,7 @@ PixioScript.prototype.fns[9] = function (next) {
                 uid: this.auth.uid,
                 battle_type: 1
             };
-            new Battle(this.socket, this.auth, this.db)
+            instantiateGameCoreKlass(Battle, this.main)
                 .insert(
                     data,
                     next
@@ -363,7 +362,7 @@ PixioScript.prototype.fns[9] = function (next) {
         },
         // pegar itens
         items: next => {
-            new Bag(null, this.auth, this.db)
+            instantiateGameCoreKlass(Bag, this.main)
                 .getItems(next);
         },
         // pegar dados do monstro selvagem
@@ -419,3 +418,5 @@ const
     Tamer = require("./tamer.js"),
     Battle = require("./battle.js"),
     Flag = require("./flag.js");
+
+const { instantiateGameCoreKlass } = require("../utils/utils.js");

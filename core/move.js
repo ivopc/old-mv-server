@@ -4,9 +4,10 @@ const PlayerData = require("./playerdata.js");
 
 const Base = require("./base.js");
 
-const Move = function (socket, auth, db, scServer) {
-    Base.call(this, socket, auth, db, scServer);
+const Move = function (main, socket, auth, db, scServer, dataMasterEvents) {
+    Base.call(this, main, socket, auth, db, scServer, dataMasterEvents);
 };
+
 
 Move.prototype = Object.create(Base.prototype);
 

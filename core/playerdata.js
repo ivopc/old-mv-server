@@ -46,6 +46,10 @@ PlayerData.prototype.getActivePlayersInMap = function (map_id, notUid, callback)
     callback(null, players);
 };
 
+PlayerData.prototype.getAll = function (map_id, notUid, callback) {
+    return [ ...PlayersModel.values() ];
+};
+
 // updeitar posição do player no mapa para certa direção
 PlayerData.prototype.walk = function (uid, direction, callback) {
 

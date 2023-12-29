@@ -8,8 +8,8 @@ const Resources = {
 
 const Base = require("./base.js");
 
-const Tamer = function (socket, auth, db, scServer) {
-    Base.call(this, socket, auth, db, scServer);
+const Tamer = function (main, socket, auth, db, scServer, dataMasterEvents) {
+    Base.call(this, main, socket, auth, db, scServer, dataMasterEvents);
 };
 
 Tamer.prototype = Object.create(Base.prototype);
@@ -17,7 +17,7 @@ Tamer.prototype = Object.create(Base.prototype);
 // inserir
 Tamer.prototype.insert = function (tamer_id, callback) {
     const 
-        species = new Species(null, this.auth, this.db),
+        species = instantiateGameCoreKlass(Species, this.main),
         tamer = Resources.Tamers[tamer_id],
         team = tamer.team,
 
@@ -70,11 +70,11 @@ Tamer.prototype.startBattle = function (tamer_id, callback) {
     async.auto({
         tamer: next => this.insert(tamer_id, next),
         items: next => {
-            new Bag(null, this.auth, this.db)
+            instantiateGameCoreKlass(Bag, this.main)
                 .getItems(next);
         },
         insertBattle: next => {
-            new Battle(null, this.auth, this.db)
+            instantiateGameCoreKlass(Battle, this.main)
                 .insert({
                     uid: this.auth.uid,
                     battle_type: 2,
@@ -99,7 +99,7 @@ Tamer.prototype.startBattle = function (tamer_id, callback) {
             this.getMonstersInParty(tamer_id, next);
         }],
         playerMonsters: next => {
-            new Species(null, this.auth, this.db)
+            instantiateGameCoreKlass(Species, this.main)
                 .getMonstersInPocket(next);
         }
     }, (err, data) => {
@@ -232,3 +232,5 @@ const
     Battle = require("./battle.js"),
     Species = require("./species.js"),
     Bag = require("./bag.js");
+
+const { instantiateGameCoreKlass } = require("../utils/utils.js");

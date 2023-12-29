@@ -1,15 +1,13 @@
 const 
     async = require("async"),
-    _ = require("underscore"),
-    utils = require("./../utils/utils.js");
+    _ = require("underscore");
 
 const EVENTS = require("./../database/socket_events.json");
 
 const Base = require("./base.js");
 
-const Battle = function (socket, auth, db, scServer) {
-    Base.call(this, socket, auth, db, scServer);
-
+const Battle = function (main, socket, auth, db, scServer, dataMasterEvents) {
+    Base.call(this, main, socket, auth, db, scServer, dataMasterEvents);
     // this.action = new Action();
     // this.turns = new Turns();
     // this.script = new Script();
@@ -18,8 +16,6 @@ const Battle = function (socket, auth, db, scServer) {
     // this.formulas = new Formulas();
     // this.netwoking = new Networking();
 };
-
-const dataMasterEvents = require("../datamaster.js");
 
 Battle.prototype = Object.create(Base.prototype);
 
@@ -85,8 +81,7 @@ Battle.prototype.insert = function (data, callback) {
     this.mysqlQuery("INSERT INTO `battle` SET ?", data, (err, results) => {
         // se for pvp inserir no datamaster
         if (data.battle_type == 3) {
-            dataMasterEvents.handleEvents({
-                type: 0,
+            this.dataMasterEvents.insertBattle({
                 battle_id: results.insertId
             });
         };
@@ -177,7 +172,7 @@ Battle.prototype.fainted = function (actions, data, fainted_type, fainted_monste
             // verificar se tem algum monstro vivo
             // se tiver -> troca monstro, dá exp, continua battle
             // se não tiver -> da exp, acaba batalha
-            const tamer = new Tamer(null, this.auth, this.db);
+            const tamer = instantiateGameCoreKlass(Tamer, this.main);
 
             async.waterfall([
                 // pegar monstro vivo
@@ -290,7 +285,7 @@ Battle.prototype.fainted = function (actions, data, fainted_type, fainted_monste
         case "player": {
             async.waterfall([
                 next => {
-                    new Species(null, this.auth, this.db)
+                    instantiateGameCoreKlass(Species, this.main)
                         .getAliveMonster(next);
                 },
                 have => {
@@ -338,8 +333,7 @@ Battle.prototype.fainted = function (actions, data, fainted_type, fainted_monste
         case "pvp": {
 
             /// manda pro datamaster
-            dataMasterEvents.handleEvents({
-                type: 4,
+            this.dataMasterEvents.insertFaintedMonster({
                 battle_id: data.battle_info.id,
                 fainted: [
                     {uid: fainted_monster_data.uid}
@@ -348,7 +342,7 @@ Battle.prototype.fainted = function (actions, data, fainted_type, fainted_monste
 
             async.waterfall([
                 next => {
-                    new Species(null, this.auth, this.db)
+                    instantiateGameCoreKlass(Species, this.main)
                         .getAliveMonster(next, fainted_monster_data.uid);
                 },
                 have => {
@@ -384,8 +378,7 @@ Battle.prototype.fainted = function (actions, data, fainted_type, fainted_monste
             //// console.log(fainted_monster_data);
 
             /// manda pro datamaster para ambos mudarem de monstro
-            dataMasterEvents.handleEvents( {
-                type: 4,
+            this.dataMasterEvents.insertFaintedMonster({
                 battle_id: data.battle_info.id,
                 fainted: [
                     {uid: fainted_monster_data[0].uid},
@@ -398,7 +391,7 @@ Battle.prototype.fainted = function (actions, data, fainted_type, fainted_monste
                 inviter = fainted_monster_data.find(monster => monster.uid == data.battle_info.uid),
                 receiver = fainted_monster_data.find(monster => monster.uid == data.battle_info.challenged);
 
-            const species = new Species(null, {uid: null}, this.db);            
+            const species = new Species(this.main, null, {uid: null}, this.db);
 
             // vê se tem monstro vivos do inviter e receiver
             async.parallel({
@@ -486,12 +479,12 @@ Battle.prototype.onPlayerLose = function (actions, data, fainted_monster_data) {
                 },
                 // teletransportar para healing place
                 teleportToHealingPlace: next => {
-                    new Map(null, this.auth, this.db)
+                    instantiateGameCoreKlass(Map, this.main)
                         .teleportToHealingPlace(next);
                 },
                 // healar monstros do player
                 healPlayerMonsters: next => {
-                    new Species(null, this.auth, this.db)
+                    instantiateGameCoreKlass(Species, this.main)
                         .healAllPlayerMonsters(next);
                 }
             }, (err, _data) => {
@@ -548,12 +541,12 @@ Battle.prototype.onPlayerLose = function (actions, data, fainted_monster_data) {
                 },
                 // teletransportar para healing place
                 teleportToHealingPlace: next => {
-                    new Map(null, this.auth, this.db)
+                    instantiateGameCoreKlass(Map, this.main)
                         .teleportToHealingPlace(next);
                 },
                 // healar monstros do player
                 healPlayerMonsters: next => {
-                    new Species(null, this.auth, this.db)
+                    instantiateGameCoreKlass(Species, this.main)
                         .healAllPlayerMonsters(next);
                 }
             }, (err, _data) => {
@@ -602,12 +595,12 @@ Battle.prototype.onPlayerLose = function (actions, data, fainted_monster_data) {
                 },
                 // teletransportar perdedor para healing place
                 teleportLoserToHealingPlace: next => {
-                    new Map(null, this.auth, this.db)
+                    instantiateGameCoreKlass(Map, this.main)
                         .teleportToHealingPlace(next, fainted_monster_data.uid);
                 },
                 // healar monstros do player que foi derrotado
                 healLoserPlayerMonsters: next => {
-                    new Species(null, this.auth, this.db)
+                    instantiateGameCoreKlass(Species, this.main)
                         .healAllPlayerMonsters(next, fainted_monster_data.uid);
                 }
             }, (err, _data) => {
@@ -665,22 +658,22 @@ Battle.prototype.onDraw = function (actions, data) {
                 },
                 // teletransportar inviter para healing place
                 teleportInviterToHealingPlace: next => {
-                    new Map(null, this.auth, this.db)
+                    instantiateGameCoreKlass(Map, this.main)
                         .teleportToHealingPlace(next, data.battle_info.uid);
                 },
                 // healar monstros do inviter
                 healInviterPlayerMonsters: next => {
-                    new Species(null, this.auth, this.db)
+                    instantiateGameCoreKlass(Species, this.main)
                         .healAllPlayerMonsters(next, data.battle_info.uid);
                 },
                 // teletransportar receiver para healing place
                 teleportReceiverToHealingPlace: next => {
-                    new Map(null, this.auth, this.db)
+                    instantiateGameCoreKlass(Map, this.main)
                         .teleportToHealingPlace(next, data.battle_info.challenged);
                 },
                 // healar monstros do inviter
                 healReceiverPlayerMonsters: next => {
-                    new Species(null, this.auth, this.db)
+                    instantiateGameCoreKlass(Species, this.main)
                         .healAllPlayerMonsters(next, data.battle_info.challenged);
                 }
             }, (err, _data) => {
@@ -713,7 +706,7 @@ Battle.prototype.onDraw = function (actions, data) {
 Battle.prototype.checkAndInsertQuestDefeat = function (monster_data, callback) {
 
     const 
-        quest = new Quest(this.socket, this.auth, this.db, this.scServer),
+        quest = instantiateGameCoreKlass(Quest, this.main),
         insert = [];
 
     // console.log("Entrou no método quest defeat");
@@ -840,7 +833,7 @@ Battle.prototype.giveExpRaw = function (exp_reward, playerMonster, fainted_monst
     async.waterfall([
         // checar se player é vip para duplicar o EXP
         next => {
-            new Player(null, this.auth, this.db)
+            instantiateGameCoreKlass(Player, this.main)
                 .checkIfIsVip(next);
         },
         (isVip, next) => {
@@ -860,7 +853,7 @@ Battle.prototype.giveExpRaw = function (exp_reward, playerMonster, fainted_monst
             };
 
             // adiciona exp, drop points, muda stats, aprender move, evoluir
-            new Species(this.socket, this.auth, this.db)
+            instantiateGameCoreKlass(Species, this.main)
                 .addExpRewards({
                     isVip,
                     id: playerMonster.id,
@@ -952,7 +945,7 @@ Battle.prototype.coinReward = function (data, fainted_monster_data, callback) {
 
     async.waterfall([
         next => {
-            new Player(null, this.auth, this.db)
+            instantiateGameCoreKlass(Player, this.main)
                 .checkIfIsVip(next);
         },
         isVip => {
@@ -1016,7 +1009,7 @@ Battle.prototype.itemDrop = function (fainted_monster_data, callback) {
                     item: sorted_item
                 });
 
-                new Bag(null, this.auth, this.db)
+                instantiateGameCoreKlass(Bag, this.main)
                     .insertItem(null, sorted_item, 1, () => next(null, null));
             } else {
                 // console.log(`Não pegou item de drop! tem ${rate}%`);
@@ -1040,7 +1033,7 @@ Battle.prototype.itemDrop = function (fainted_monster_data, callback) {
                         item: _sorted_item
                     });
 
-                    new Bag(null, this.auth, this.db)
+                    instantiateGameCoreKlass(Bag, this.main)
                         .insertItem(null, _sorted_item, 1, () => next(null, null));
                 } else {
                     // console.log(`Não pegou item do monstro! ${_rate}%`);
@@ -1159,9 +1152,15 @@ Battle.prototype.handlePvPInput = function (input, battle_id) {
         return;
     };
 
+    console.log({
+        action: input.action,
+        param: input.param,
+        battle_id,
+        uid: this.auth.uid
+    });
+
     // publicar para o datamaster
-    dataMasterEvents.handleEvents({
-        type: 1,
+    this.dataMasterEvents.chooseBattleAction({
         action: input.action,
         param: input.param,
         battle_id,
@@ -1603,8 +1602,7 @@ Battle.prototype.requestChangeFaintedMonsterPvP = function (input) {
                 iAm = "receiver";
             };
 
-            dataMasterEvents.handleEvents({
-                type: 5,
+            this.dataMasterEvents.changeFaintedMonster({
                 battle_id,
                 iAm,
                 uid: this.auth.uid,
@@ -1835,11 +1833,9 @@ Battle.prototype.claimTimer = function () {
         "SELECT `battle_type`, `if_is_pvp_battle_id` FROM `current_doing` WHERE `uid` = ?",
         [this.auth.uid],
         (err, results) => {
-            dataMasterEvents.handleEvents({
-                type: 3,
+            this.dataMasterEvents.insertBattleTimer({
                 battle_id: results[0].if_is_pvp_battle_id
             });
-
             this.scServer.exchange.publish("p" + results[0].if_is_pvp_battle_id, {
                 type: 1
             });
@@ -1886,8 +1882,7 @@ Battle.prototype.claimVictory = function (data) {
         }]
     }, () => {
 
-        dataMasterEvents.handleEvents({
-            type: 2,
+        this.dataMasterEvents.removeBattle({
             battle_id: data.battle_id
         });
 
@@ -3210,7 +3205,7 @@ Battle.prototype.getAllBattleInfo = function (battle_type, if_is_pvp_battle_id, 
             async.parallel({
                 // pegar infos dos monstros do player que estão no pocket
                 playerMonsters: next => {
-                    new Species(this.socket, this.auth, this.db)
+                    instantiateGameCoreKlass(Species, this.main)
                         .getMonstersInPocket(next);
                 },
                 // pegar informação do wild que está lutando
@@ -3280,11 +3275,11 @@ Battle.prototype.getAllBattleInfo = function (battle_type, if_is_pvp_battle_id, 
                     );
                 }],
                 playerMonsters: next => {
-                    new Species(this.socket, this.auth, this.db)
+                    instantiateGameCoreKlass(Species, this.main)
                         .getMonstersInPocket(next);
                 },
                 tamerMonsters: ["battle", (data, next) => {
-                    new Tamer(this.socket, this.auth, this.db)
+                    instantiateGameCoreKlass(Tamer, this.main)
                         .getMonstersInParty(data.battle.challenged, next);
                 }]
             }, callback);
@@ -3312,12 +3307,12 @@ Battle.prototype.getAllBattleInfo = function (battle_type, if_is_pvp_battle_id, 
                 },
                 // monstros do inviter e do receiver
                 inviter: ["battle_info", (data, next) => {
-                    new Species(this.socket, this.auth, this.db)
+                    instantiateGameCoreKlass(Species, this.main)
                         .getMonstersInPocket(next, data.battle_info.uid);
                     
                 }],
                 receiver: ["battle_info", (data, next) => {
-                    new Species(this.socket, this.auth, this.db)
+                    instantiateGameCoreKlass(Species, this.main)
                         .getMonstersInPocket(next, data.battle_info.challenged);
                 }]
             }, callback);
@@ -3329,7 +3324,7 @@ Battle.prototype.getAllBattleInfo = function (battle_type, if_is_pvp_battle_id, 
 // Script para aplicar ações na batalha
 const BattleScript = function (main, battle_id) {
 
-    Base.call(this, {}, main.auth, main.db, {});
+    Base.call(main.main, {}, main.auth, main.db, {});
 
     this.main = main;
 
@@ -3673,7 +3668,7 @@ BattleScript.prototype.fns[6] = function (param, next) {
     async.series([
         // desconta item
         callback => {
-            new Bag(null, this.auth, this.db)
+            instantiateGameCoreKlass(Bag, this.main.main)
                 .discontItem(
                     +param.item_id,
                     () => callback()
@@ -3681,7 +3676,7 @@ BattleScript.prototype.fns[6] = function (param, next) {
         },
         // adiciona HP
         callback => {
-            new Species(null, this.auth, this.db)
+            instantiateGameCoreKlass(Species, this.main.main)
                 .addHp(
                     param.heal, 
                     param.monster_id, 
@@ -3700,7 +3695,7 @@ BattleScript.prototype.fns[7] = function (param, next) {
     async.series([
         // desconta item
         callback => {
-            new Bag(null, this.auth, this.db)
+            instantiateGameCoreKlass(Bag, this.main.main)
                 .discontItem(
                     +param.item_id,
                     () => callback()
@@ -3721,7 +3716,7 @@ BattleScript.prototype.fns[7] = function (param, next) {
                     },
                     // pega espaço livre no bracelete
                     (results, cb) => {
-                        new Species(null, this.auth, this.db)
+                        instantiateGameCoreKlass(Species, this.main.main)
                             .getFreeSpaceInPocket(freespace => cb(null, freespace));
                     },
                     // se tiver espaço livre, joga monstro dentro do bracelete
@@ -3745,7 +3740,7 @@ BattleScript.prototype.fns[7] = function (param, next) {
                             ], cb);
                         } else {
                             //cb(null, 1);
-                            new Box(null, this.auth, this.db)
+                            instantiateGameCoreKlass(Box, this.main.main)
                                 .insert(param.monster_id, cb);
                         };
                     }
@@ -3831,6 +3826,8 @@ const
     Quest = require("./quest.js"),
     Map = require("./map.js"),
     Box = require("./box.js");
+
+const { instantiateGameCoreKlass } = require("../utils/utils.js");
 
 /*
     `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,

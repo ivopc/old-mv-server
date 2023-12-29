@@ -25,8 +25,8 @@ const SP_CHECKER = 65656556;
 
 const Base = require("./base.js");
 
-const Player = function (socket, auth, db, scServer) {
-    Base.call(this, socket, auth, db, scServer);
+const Player = function (main, socket, auth, db, scServer, dataMasterEvents) {
+    Base.call(this, main, socket, auth, db, scServer, dataMasterEvents);
     this.networking = new SubClasses.Networking(socket, scServer, auth.uid);
     /**
      * @type {number}
@@ -299,7 +299,7 @@ Player.prototype.sendTamerBattle = function (data) {
             );
         }],
         tamerMonsters: ["battle",  (_data, next) => {
-            new Tamer(null, this.auth, this.db)
+            instantiateGameCoreKlass(Tamer, this.main)
                 .getMonstersInParty(_data.battle.challenged, next);
         }]
     }, (err, battle_data) => {
@@ -327,7 +327,7 @@ Player.prototype.sendTamerBattle = function (data) {
 
 // enviar informações da batalha de pvp para o client
 Player.prototype.sendPvPBattle = function (data) {
-    const species = new Species(null, this.auth, this.db);
+    const species = instantiateGameCoreKlass(Species, this.main);
     async.auto({
         battle: next => {
             this.mysqlQuery(
@@ -384,7 +384,7 @@ Player.prototype.sendWaitWildBattle = function (data, flag) {
             );
         },
         checkIfHaveItem: next => {
-            new Bag(null, this.auth, this.db)
+            instantiateGameCoreKlass(Bag, this.main)
                 .checkIfHaveItem(SP_CHECKER, next);
         }
     }, (err, _data) => {
@@ -449,7 +449,7 @@ Player.prototype.getRawPlayerData = function (callback) {
         },
         // pegar monstros do player
         monsters: next => {
-            const species = new Species(null, this.auth, this.db);
+            const species = instantiateGameCoreKlass(Species, this.main);
             
             species.getMonstersInPocket((err, data) => {
                 species.filterMonstersData(err, data, next);
@@ -457,7 +457,7 @@ Player.prototype.getRawPlayerData = function (callback) {
         },
         // pegar itens do player
         items: next => {
-            new Bag(null, this.auth, this.db)
+            instantiateGameCoreKlass(Bag, this.main)
                 .getItems(next);
         },
         // o que jogador está fazendo atualmente
@@ -471,7 +471,7 @@ Player.prototype.getRawPlayerData = function (callback) {
         // dados dos domadores que estão no mapa
         tamersInMap: ["game_data", (data, next) => {
             if (MapData[data.game_data.map].tamers) {
-                new Map(null, this.auth, this.db)
+                instantiateGameCoreKlass(Map, this.main)
                     .getActiveTamers(data.game_data.map, next);
             } else {
                 next(null, null);
@@ -479,7 +479,7 @@ Player.prototype.getRawPlayerData = function (callback) {
         }],
         // notificações do player
         notify: next => {
-            new Notify(null, this.auth, this.db)
+            instantiateGameCoreKlass(Notify, this.main)
                 .getRaw(null, next);
         }
     }, callback);
@@ -492,7 +492,7 @@ Player.prototype.getItemsMonster = function (input) {
 
     if ("monsters" in input) {
 
-        const species = new Species(null, this.auth, this.db);
+        const species = instantiateGameCoreKlass(Species, this.main)
         
         species.getMonstersInPocket((err, data) => {
             species.filterMonstersData(err, data, (error, monsters) => {
@@ -504,7 +504,7 @@ Player.prototype.getItemsMonster = function (input) {
         });
     };
     if ("items" in input) {
-        new Bag(null, this.auth, this.db)
+        instantiateGameCoreKlass(Bag, this.main)
             .getItems((err, data) => {
                 this.networking.send(EVENTS.RECEIVE_UPDATED_MONSTERS_ITEMS, {
                     type: 2,
@@ -568,7 +568,7 @@ Player.prototype.respondPvPInvite = function (receiver, inviter, accepted, next)
         battle: callback => {
             // caso aceitou a batalha
             if (accepted == 1) {
-                new Battle(null, this.auth, this.db, this.scServer)
+                instantiateGameCoreKlass(Battle, this.main)
                     .insert({
                         uid: inviter,
                         battle_type: 3,
@@ -608,7 +608,7 @@ Player.prototype.respondPvPInvite = function (receiver, inviter, accepted, next)
             return;
 
         const 
-            species = new Species(null, this.auth, this.db),
+            species = instantiateGameCoreKlass(Species, this.main),
             pdata = new PlayerData();
 
         // pegar monstros do player
@@ -691,7 +691,7 @@ Player.prototype.getSelfProfileData = function () {
 Player.prototype.getProfileData = function (input) {
     async.parallel({
         monsters: next => {
-            const species = new Species(null, this.auth, this.db);
+            const species = instantiateGameCoreKlass(Species, this.main);
             species.getMonstersInPocket((err, data) => {
                 next(null, species.filterOtherProfileMonstersData(data));
             }, input.uid);
@@ -881,3 +881,5 @@ const
 
 // SubClasses
 SubClasses.Networking = require("./subclasses/networking.js");
+
+const { instantiateGameCoreKlass } = require("../utils/utils.js");

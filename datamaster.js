@@ -1,6 +1,5 @@
 const 
      _ = require("underscore"),
-    crypto = require("crypto"),
     EventEmitter = require("events");
 
 /*
@@ -8,57 +7,42 @@ Datamaster gerencia variavéis do jogo de forma global, guarda por exemplo: aç�
 e articula e gerencia emição de dados sw forma global
  */
 
-const Datamaster = function () {
+const db = require("./models/setdb.js").inConn();
+
+const pvpEvents = {
+    "HANDLE_PVP_ACTION": "1",
+    "PVP_TIME_OVER": "2",
+    "TRADE_FAINTED_MONSTERS": "3"
+};
+
+/**
+ * 
+ * @param {Main} main 
+ */
+const Datamaster = function (main) {
     EventEmitter.call(this);
+    this.socket = main.socket;
+    this.server = main.server;
+    this.on(pvpEvents.HANDLE_PVP_ACTION, data =>
+        instantiateGameCoreKlass(Battle, main)
+            .preHandleActionPvP(data)
+    );
+    this.on(pvpEvents.PVP_TIME_OVER, data =>
+        instantiateGameCoreKlass(Battle, main)
+            .claimVictory(data)
+    );
+    this.on(pvpEvents.TRADE_FAINTED_MONSTERS, data =>
+        instantiateGameCoreKlass(Battle, main)
+            .changeFaintedMonsterPvP(data)
+    );
 };
 
 Datamaster.prototype = Object.create(EventEmitter.prototype);
 
-// Manipular eventos
-Datamaster.prototype.handleEvents = function (data) {
-    switch (data.type) {
-        // inserir batalha
-        case 0: {
-            this.insertBattle(data);
-            break;
-        };
-
-        // escolher ação (move - batalha PvP)
-        case 1: {
-            this.chooseBattleAction(data);
-            break;
-        };
-
-        // remover batalha
-        case 2: {
-            this.removeBattle(data);
-            break;
-        };
-
-        // inserir timer da batalha
-        case 3: {
-            this.insertBattleTimer(data);
-            break;
-        };
-
-
-        // inserir que precisa trocar de monstro, pois ele está faintado
-        case 4: {
-            this.insertFaintedMonster(data);
-            break;
-        };
-
-        // Trocar monstro faintado
-        case 5: {
-            this.changeFaintedMonster(data);
-            break;
-        };
-    };
-};
-
 // * Eventos
 // Inserir batalha
 Datamaster.prototype.insertBattle = function (data) {
+    console.log("Datamaster.insertBattle", data);
     this.PvP[data.battle_id] = {};
     this.PvP[data.battle_id].actionSended = {};
     this.PvP[data.battle_id].timerActive = false;
@@ -67,6 +51,7 @@ Datamaster.prototype.insertBattle = function (data) {
 
 // Escolher ação
 Datamaster.prototype.chooseBattleAction = function (data) {
+    console.log("Datamaster.chooseBattleAction", data);
     // se ninguém escolheu o move ainda, apenas insere
     if (_.isEmpty(this.PvP[data.battle_id].actionSended)) {
         console.log("N tem!", data);
@@ -80,7 +65,7 @@ Datamaster.prototype.chooseBattleAction = function (data) {
             this.PvP[data.battle_id].timerActive = false;
         };
         // envia ações pro server processar e enviar pro client
-        this.emit("1", {
+        this.emit(pvpEvents.HANDLE_PVP_ACTION, {
             battle_id: data.battle_id,
             actions: [
                 this.PvP[data.battle_id].actionSended,
@@ -95,6 +80,7 @@ Datamaster.prototype.chooseBattleAction = function (data) {
 
 // Remover batalha
 Datamaster.prototype.removeBattle = function (data) {
+    console.log("Datamaster.removeBattle", data);
     // limpa timer
     if (this.PvP[data.battle_id].timerActive)
         clearInterval(this.PvP[data.battle_id].timer);
@@ -105,6 +91,7 @@ Datamaster.prototype.removeBattle = function (data) {
 
 // Inserir timer no PvP
 Datamaster.prototype.insertBattleTimer = function (data) {
+    console.log("Datamaster.insertBattleTimer", data);
     // se timer já estiver ativado, retorna
     if (this.PvP[data.battle_id].timerActive)
         return;
@@ -115,7 +102,7 @@ Datamaster.prototype.insertBattleTimer = function (data) {
     // execura timer
     this.PvP[data.battle_id].timer = setTimeout(() => {
         console.log("Timer ends");
-        this.emit("2", {
+        this.emit(pvpEvents.PVP_TIME_OVER, {
             battle_id: data.battle_id,
             action: this.PvP[data.battle_id].actionSended
         });
@@ -125,6 +112,7 @@ Datamaster.prototype.insertBattleTimer = function (data) {
 
 // Inserir que precisa trocar de monstro, pois ele está faintado
 Datamaster.prototype.insertFaintedMonster = function (data) {
+    console.log("Datamaster.insertFaintedMonster", data);
     // loopa os que foram faintados
     this.PvP[data.battle_id].needToTradeFaintedMonster = data.fainted.map(fainted => ({
         uid: fainted.uid,
@@ -138,12 +126,13 @@ Datamaster.prototype.insertFaintedMonster = function (data) {
 
 // Trocar monstro faintado no PvP
 Datamaster.prototype.changeFaintedMonster = function (data) {
+    console.log("Datamaster.changeFaintedMonster", data);
     console.log("LULZ1");
     // ** se só precisar trocar um
     if (this.PvP[data.battle_id].needToTradeFaintedMonster.length == 1) {
         console.log("LULZ2");
         // emitir pra trocar
-        this.emit("3", {
+        this.emit(pvpEvents.TRADE_FAINTED_MONSTERS, {
             battle_id: data.battle_id,
             params: [{
                 iAm: data.iAm,
@@ -172,7 +161,7 @@ Datamaster.prototype.changeFaintedMonster = function (data) {
 
             console.log(this.PvP[data.battle_id].needToTradeFaintedMonster);
 
-            this.emit("3", {
+            this.emit(pvpEvents.TRADE_FAINTED_MONSTERS, {
                 battle_id: data.battle_id,
                 params: this.PvP[data.battle_id].needToTradeFaintedMonster
             })
@@ -199,8 +188,9 @@ Datamaster.prototype.PvP = {};
 // Timer do PVP de limite de espera do outro jogador
 Datamaster.prototype.pvpTimer = 120000; //120000
 
-// Senha para entrar como datamaster
-Datamaster.password = crypto.randomBytes(64).toString('hex');
 
+module.exports = Datamaster;
 
-module.exports = new Datamaster();
+const Battle = require("./core/battle.js");
+const Main = require("./core.js");
+const { instantiateGameCoreKlass } = require("./utils/utils.js");

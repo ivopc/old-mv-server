@@ -13,9 +13,9 @@ const
     morgan = require("morgan"),
     healthChecker = require("sc-framework-health-check");
 
-let scServer;
+    const url = require("url");
 
-const DataMaster = require("./datamaster.js");
+let scServer;
 
 const app = express();
 
@@ -35,7 +35,8 @@ const Router = {
     account: express.Router(),
     marketplace: express.Router(),
     admin: express.Router(),
-    payment: express.Router()
+    payment: express.Router(),
+    api: express.Router()
 };
 
 const Controller = {
@@ -43,6 +44,7 @@ const Controller = {
     account: require("./controller/account.js"),
     admin: require("./controller/admin.js"),
     payment: require("./controller/payment.js"),
+    api: require("./controller/api.js"),
     routes: {}
 };
 
@@ -56,9 +58,6 @@ app
     .set("view engine", "html")
     .set("views", __dirname + "/views");
 
-// * rotas
-
-// rotas principais
 Router.main
     .use(checkIfIsBan)
     // páginas iniciais
@@ -177,6 +176,13 @@ Router.payment
     })
     .post("/pay", Controller.payment.pay)
     .post("/callback", Controller.payment.callback);
+
+
+
+Router.api
+    .get("/players-online", Controller.api.players);
+
+
 // middlewares
 app
     .use(express.static(__dirname + "/public"))
@@ -209,14 +215,25 @@ app
     .use("/account", Router.account)
     .use("/marketplace", Router.marketplace)
     .use("/admin", Router.admin)
-    .use("/payment", Router.payment);
+    .use("/payment", Router.payment)
+    .use("/api", Router.api);
 
-const wsConn = sck => new Core().conn(sck, scServer),
-      wsAuth = (req, next) => new Core().auth(req, next),
-      wsSubscribe = (req, next) => new Core().subscribe(req, scServer, next),
-      wsPublishIn = (req, next) => new Core().publishIn(req, scServer, next),
-      wsPublishOut = (req, next) => new Core().publishOut(req, next),
-      wsEmit = (req, next) => new Core().emit(req, next);
+const wsConn = sck => {
+    const core = new Core();
+    core.conn(sck, scServer);
+    },
+    wsAuth = (req, next) => { 
+        const core = new Core();
+        core.authConn(req, next)
+    },
+      wsSubscribe = (req, next) => coreFactory(req, next).subscribe(req, scServer, next),
+      wsPublishIn = (req, next) => coreFactory(req, next).publishIn(req, scServer, next),
+      wsPublishOut = (req, next) => coreFactory(req, next).publishOut(req, next),
+      wsEmit = (req, next) => coreFactory(req, next).emit(req, next);
+    
+function coreFactory (req, next) {
+    return new Core(req.socket, scServer, url.parse(req.socket.request.url, true).query);
+};
 
 class Worker extends SCWorker {
     run() {

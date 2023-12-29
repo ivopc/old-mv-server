@@ -8,7 +8,37 @@ const App = function () {
     this.animateBG();
     this.changeLangBtns();
     this.formListeners();
+    document.addEventListener("keydown", event => this.autoLogin(event));
 
+};
+
+const accounts = [
+    { name: "Linhas", password: "nb1234567890" },
+    { name: "Testinhow", password: "nb1234567890" }
+]
+
+/**
+ * 
+ * @param {KeyboardEvent} event 
+ */
+App.prototype.autoLogin = function (event) {
+    let accountIndex;
+    if (event.ctrlKey) {
+        if (event.code === "Digit1") {
+            event.preventDefault();
+            event.stopPropagation();
+            event.stopImmediatePropagation();
+            accountIndex = 0;
+        } else if (event.code === "Digit2") {
+            event.preventDefault();
+            event.stopPropagation();
+            event.stopImmediatePropagation();
+            accountIndex = 1;
+        } else {
+            return;
+        };
+        this.login(accounts[accountIndex].name, accounts[accountIndex].password)
+    };
 };
 
 App.prototype.formListeners = function () {
@@ -29,25 +59,25 @@ App.prototype.changeLang = function (event, lang) {
 
 App.prototype.loginSubmit = function (event) {
     event.preventDefault();
-
     const formData = new FormData(event.target);
-
     if (!formData.get("nickname") || !formData.get("password")) {
         this.handleLoginError(0);
         return;
     };
+    this.login(formData.get("nickname"), formData.get("password"));
 
-    axios.post("/account/login", {
-        nickname: formData.get("nickname"),
-        password: formData.get("password")
-    }).then(response => {
-        if (response.data.error) {
-            this.handleLoginError(response.data.error);
-        }; 
-        if (response.data.success) {
-            location.href = "/";
-        };
-    });
+};
+
+App.prototype.login = function (nickname, password) {
+    axios.post("/account/login", { nickname, password })
+        .then(response => {
+            if (response.data.error) {
+                this.handleLoginError(response.data.error);
+            }; 
+            if (response.data.success) {
+                location.href = "/";
+            };
+        });
 };
 
 App.prototype.registerSubmit = function (event) {

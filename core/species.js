@@ -4,8 +4,8 @@ const Base = require("./base.js");
 
 const SP_CHECKER = 1;
 
-const Species = function (socket, auth, db, scServer) {
-    Base.call(this, socket, auth, db, scServer);
+const Species = function (main, socket, auth, db, scServer, dataMasterEvents) {
+    Base.call(this, main, socket, auth, db, scServer, dataMasterEvents);
 };
 
 Species.prototype = Object.create(Base.prototype);
@@ -482,7 +482,7 @@ Species.prototype.healAllPlayerMonsters = function (callback, uid) {
 Species.prototype.filterMonstersData = function (err, data, callback) {
     //console.log(data);
 
-    new Bag(null, this.auth, this.db)
+    instantiateGameCoreKlass(Bag, this.main)
         .checkIfHaveItem(SP_CHECKER, (err, have) => {
             const monsters = {};
             for (let i = 0; i < 6; i++) {
@@ -527,7 +527,7 @@ Species.prototype.filterMonstersData = function (err, data, callback) {
 
 // filtrar dados de um único monstro
 Species.prototype.uniqueMonsterDataFilter = function (err, data, callback) {
-    new Bag(null, this.auth, this.db)
+    instantiateGameCoreKlass(Bag, this.main)
         .checkIfHaveItem(SP_CHECKER, (err, have) => {
 
             const {
@@ -721,9 +721,7 @@ Species.prototype.addExpRewards = function (object, callback) {
     if (lvl_inc > 0) {
         console.log("--------------------------------------__");
         console.log("HELLOUUUU UPOU SIM");
-
-        const notify = new Notify(this.socket, this.auth, this.db);
-
+        const notify = instantiateGameCoreKlass(Notify, this.main);
         async.parallel({
             learnMove: next => {
                 console.log({learn});
@@ -860,6 +858,8 @@ module.exports = Species;
 const 
     Bag = require("./bag.js"),
     Notify = require("./notify.js");
+
+const { instantiateGameCoreKlass } = require("../utils/utils.js");
 
 /*
 id
