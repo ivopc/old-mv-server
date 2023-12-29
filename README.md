@@ -7,18 +7,26 @@ Old Monster Valle server, crap architecture. I Just turned it public to rewrite 
 
 # Secretly I'm doing a closed-source release of my game with TypeScript+Phaser3+NuxtJS+NestJS :)
 
+### This branch is created only to deploy purpouses at https://monstervalle.onrender.com/
+
 The Old Game Client and and Old Game Server are avaliable here: https://monstervalle.onrender.com/
 
+## Dependences
+- NodeJS
+- MySQL
+
 ## Build Setup
+
+Do not forget to create an `.env` file in the project root path based in `.env.example` and add your MySQL credentials.
 
 ``` bash
 # install dependencies
 npm install
 
-# serve with hot reload at localhost:8000
-npm run dev
+# start server at localhost:8000
+npm run start
 
-# run database seeds
+# run database seeds (you need it to run the game server)
 npm run database-seed
 
 # if you get some bug, black screen or issue in battle gameplay just reset the battle related databases
@@ -30,7 +38,7 @@ The code of game source project is released under the MIT license.
 
 # Credits
 This projects is mainly created, idealized and full coded by: Ivo Pires de Camargo (me). 
-The art is not public, owned and created by: mainly by [Everton Luiz](https://soundcloud.com/evertonluizmaestro), [Clara Luz Romagnolli](https://linktr.ee/shaarpie) and Victor Athayde. [Caio Carlos](https://clockworkraven.itch.io/), Junio Henrike and Gabriel Faleiros. Please do not use the art and musics in any commercial project.
+The art is not public, owned and created by: mainly by [Everton Luiz](https://soundcloud.com/evertonluizmaestro?), [Clara Luz Romagnolli](https://linktr.ee/shaarpie) and Victor Athayde. [Caio Carlos](https://clockworkraven.itch.io/), Junio Henrike and Gabriel Faleiros. Please do not use the art and musics in any commercial project.
 
 
 https://github.com/ivopc/Monster-Valle

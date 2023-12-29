@@ -4,8 +4,7 @@
   "description": "Monster Valle Old Server",
   "main": "index.js",
   "scripts": {
-    "dev": "node server",
-    "prod": "node server",
+    "start": "node server",
     "database-seed": "node database-seed.js",
     "database-reset-battle": "node database-reset-battle.js"
   },
