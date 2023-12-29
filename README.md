@@ -15,16 +15,16 @@ The Old Game Client and and Old Game Server are avaliable here: https://monsterv
 
 ## Build Setup
 
-Do not forget to create an `.env` file in the project root path based in `.env.example`
+Do not forget to create an `.env` file in the project root path based in `.env.example` and add your MySQL credentials.
 
 ``` bash
 # install dependencies
 npm install
 
-# serve with hot reload at localhost:8000
-npm run dev
+# start server at localhost:8000
+npm run start
 
-# run database seeds (you need it to run server properly)
+# run database seeds (you need it to run the game server)
 npm run database-seed
 
 # if you get some bug, black screen or issue in battle gameplay just reset the battle related databases
