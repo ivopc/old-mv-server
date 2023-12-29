@@ -9,12 +9,28 @@ Old Monster Valle server, crap architecture. I Just turned it public to rewrite 
 
 The Old Game Client and and Old Game Server are avaliable here: https://monstervalle.onrender.com/
 
+## Build Setup
+
+``` bash
+# install dependencies
+npm install
+
+# serve with hot reload at localhost:8000
+npm run dev
+
+# run database seeds
+npm run database-seed
+
+# if you get some bug, black screen or issue in battle gameplay just reset the battle related databases
+npm run database-reset-battle
+```
+
 # License
 The code of game source project is released under the MIT license.
 
 # Credits
 This projects is mainly created, idealized and full coded by: Ivo Pires de Camargo (me). 
-The art is not public, owned and created by: mainly by [Everton Luiz](https://soundcloud.com/evertonluizmaestro?), [Clara Luz Romagnolli](https://linktr.ee/shaarpie) and Victor Athayde. [Caio Carlos](https://clockworkraven.itch.io/), Junio Henrike and Gabriel Faleiros. Please do not use the art and musics in any commercial project.
+The art is not public, owned and created by: mainly by [Everton Luiz](https://soundcloud.com/evertonluizmaestro), [Clara Luz Romagnolli](https://linktr.ee/shaarpie) and Victor Athayde. [Caio Carlos](https://clockworkraven.itch.io/), Junio Henrike and Gabriel Faleiros. Please do not use the art and musics in any commercial project.
 
 
 https://github.com/ivopc/Monster-Valle
