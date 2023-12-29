@@ -49,7 +49,7 @@ Main.prototype.conn = function (socket, scServer) {
     this.socket = socket;
     this.server = scServer;
     console.log(`Oi usuário de ID ${auth.uid}`);
-    this.dataMasterEvents = new DataMaster(this);
+    this.setupDataMaster();
     // configurar conexão do jogador
     instantiateGameCoreKlass(Player, this).connect();
 
@@ -301,6 +301,8 @@ Main.prototype.subscribe = function (req, scServer, next) {
     const 
         channel = String(req.channel),
         auth = url.parse(req.socket.request.url, true).query;
+    
+    this.setupDataMaster();    
 
     // ver qual canal é
     switch(channel.substr(0, 1)) {
@@ -360,6 +362,7 @@ Main.prototype.publishIn = function (req, scServer, next) {
         auth = url.parse(req.socket.request.url, true).query;
 
     //console.log(channel);
+    this.setupDataMaster();
 
     //tratando entrada  do canal
     switch(channel.substr(0, 1)) {
@@ -489,6 +492,8 @@ Main.prototype.publishOut = function (req, next) {
     const 
         channel = String(req.channel),
         auth = url.parse(req.socket.request.url, true).query;
+    
+    this.setupDataMaster();
 
     // pegar primeira linha da string
 
@@ -530,7 +535,12 @@ Main.prototype.publishOut = function (req, next) {
 
 // manipulação de emição
 Main.prototype.emit = function (req, next) {
+    this.setupDataMaster();
     next();
+};
+
+Main.prototype.setupDataMaster = function () {
+    this.dataMasterEvents = new DataMaster(this);
 };
 
 

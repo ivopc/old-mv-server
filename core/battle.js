@@ -1633,6 +1633,9 @@ Battle.prototype.changeFaintedMonsterPvP = function (input) {
     //     change_monster
     // };
 
+
+    console.log("Battle.changeFaintedMonsterPvP", input);
+
     const actions = input.params.map(data => ({
         fn_name: "change_fainted_pvp",
         param: {
@@ -1644,7 +1647,8 @@ Battle.prototype.changeFaintedMonsterPvP = function (input) {
 
     const fns = actions.map(data => next => this.rawChangeMonster(data.param.monsterPartyIndex, data.param.uid, next));
 
-    async.parallel(fns, () => {
+    async.parallel(fns, (err, data) => {
+        console.log("async.parallel", err, data);
         this.scServer.exchange.publish("p" + input.battle_id, {
             type: 0,
             actions: {
@@ -1661,14 +1665,19 @@ Battle.prototype.rawChangeMonster = function (changePartyIndex, uid, callback) {
 
     uid = uid || this.auth.uid;
 
+
+    console.log({ changePartyIndex, uid, callback });
+
     async.waterfall([
         next => {
             this.mysqlQuery(
-                "SELECT `monster0`, `monster" + this.escapeSQL(changePartyIndex) + "` FROM `monsters_in_pocket` WHERE `uid` = '" + this.escapeSQL(uid) + "'", 
-                (err, data) => next(err, data)
+                "SELECT `monster0`, `monster" + this.escapeSQL(changePartyIndex) + "` FROM `monsters_in_pocket` WHERE `uid` = " + this.escapeSQL(uid), 
+                next
             );
         },
-        results => {
+        (results, cb) => {
+
+            console.log({results});
 
             results = results[0];
 
@@ -1681,7 +1690,7 @@ Battle.prototype.rawChangeMonster = function (changePartyIndex, uid, callback) {
 
             // fazer update na db
             this.mysqlQuery(
-                "UPDATE `monsters_in_pocket` SET `monster0` = '" + this.escapeSQL(change[0]) + "', `monster" + this.escapeSQL(changePartyIndex) + "` = '" + this.escapeSQL(change[1]) + "' WHERE `uid` = '" + this.escapeSQL(uid) + "'",
+                "UPDATE `monsters_in_pocket` SET `monster0` = " + this.escapeSQL(change[0]) + ", `monster" + this.escapeSQL(changePartyIndex) + "` = " + this.escapeSQL(change[1]) + " WHERE `uid` = " + this.escapeSQL(uid),
                 callback
             );
         }
@@ -3323,11 +3332,9 @@ Battle.prototype.getAllBattleInfo = function (battle_type, if_is_pvp_battle_id, 
 
 // Script para aplicar ações na batalha
 const BattleScript = function (main, battle_id) {
-
-    Base.call(main.main, {}, main.auth, main.db, {});
-
+    //Base.call(this, main, socket, auth, db, scServer, dataMasterEvents);
+    Base.call(this, main.main, {}, main.auth, main.db, {});
     this.main = main;
-
     this.fn = [];
     this.battle_id = battle_id;
 };
