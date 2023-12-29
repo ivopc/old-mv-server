@@ -1,34 +1,23 @@
-const PlayerData = require("./core/playerdata");
+require('dotenv').config();
 
-const pdata = new PlayerData();
+const mysql = require("mysql2");
 
-Promise.all([
-    new Promise(resolve => 
-        pdata.insert({
-            uid: 1,
-            nickname: "SouXiterMex1",
-            online: false,
-            sprite: 2,
-            map: 7,
-            pos_x: 2,
-            pos_y: 3,
-            pos_facing: 3
-        }, 
-    resolve)
-    ),
-    new Promise(resolve => 
-        pdata.insert({
-            uid: 2,
-            nickname: "Roberto",
-            online: false,
-            sprite: 2,
-            map: 7,
-            pos_x: 2,
-            pos_y: 3,
-            pos_facing: 3
-        }, 
-    resolve)
-    )
-]).then(() => {
-    console.log("Players database data inserted, it's done!");
+const mysqlConnection = mysql.createConnection({
+    host: process.env.DB_HOST,
+    port: process.env.DB_PORT,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD || "",
+    database: process.env.DB_NAME,
+    multipleStatements: true
+});
+const { readFileSync } = require("fs");
+const databaseEntries = readFileSync("./database/db.sql", { encoding: 'utf8' });
+console.log("Database seed inited!");
+mysqlConnection.query(databaseEntries, err => {
+    if (err) {
+        console.error(err);
+    } else {
+        console.log("Database seed completed!!");
+    };
+    mysqlConnection.end();
 });

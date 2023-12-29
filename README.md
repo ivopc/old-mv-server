@@ -5,8 +5,6 @@
 # Monster Valle Old Server
 Old Monster Valle server, crap architecture. I Just turned it public to rewrite to new one: https://github.com/ivopc/new-mv-server
 
-I guess the `deploy-end` branch is more suitable to test the game
-
 # Secretly I'm doing a closed-source release of my game with TypeScript+Phaser3+NuxtJS+NestJS :)
 
 The Old Game Client and and Old Game Server are avaliable here: https://monstervalle.onrender.com/

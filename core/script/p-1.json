@@ -31,6 +31,11 @@
             "type": "m",
             "flag_id": 2,
             "value": 1
+        }],
+        ["setflag", {
+            "type": "m",
+            "flag_id": 7,
+            "value": 2
         }]
     ],
     "onscriptdone": []

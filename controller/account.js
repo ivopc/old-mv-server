@@ -50,7 +50,6 @@ const Login = function (req, res) {
 Login.prototype.checkIfUserExist = function (object, callback) {
     // procurar pelo nick
     object.db.query("SELECT `id`, `nickname`, `password`, `rank`, `ban`, `lang` FROM `users` WHERE `nickname` = ?", [object.nickname], function (err, results) {
-        
         // se houver resultado setar o primeiro da array para ser único, se não transf. em false
         if (results[0]) {
             results = results[0];
@@ -113,8 +112,6 @@ const Register = function (req, res) {
 // checar se usuário existe
 Register.prototype.checkIfUserExist = function (nickname, db, next) {
     db.query("SELECT `nickname` FROM `users` WHERE `nickname` = ?", [nickname], function (err, results, fields) {
-
-        console.log("results", results);
         
         // se houver resultado setar o primeiro da array para ser único
         if (results[0])
@@ -233,8 +230,15 @@ Register.prototype.complete = function (req, res, data) {
                         points: 0,
                         level: 0,
                         rank: 0,
-                        exp: 0
-                    }, cb);
+                        exp: 0,
+                        nickname: req.body["nickname"],
+                        online: 0,
+                        sprite: 2,
+                        map: default_init.position.map,
+                        pos_x: default_init.position.x,
+                        pos_y: default_init.position.y,
+                        pos_facing: default_init.position.facing
+                    }, (err, data) => {console.log(err, data);cb(err, data)});
                 },
                 // [RethinkDB] informações do player que requerem real-time
                 player_data: cb => {
@@ -573,14 +577,23 @@ exports.register = function (req, res) {
     console.log("TNC FDP!");
 
     // validando inputs
-    req.checkBody("nickname", 0).len(4, 15);
-    req.checkBody("password", 1).len(7, 30);
-    req.checkBody("email", 2).isEmail();
+    req.checkBody("nickname", 1).len(4, 15);
+    req.checkBody("password", 2).len(7, 30);
+    req.checkBody("email", 3).isEmail();
     //req.checkBody("captcha", 3).len(4, 4);
 
     // checando se tem erros nas inputs
-    if (req.validationErrors()) {
-        res.json({error: 1});
+    const errors = req.validationErrors();
+    if (errors) {
+        console.log(errors);
+        const error = errors[0];
+        const map = {
+            1: 5, // LENGTH_USER
+            2: 6, // LENGTH_PASSWORD
+            3: 7 // EMPTY_INPUTS - invalid email
+        };
+        console.log(map[error.msg]);
+        res.json({error: map[error.msg] || 1});
         return;
     };
 

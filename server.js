@@ -6,7 +6,7 @@
   in the future, avoid changing the environment variable names below as
   each one has a specific meaning within the SC ecosystem.
 */
-
+require('dotenv').config()
 var path = require('path');
 var argv = require('minimist')(process.argv.slice(2));
 var scHotReboot = require('sc-hot-reboot');
@@ -16,15 +16,12 @@ var SocketCluster = require('socketcluster');
 var fsUtil = require('socketcluster/fsutil');
 var waitForFile = fsUtil.waitForFile;
 
-const Datamaster = require("./datamaster.js");
+//const Datamaster = require("./datamaster.js");
 
 var workerControllerPath = argv.wc || process.env.SOCKETCLUSTER_WORKER_CONTROLLER;
 var brokerControllerPath = argv.bc || process.env.SOCKETCLUSTER_BROKER_CONTROLLER;
 var workerClusterControllerPath = argv.wcc || process.env.SOCKETCLUSTER_WORKERCLUSTER_CONTROLLER;
 var environment = process.env.ENV || 'dev';
-
-
-console.log("port", process.env.PORT);
 
 
 
@@ -106,7 +103,7 @@ var filesReadyPromises = [
 Promise.all(filesReadyPromises)
 .then(() => {
   start();
-  new Datamaster();
+  //new Datamaster();
 })
 .catch((err) => {
   console.error(err.stack);

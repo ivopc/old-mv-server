@@ -402,10 +402,10 @@ Main.prototype.subscribe = function (req, scServer, next) {
         // datamaster
         case "d": {
             if (this.authAdmin(auth)) {
-                console.log("Foi xD");
+                console.log("Datamaster joined the server.");
                 next();
             } else {
-                console.log("N foi xD");
+                console.log("Wrong Datamaster auth.");
                 next(true);
             };
             return;

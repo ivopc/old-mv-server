@@ -1,2 +1,0 @@
-node datamaster.js
-pause

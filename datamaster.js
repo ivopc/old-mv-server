@@ -22,7 +22,7 @@ const Datamaster = function () {
 
     // Quando conectar, liberar clients a acessar jogo
     this.socket.on("connect", () => {
-        console.log("Conectou, ok?");
+        console.log("Datamaster started.");
     });
 
     this.socket.on("error", err =>

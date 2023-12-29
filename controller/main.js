@@ -23,7 +23,7 @@ exports.index = function (req, res) {
         return;
     };
 
-    res.render("newdashboard", {
+    res.render("index", {
         isConnected: true,
         uid: req.session["uid"],
         nickname: req.session["nickname"],

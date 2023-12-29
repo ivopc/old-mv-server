@@ -1,180 +1,85 @@
-const 
-    r = require("rethinkdb"),
-    async = require("async");
+const PlayersModel = new Map([
+    [0, {
+        uid: 0,
+        nickname: "",
+        online: false,
+        sprite: 0,
+        map: 0,
+        pos_x: 0,
+        pos_y: 0,
+        pos_facing: 0      
+    }]
+]);
 
-const config = require("./../database/dbconfig.json");
+//setInterval(() => console.log(PlayersModel), 3000);
 
 const PlayerData = function () {};
 
-// Conectar a db
-PlayerData.prototype.connect = function (callback) {
-    r.connect(config.rethinkdb, callback);
-};
-
 // inserir na db
 PlayerData.prototype.insert = function (object, callback) {
-    
-    let connection;
-
-    async.waterfall([
-        next => this.connect(next),
-        (conn, next) => {
-            connection = conn;
-
-            // object =
-            // uid,
-            // nickname: req.body["nickname"],
-            // online: false,
-            // sprite: 2,
-            // map: default_init.position.map,
-            // pos_x: default_init.position.x,
-            // pos_y: default_init.position.y,
-            // pos_facing: default_init.position.facing
-
-            r.table("game_data")
-                .insert([object])
-                    .run(conn, next);
-        },
-        () => {
-            connection.close();
-
-            if (typeof(callback) == "function")
-                callback();
-        }
-    ]);
+    PlayersModel.set(Number(object.uid), object);
+    callback();
 };
 
 // pegar dados de um player especifico
 PlayerData.prototype.get = function (uid, callback, _connection) {
-
-    let connection;
-
-    async.waterfall([
-        next => _connection ? next(null, _connection) : this.connect(next),
-        (conn, next) => {
-            connection = conn;
-            
-            r.table("game_data")
-                .filter(r.row("uid").eq(+uid))
-                    .run(conn, next);
-        },
-        (cursor, next) => {
-            connection.close();
-            cursor.toArray((err, data) => next(err, data[0]));
-        }
-    ], callback);
+    callback(null, PlayersModel.get(Number(uid)));
 };
 
 // setar algum dado especifico
 PlayerData.prototype.set = function (uid, object, callback) {
-    let connection;
-    async.waterfall([
-        next => this.connect(next),
-        (conn, next) => {
-            connection = conn;
-            r.table("game_data")
-                .filter(r.row("uid").eq(+uid))
-                .update(object)
-                    .run(conn, next);
-        },
-        data => {
-            if (typeof(callback) == "function")
-                callback(null, data);
 
-            connection.close();
-        }
-    ]);
+    console.log("setter pdata", object);
+    const player = { ... PlayersModel.get(Number(uid)) };
+    PlayersModel.set(Number(uid), { ... player, ... object});
+    typeof callback === "function" ? callback(null, PlayersModel.get(Number(uid))) : null;
+};
+
+PlayerData.prototype.has = function (uid) {
+    return PlayersModel.has(Number(uid));
 };
 
 // pegar players que estão online no mapa especifico
 PlayerData.prototype.getActivePlayersInMap = function (map_id, notUid, callback) {
-
-    let connection;
-
-    async.waterfall([
-        next => this.connect(next),
-        (conn, next) => {
-        connection = conn;
-            r.table("game_data")
-                .filter(r.row("map").eq(map_id))
-                .filter(r.row("online").eq(true))
-                // não incluir o próprio jogador
-                .filter(r.row("uid").ne(+notUid))
-                    .run(conn, next);
-        },
-        (cursor, next) => {
-            connection.close();
-            cursor.toArray(next);
-        }
-    ], callback);
+    const arr = [ ...PlayersModel.values() ];
+    const players = arr.filter(player => player.map == map_id && player.online === true && player.uid !== +notUid)
+    callback(null, players);
 };
 
 // updeitar posição do player no mapa para certa direção
 PlayerData.prototype.walk = function (uid, direction, callback) {
-    
-    let connection;
 
-    async.waterfall([
-        next => this.connect(next),
-        (conn, next) => {
-            connection = conn;
-            // storando query
-            let query;
-            // vendo pra qual direção vai
-            switch (direction) {
+    const player = { ... PlayersModel.get(Number(uid)) };
 
-                case 0: { // up
-                    query = {pos_y: r.row("pos_y").sub(1)};
-                    break;
-                };
-
-                case 1: { // right
-                    query = {pos_x: r.row("pos_x").add(1)};
-                    break;
-                };
-
-                case 2: { // down
-                    query = {pos_y: r.row("pos_y").add(1)};
-                    break;
-                };
-
-                case 3: { // left
-                    query = {pos_x: r.row("pos_x").sub(1)};
-                    break;
-                };
-            };
-            // atualiza facing
-            query.pos_facing = direction;
-
-            // updeita na db
-            r.table("game_data")
-                .filter(r.row("uid").eq(+uid))
-                .update(query)
-                    .run(conn, next);
-        },
-        // retornar dados do player
-        () => this.get(uid, callback, connection)
-    ]);
+    switch (direction) {
+        case 0: { // up
+            player.pos_y --;
+            break;
+        };
+        case 1: { // right
+            player.pos_x ++;
+            break;
+        };
+        case 2: { // down
+            player.pos_y ++;
+            break;
+        };
+        case 3: { // left
+            player.pos_x --;
+            break;
+        };
+    };
+    player.pos_facing = direction;
+    PlayersModel.set(Number(uid), player);
+    typeof callback === "function" ? callback(null, PlayersModel.get(Number(uid))) : null;
 };
 
 // updeitar facing do player
 PlayerData.prototype.face = function (uid, direction, callback) {
-    let connection;
+    const player = PlayersModel.get(Number(uid));
+    PlayersModel.set(Number(uid), {... player, pos_facing: direction});
+    typeof callback === "function" ? callback(null, PlayersModel.get(Number(uid))) : null;
 
-    async.waterfall([
-        next => this.connect(next),
-        (conn, next) => {
-            connection = conn;
-
-            // updeita na db
-            r.table("game_data")
-                .filter(r.row("uid").eq(+uid))
-                .update({pos_facing: direction})
-                    .run(conn, next);
-        },
-        // retornar dados do player
-        () => this.get(uid, callback, connection)
-    ]);
 };
 
 module.exports = PlayerData;

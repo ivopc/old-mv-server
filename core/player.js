@@ -27,21 +27,33 @@ const Base = require("./base.js");
 
 const Player = function (socket, auth, db, scServer) {
     Base.call(this, socket, auth, db, scServer);
-
     this.networking = new SubClasses.Networking(socket, scServer, auth.uid);
+    /**
+     * @type {number}
+     */
+    this.autoSaveTimer;
 };
+
+const AUTO_SAVE_TIMER_UPDATE = 15000;
 
 Player.prototype = Object.create(Base.prototype);
 
 // quando jogador conecta
-Player.prototype.connect = function () {
+Player.prototype.connect = async function () {
 
     console.log(`Jogador ID ${this.auth.uid} conectou.`);
 
-    // setar no banco de dados que player está online
-    new PlayerData()
-        .set(this.auth.uid, {online: true});
+    const pdata = new PlayerData();
 
+    if (!pdata.has(this.auth.uid)) {
+        const data = await this.fetchDataFromPersistent();
+        pdata.set(this.auth.uid, data);
+    };
+
+    // setar no banco de dados que player está online
+    pdata.set(this.auth.uid, {online: true});
+
+    this.autoSaveTimer = setInterval(() => this.autoSaveData(), AUTO_SAVE_TIMER_UPDATE);
     async.series([
         // checar se tem outro player conectado
         next => this.checkIfTheresOtherPlayerConnected(next),
@@ -72,6 +84,9 @@ Player.prototype.disconnect = function () {
             dataType: 3
         });
     });
+
+    clearInterval(this.autoSaveTimer);
+    this.autoSaveData();
 };
 
 // ping-pong
@@ -94,15 +109,11 @@ Player.prototype.checkIfTheresOtherPlayerConnected = function (callback) {
         },
         (results, next) => {
 
-            console.log("checkIfTheresOtherPlayerConnected2");
-
             // se não há ninguém conectado só vai pro proximo
             if (!results.length) {
                 next(null, true);
                 return;
             };
-
-            console.log("checkIfTheresOtherPlayerConnected3");
 
             // * se há alguém conectado, desconecta ele
 
@@ -419,14 +430,14 @@ Player.prototype.sendWaitWildBattle = function (data, flag) {
 
 // pegar dados do jogador (cru/seco e com callback)
 Player.prototype.getRawPlayerData = function (callback) {
-
-    console.log("raw_player_data");
-
     async.auto({
         // pegar dados do player in-game
         game_data: next => {
-            new PlayerData()
-                .get(this.auth.uid, next);
+            this.mysqlQuery(
+                `SELECT sprite, map, pos_x, pos_y, pos_facing FROM in_game_data WHERE uid = ?`,
+                this.auth.uid,
+                (err, [ data ]) => next(err, data)
+            );
         },
         // pegar flags do mapa
         flags: next => {
@@ -820,6 +831,37 @@ Player.prototype.checkIfIsVip = function (callback) {
             };
         }
     ]);
+};
+
+Player.prototype.autoSaveData = function () {
+    const pdata = new PlayerData();
+
+    pdata.get(this.auth.uid, (
+            err, 
+            { map, pos_x, pos_y, pos_facing }
+        ) => {
+        this.mysqlQuery(
+            `UPDATE in_game_data SET 
+            map = '${map}', 
+            pos_x = ${pos_x}, 
+            pos_y = '${pos_y}', 
+            pos_facing = '${pos_facing}' WHERE uid = ?`,
+            [this.auth.uid]
+        );
+    });
+
+    
+};
+
+Player.prototype.fetchDataFromPersistent = async function () {
+    const data = await new Promise((resolve, reject) => {
+        this.mysqlQuery(
+            `SELECT uid, nickname, sprite, map, pos_x, pos_y, pos_facing FROM in_game_data WHERE uid = ?`,
+            [this.auth.uid],
+            (err, [data]) => err ? reject(err) : resolve(data)
+        )
+    });
+    return data;
 };
 
 module.exports = Player;

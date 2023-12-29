@@ -202,6 +202,10 @@ Map.prototype.getActiveTamers = function (map_id, callback) {
         map = MapData[map_id],
         fns = {};
 
+
+
+    console.log({ map });
+
     for (let i = 0; i < map.tamers.length; i ++) {
         let tamer = map.tamers[i];
         fns[tamer.id] = next => {
