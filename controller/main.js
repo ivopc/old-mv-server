@@ -18,11 +18,11 @@ exports.index = function (req, res) {
     if (!req.session["isConnected"]) {
         res.render("newlogin", {
             lang: req.cookies["lang"] || "br",
-            texts: Resources.Lang
+            texts: Resources.Lang,
+            debug: process.env.ENV === "dev"
         });
         return;
     };
-
     res.render("index", {
         isConnected: true,
         uid: req.session["uid"],
@@ -30,18 +30,6 @@ exports.index = function (req, res) {
         authToken: req.session["authToken"],
         csrfToken: req.session["csrfToken"],
         lang: req.session["lang"]
-    });
-
-    return;
-        
-    // renderiza a dashboard se estiver conectado
-    res.render("dashboard", {
-        isConnected: true,
-        uid: req.session["uid"],
-        nickname: req.session["nickname"],
-        authToken: req.session["authToken"],
-        csrfToken: req.session["csrfToken"],
-        rank: req.session["rank"]
     });
 };
 

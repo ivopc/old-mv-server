@@ -3,13 +3,17 @@
 </p>
 
 # Monster Valle Old Server
-Old Monster Valle server, crap architecture. I Just turned it public to rewrite to new one: https://github.com/ivopc/new-mv-server
+Old Monster Valle server, crap architecture. 
+I Just turned it public to rewrite to new one: https://github.com/ivopc/new-mv-server
 
 # Secretly I'm doing a closed-source release of my game with TypeScript+Phaser3+NuxtJS+NestJS :)
 
 ### This branch is created only to deploy purpouses at https://monstervalle.onrender.com/
 
+https://github.com/ivopc/mv-client/tree/old-client-server > `old-client-server` branch of `mv-client` repo is suitable to that server
+
 The Old Game Client and and Old Game Server are avaliable here: https://monstervalle.onrender.com/
+
 
 ## Dependences
 - NodeJS
