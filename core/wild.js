@@ -6,8 +6,8 @@ const EVENTS = require("./../database/socket_events.json");
 
 const Base = require("./base.js");
 
-const Wild = function (socket, auth, db, scServer) {
-    Base.call(this, socket, auth, db, scServer);
+const Wild = function (main, socket, auth, db, scServer, dataMasterEvents) {
+    Base.call(this, main, socket, auth, db, scServer, dataMasterEvents);
 };
 
 Wild.prototype = Object.create(Base.prototype);
@@ -43,7 +43,7 @@ Wild.prototype.insert = function (wild, callback) {
         level = math.random.between(wild.levelRate);
 
     // inserir monstro na batalha
-    new Species(null, this.auth, this.db)
+    instantiateGameCoreKlass(Species, this.main)
         .insert({
             monsterpedia_id,
             level,
@@ -105,7 +105,7 @@ Wild.prototype.handleAcceptReject = function (input) {
     async.parallel({
         // pegar monstro do jogador
         player: next => {
-            new Species(this.socket, this.auth, this.db)
+            instantiateGameCoreKlass(Species, this.main)
                 .getMonstersInPocket(next);
         },
         // pegar dados do monstro selvagem
@@ -156,7 +156,7 @@ Wild.prototype.generateNewWild = function (data) {
             console.log("wildo", wild_monster);
 
             // checando se tem o item do SP CHECKER
-            new Bag(null, this.auth, this.db)
+            instantiateGameCoreKlass(Bag, this.main)
                 .checkIfHaveItem(SP_CHECKER, (err, have) => {
 
                     const monsterData = {
@@ -260,7 +260,7 @@ Wild.prototype.startBattle = function (monsters_data, state) {
                 battle_type: 1
             };
             // insere batalha
-            new Battle(this.socket, this.auth, this.db)
+            instantiateGameCoreKlass(Battle, this.main)
                 .insert(
                     data,
                     next
@@ -276,7 +276,7 @@ Wild.prototype.startBattle = function (monsters_data, state) {
         },
         // pegar itens
         items: next => {
-            new Bag(null, this.auth, this.db)
+            instantiateGameCoreKlass(Bag, this.main)
                 .getItems(next);
         }
     }, (err, data) => {
@@ -354,3 +354,5 @@ const
     Battle = require("./battle.js"),
     Bag = require("./bag.js"),
     PlayerData = require("./playerdata.js");
+
+    const { instantiateGameCoreKlass } = require("../utils/utils.js");

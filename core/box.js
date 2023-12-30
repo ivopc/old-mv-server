@@ -8,8 +8,8 @@ const Base = require("./base.js");
 
 const EVENTS = require("./../database/socket_events.json");
 
-const Box = function (socket, auth, db, scServer) {
-    Base.call(this, socket, auth, db, scServer);
+const Box = function (main, socket, auth, db, scServer, dataMasterEvents) {
+    Base.call(this, main, socket, auth, db, scServer, dataMasterEvents);
 };
 
 Box.prototype = Object.create(Base.prototype);
@@ -63,7 +63,7 @@ Box.prototype.get = function (input) {
         (results, next) => {
 
             const 
-                species = new Species(null, this.auth, this.db),
+                species = instantiateGameCoreKlass(Species, this.main),
                 fn = [];
 
             in_box_data = results;
@@ -149,7 +149,7 @@ Box.prototype.changeInBoxMonsterPosition = function (input) {
 Box.prototype.changePartyToEmptyBox = function (input) {
     console.log("party -> empty box");
 
-    const species = new Species(null, this.auth, this.db);
+    const species = instantiateGameCoreKlass(Species, this.main);
 
     async.parallel({
         from: next => species.getMonstersInPocket(next),
@@ -208,7 +208,7 @@ Box.prototype.changeBoxToEmptyParty = function (input) {
             );
         },
         to: next => {
-            new Species(null, this.auth, this.db)
+            instantiateGameCoreKlass(Species, this.main)
                 .getMonstersInPocket(next);
         }
     }, (err, data) => {
@@ -237,7 +237,7 @@ Box.prototype.changeBoxToEmptyParty = function (input) {
                     );
                 },
                 organizeParty: ["updateParty", (_data, next) => {
-                    new Species(null, this.auth, this.db)
+                    instantiateGameCoreKlass(Species, this.main)
                         .reorganizeParty(next);
                 }]
 
@@ -262,7 +262,7 @@ Box.prototype.changeBoxToParty = function (input) {
             );
         },
         to: next => {
-            new Species(null, this.auth, this.db)
+            instantiateGameCoreKlass(Species, this.main)
                 .getMonstersInPocket(next);
         }
     }, (err, data) =>  {
@@ -303,3 +303,5 @@ Box.prototype.changeBoxToParty = function (input) {
 };
 
 module.exports = Box;
+
+const { instantiateGameCoreKlass } = require("../utils/utils.js");

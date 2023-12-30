@@ -14,8 +14,8 @@ const EVENTS = require("./../database/socket_events.json");
 
 const Base = require("./base.js");
 
-const Bag = function (socket, auth, db, scServer) {
-    Base.call(this, socket, auth, db, scServer);
+const Bag = function (main, socket, auth, db, scServer, dataMasterEvents) {
+    Base.call(this, main, socket, auth, db, scServer, dataMasterEvents);
 };
 
 Bag.prototype = Object.create(Base.prototype);
@@ -28,7 +28,7 @@ const Resources = {
 Bag.prototype.insertItem = function (uid, item_id, amount, callback) {
 
     // se não tiver nenhum uid setado então seta do próprio player
-    uid = uid || this.auth.uid;
+    uid = uid || this.auth?.uid;
 
     async.waterfall([
         // pega a quantidade de itens do player
@@ -197,7 +197,7 @@ Bag.prototype.item = {
     magic_seal: function () {},
     // recuperar HP
     health_potion: function (data, callback) {
-        new Species(null, this.auth, this.db)
+        instantiateGameCoreKlass(Species, this.main)
             .addHp(
                 Resources.Items[data.item].effect.heal,
                 data.monster,
@@ -206,7 +206,7 @@ Bag.prototype.item = {
     },
     // recuperar mana
     mana_potion: function (data, callback) {
-        new Species(null, this.auth, this.db)
+        instantiateGameCoreKlass(Species, this.main)
             .addMp(
                 Resources.Items[data.item].effect.heal,
                 data.monster,
@@ -253,7 +253,7 @@ Bag.prototype.item = {
     // usar pergaminho (aprender move)
     parchment: function (data, callback) {
 
-        new Species(this.socket, this.auth, this.db)
+        instantiateGameCoreKlass(Species, this.main)
             .learnMove(
                 data.monster, 
                 Resources.Items[data.item].effect.learn_move, 
@@ -266,3 +266,5 @@ Bag.prototype.item = {
 module.exports = Bag;
 
 const Species = require("./species.js");
+
+const { instantiateGameCoreKlass } = require("../utils/utils.js");

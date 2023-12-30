@@ -6,8 +6,8 @@ const EVENTS = require("./../database/socket_events.json");
 
 const Base = require("./base.js");
 
-const Quest = function (socket, auth, db, scServer) {
-    Base.call(this, socket, auth, db, scServer);
+const Quest = function (main, socket, auth, db, scServer, dataMasterEvents) {
+    Base.call(this, main, socket, auth, db, scServer, dataMasterEvents);
 };
 
 Quest.prototype = Object.create(Base.prototype);
@@ -313,7 +313,7 @@ Quest.prototype.giveItems = function (data, callback) {
     // pega todas as ações e transforma para inseri-las no banco de dados
     for (let i = 0; i < data.length; i ++)
         fns.push(next => {
-            new Bag(this.socket, this.auth, this.db)
+            instantiateGameCoreKlass(Bag, this.main)
                 .insertItem(null, data[i].id, data[i].amount, next);
         });
 
@@ -341,6 +341,8 @@ Quest.prototype.invertedToken = {
     "tame": 2,
     "drop": 3
 };
+
+const { instantiateGameCoreKlass } = require("../utils/utils.js");
 
 module.exports = Quest;
 

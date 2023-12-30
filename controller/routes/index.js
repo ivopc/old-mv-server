@@ -7,7 +7,8 @@ module.exports = (req, res) => {
     async.parallel({
         // pegar monstros no bracelete
         monsters: next => {
-            const species = new Species(null, {uid: req.session["uid"]}, {mysql: req.mysql}, null);        
+            const species = new Species({auth: {uid: req.session["uid"]}, db: {mysql: req.mysql}}, null, {uid: req.session["uid"]}, {mysql: req.mysql}, null);        
+            console.log(species);
             species.getMonstersInPocket((err, data) => {
                 species.filterMonstersData(err, data, next);
             });

@@ -78,7 +78,7 @@ exports.marketplace = function (req, res) {
     //console.log({type});
 
     // pegar mercadorias
-    const market = new MarketPlace(null, {uid: req.session["uid"]}, {mysql: req.mysql}, null);
+    const market = new MarketPlace({auth: {uid: req.session["uid"]}, db: {mysql: req.mysql}}, {uid: req.session["uid"]}, {mysql: req.mysql});
     
     market.getMerchandises({
         page: req.query["page"],

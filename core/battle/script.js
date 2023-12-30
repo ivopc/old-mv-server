@@ -417,7 +417,7 @@ Script.prototype.fns[7] = function (param, next) {
                             ], cb);
                         } else {
                             //cb(null, 1);
-                            new Box(null, this.auth, this.db)
+                        instantiateGameCoreKlass(Box, this.main)
                                 .insert(param.monster_id, cb);
                         };
                     }

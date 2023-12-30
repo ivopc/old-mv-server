@@ -10,11 +10,15 @@ const mysqlConnection = mysql.createConnection({
     database: process.env.DB_NAME,
     multipleStatements: true
 });
-
-mysqlConnection.query("TRUNCATE TABLE `battle`");
-mysqlConnection.query("TRUNCATE TABLE `battle_buffs_nerfs`");
-mysqlConnection.query("TRUNCATE TABLE `battle_exp_share`");
-mysqlConnection.query("TRUNCATE TABLE `tamer_bot_monsters_in_pocket`");
-mysqlConnection.query("UPDATE `current_doing` SET `battle_type` = '0'");
-mysqlConnection.query("DELETE FROM `monsters` WHERE `type` = '1'");
-mysqlConnection.query("DELETE FROM `monsters` WHERE `type` = '2'");
+console.log("Cleaning up the battle related databases...");
+mysqlConnection.query(
+    "TRUNCATE TABLE `battle`;TRUNCATE TABLE `battle_buffs_nerfs`;TRUNCATE TABLE `battle_exp_share`;TRUNCATE TABLE `tamer_bot_monsters_in_pocket`;UPDATE `current_doing` SET `battle_type` = '0';DELETE FROM `monsters` WHERE `type` = '1';DELETE FROM `monsters` WHERE `type` = '2'",
+    (err, data) => {
+        if (err) {
+            console.error(err);
+        } else {
+            console.log("Battle databases cleaned with success!!");
+        };
+        mysqlConnection.end();
+    }
+);

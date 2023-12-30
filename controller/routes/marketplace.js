@@ -16,7 +16,7 @@ module.exports = function (req, res) {
         return;
     };
 
-    const marketplace = new MarketPlace(null, null, {mysql: req.mysql}, req.scServer);
+    const marketplace = new MarketPlace({auth: {uid: req.session["uid"]}, db: {mysql: req.mysql}}, null, {mysql: req.mysql}, req.scServer);
 
     switch (+req.body["type"]) {
         // por monstro a venda
@@ -192,7 +192,7 @@ module.exports = function (req, res) {
                                 );
                         },
                         putInMonsterBox: ["transfer", (data, cb) => {
-                            box = new Box(null, {uid: req.session["uid"]}, {mysql: req.mysql}, null);
+                            box = new Box({}, null, {uid: req.session["uid"]}, {mysql: req.mysql});
                             box.insert(sale_id, cb);
                         }]
                     }, next);
@@ -407,7 +407,7 @@ module.exports = function (req, res) {
                     console.log(444);
                     async.parallel({
                         insertItem: next => {
-                            const bag = new Bag(null, {uid: req.session["uid"]}, {mysql: req.mysql});
+                            const bag = new Bag({auth: {uid: req.session["uid"]}}, null, {uid: req.session["uid"]}, {mysql: req.mysql});
 
                             bag.insertItem(
                                 req.session["uid"],

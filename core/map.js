@@ -6,9 +6,10 @@ const PlayerData = require("./playerdata.js");
 
 const Base = require("./base.js");
 
-const Map = function (socket, auth, db, scServer) {
-    Base.call(this, socket, auth, db, scServer);
+const Map = function (main, socket, auth, db, scServer, dataMasterEvents) {
+    Base.call(this, main, socket, auth, db, scServer, dataMasterEvents);
 };
+
 
 Map.prototype = Object.create(Base.prototype);
 
@@ -182,6 +183,9 @@ Map.prototype.changeMap = function (input) {
 // Pegar players que estão no mapa
 Map.prototype.getActivePlayersInMap = function () {
     const pdata = new PlayerData();
+
+
+    console.log("getActivePlayersInMap", this.auth.uid);
 
     async.waterfall([
         // pegar mapa atual

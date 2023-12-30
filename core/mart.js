@@ -6,9 +6,10 @@ const EVENTS = require("./../database/socket_events.json");
 
 const Base = require("./base.js");
 
-const Mart = function (socket, auth, db, scServer) {
-    Base.call(this, socket, auth, db, scServer);
+const Mart = function (main, socket, auth, db, scServer, dataMasterEvents) {
+    Base.call(this, main, socket, auth, db, scServer, dataMasterEvents);
 };
+
 
 Mart.prototype = Object.create(Base.prototype);
 
@@ -23,7 +24,7 @@ Mart.prototype.buy = function (input) {
     const { item_id, amount } = input;
 
     const 
-        bag = new Bag(null, this.auth, this.db),
+        bag = instantiateGameCoreKlass(Bag, this),
         item = Resources.items_market[item_id];
 
     console.log("OIIII");
@@ -113,3 +114,5 @@ Mart.prototype.discountCoin = function (type, amount, callback) {
 module.exports = Mart;
 
 const Bag = require("./bag.js");
+
+const { instantiateGameCoreKlass } = require("../utils/utils.js");

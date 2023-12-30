@@ -26,7 +26,7 @@ npm install
 # start server at localhost:8000
 npm run start
 
-# run database seeds (you need it to run the game server)
+# run database seeds (as first usage you need it to run the game server that depends on database)
 npm run database-seed
 
 # if you get some bug, black screen or issue in battle gameplay just reset the battle related databases

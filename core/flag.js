@@ -11,8 +11,8 @@ fs.readdirSync(__dirname + "/script").forEach(file => Scripts[file.split(".")[0]
 
 const Base = require("./base.js");
 
-const Flag = function (socket, auth, db, scServer) {
-    Base.call(this, socket, auth, db, scServer);
+const Flag = function (main, socket, auth, db, scServer, dataMasterEvents) {
+    Base.call(this, main, socket, auth, db, scServer, dataMasterEvents);
 };
 
 Flag.prototype = Object.create(Base.prototype);

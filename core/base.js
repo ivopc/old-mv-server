@@ -1,8 +1,13 @@
-const Base = function (socket, auth, db, scServer) {
+const Base = function (main, socket, auth, db, scServer, dataMasterEvents) {
+    /** @type {Main} */
+    this.main = main;
     this.socket = socket;
+    /** @type {{ uid: string }} */
     this.auth = auth;
     this.db = db;
     this.scServer = scServer;
+    /**@type {Datamaster} */
+    this.dataMasterEvents = dataMasterEvents;
 };
 
 Base.prototype.mysqlQuery = function () {
