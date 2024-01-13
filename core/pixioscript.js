@@ -114,6 +114,7 @@ PixioScript.prototype.codeParser = function (codes) {
         // ao escopo dela
         this.fn.push(this.fns[fnName].bind({
             param,
+            main: this.main,
             socket: this.socket,
             db: this.db,
             mysqlQuery: this.mysqlQuery,
@@ -290,19 +291,18 @@ PixioScript.prototype.fns[2] = function (next) {
 PixioScript.prototype.fns[6] = function (next) {
 
     console.log(this.param, "executando teleport");
-
-    // mudar no cache
-    this.db.cache.HMSET("u-" + this.auth.uid, {
+    new PlayerData().set(this.auth.uid, {
         posx: param.x,
         posy: param.y,
         posfacing: param.facing
-    }, next);
+    });
+    next();
 };
 
 // setflag
 PixioScript.prototype.fns[7] = function (next) {
 
-    console.log(this.param, "executando setflag");
+    console.log(this.param, Object.keys(this.main), "executando setflag");
 
     // updeita flag
     const param = this.param;
@@ -417,6 +417,7 @@ const
     Species = require("./species.js"),
     Tamer = require("./tamer.js"),
     Battle = require("./battle.js"),
-    Flag = require("./flag.js");
+    Flag = require("./flag.js"),
+    PlayerData = require("./playerdata.js");
 
 const { instantiateGameCoreKlass } = require("../utils/utils.js");
