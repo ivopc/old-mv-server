@@ -111,7 +111,7 @@ Flag.prototype.requestExecution = function (input) {
             async.series([
                 next => {
                     // instancia pixioscript para executar
-                    let pixioscript = new PixioScript(this.socket, this.auth, this.db);
+                    const pixioscript = instantiateGameCoreKlass(PixioScript, this.main);
 
                     // se houver parâmetros de input do usuário, aplica eles
                     if (hasParam)
@@ -125,7 +125,7 @@ Flag.prototype.requestExecution = function (input) {
                 next => {
 
                     // executa ações após o script estiver pronto
-                    let pixioscript = new PixioScript(this.socket, this.auth, this.db),
+                    const pixioscript = instantiateGameCoreKlass(PixioScript, this.main),
                         code = _.clone(script.onscriptdone);
 
                     // adiciona que já executou flag requisitada pelo client
@@ -218,3 +218,5 @@ Flag.prototype.customFlag = {};
 module.exports = Flag;
 
 const PixioScript = require("./pixioscript.js");
+
+const { instantiateGameCoreKlass } = require("../utils/utils.js");

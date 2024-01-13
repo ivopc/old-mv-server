@@ -11,7 +11,7 @@ const PlayersModel = new Map([
     }]
 ]);
 
-//setInterval(() => console.log(PlayersModel), 3000);
+//setInterval(() => console.log(PlayersModel), 100);
 
 const PlayerData = function () {};
 
