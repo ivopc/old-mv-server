@@ -133,7 +133,7 @@
                     ["face", "toplayer"],
                     ["dialog", [
                         {
-                            "br": "... Você sabia que, por mais que os corvos possuam uma natureza magarefe, eles possuem empatia?",
+                            "br": "... Você sabia que, por mais que os corvos possuam uma natureza magarefe, eles possuem empatia?"
                         },
                         {
                             "br": "Uma capacidade que supera sua essência, mas não o fazem porque por pura benevolência, o fazem para sobreviver."
