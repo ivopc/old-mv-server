@@ -261,16 +261,7 @@
             },
             "2": {
                 "requiredFlagValueToExec": [2],
-                "script": [
-                    ["disableMoveInputs"],
-                    ["dialog", [
-                        {
-                            "br": "Não me deixe aqui sozinho, {player}!"
-                        }
-                    ]],
-                    ["walk", "up", {"target": "${player}"}],
-                    ["enableMoveInputs"]
-                ]
+                "script": []
             }
         }
     }
