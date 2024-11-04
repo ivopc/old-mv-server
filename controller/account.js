@@ -126,6 +126,9 @@ Register.prototype.checkIfUserExist = function (nickname, db, next) {
 // checar se o e-mail está em uso
 Register.prototype.checkIfEmailInUse = function (email, db, next) {
     db.query("SELECT `email` FROM `users` WHERE `email` = ?", [email], (err, results, fields) => {
+
+        console.log("lol", {email, err, results, fields});
+        
         
         // se houver resultado setar o primeiro da array para ser único
         if (results[0])
